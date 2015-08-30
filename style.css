@@ -1,47 +1,30 @@
 html {
 	background-image: url("Wallapaper.png");
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background-size: 50% 50%;
 }
 body {
-	font-family: 'Open Sans', serif;
+	font-family: 'Open Sans', serif !important;
+	text-align: center;
 }
 h1 {
 	font-weight: bold;
-	margin-bottom: -25px;
+	margin-bottom: -15px;
+}
+h2 {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+p {
+	font-size: 16px;
 }
 .center-content {
-	text-align: center;
-}
-a {
-	text-decoration: none;
+	padding: 50px 50px 50px 50px;
 }
 
-/*Replicate bootstrap info button style*/
-.btn {
-	display: inline-block;
-	padding: 6px 12px;
-	font-size: 14px;
-	font-weight: 400px;
-    line-height: 1.42857143;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	cursor: pointer;
-	background-image: none;
-	border: 1px solid transparent;
-	border-radius: 4px;
-}
-.btn-blue {
-	color: #fff;
-	background-color: #5bc0de;
-	border-color: #46b8da;
-}
-.btn-blue:hover {
-	color: #fff;
-	background-color: #31b0d5;
-	border-color: #269abc;
+#bottom-img {
+	margin-top: 50px;
+	max-width: 100%;
+	height: auto;
 }

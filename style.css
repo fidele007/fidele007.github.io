@@ -1,0 +1,47 @@
+html {
+	background-image: url("Wallapaper.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
+	font-family: 'Open Sans', serif;
+}
+h1 {
+	font-weight: bold;
+	margin-bottom: -25px;
+}
+.center-content {
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+
+/*Replicate bootstrap info button style*/
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: 400px;
+    line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.btn-blue {
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+}
+.btn-blue:hover {
+	color: #fff;
+	background-color: #31b0d5;
+	border-color: #269abc;
+}

@@ -43,7 +43,7 @@
 					<div class="panel-heading">
 						<span class="glyphicon glyphicon-align-left"></span> Description
 					</div>
-					<p class="panel-body package-desc"></p>
+					<div class="panel-body package-desc"></div>
 				</div>
 
 				<div class="row panel panel-default">
@@ -106,7 +106,7 @@
 		  		$.getJSON("packages/" + dPackage + ".json", function(data) {
 					document.title = data.name + " by " + data.author;
 					$(".package-name").text(data.name);
-					$(".package-desc").text(data.description);
+					$(".package-desc").html(data.description);
 					$(".latest-version").text(data.version);
 					$(".package-author").text(" by " + data.author);
 

@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+}
+h1 {
+	font-weight: bold;
+	margin-bottom: -15px;
+}
+h2 {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+p {
+	font-size: 16px;
+}
+.center-content {
+	padding: 50px 50px 50px 50px;
+}
+
+#bottom-img {
+	margin-top: 50px;
+	max-width: 100%;
+	height: auto;
+}

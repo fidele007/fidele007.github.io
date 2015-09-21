@@ -1,0 +1,31 @@
+{
+	"name": "MultipleReturnToSender+",
+	"package": "com.fidele007.multiplereturntosender+",
+	"author": "fidele007",
+	"version": "0.0.1-194",
+	"description": "<div>Good old MultipleReturnToSender, but cooler. Send message by pressing multiple Return keys.</div><br><div>Supported apps/tweaks:</div><ul><li>Messages app (In-app composer and Quick Reply)</li><li>Couria</li><li>Telegram app</li><li>Viber app</li><ul>",
+	"changelog": {
+		"0.0.1-49": [
+			"Initial Release"
+		],
+		"0.0.1-50": [
+			"Fixed bug where inserting white spaces also send message"
+		],
+		"0.0.1-85": [
+			"Improved settings sync",
+			"<strong>NEW:</strong> Option to change Return key to Send key just before the final Return key to send message"
+		],
+		"0.0.1-194": [
+			"<strong>NEW:</strong> Support for Telegram app",
+			"<strong>NEW:</strong> Support for Viber app",
+			"Finally fixed the settings sync bug by Saving Changes on Respring",
+			"Overhauled settings look"
+		]
+	},
+	"screenshots": {
+	},
+	"links": {
+		"<span class=\"glyphicon glyphicon-user\"></span> Yours truly on Twitter": "https://twitter.com/kienforcefidele",
+		"<span class=\"glyphicon glyphicon-gift\"></span> Contribution via PayPal": "https://paypal.me/fidele007"
+	}
+}

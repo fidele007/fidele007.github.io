@@ -2,7 +2,7 @@
 	"name": "MultipleReturnToSender+",
 	"package": "com.fidele007.multiplereturntosender+",
 	"author": "fidele007",
-	"version": "0.0.1-194",
+	"version": "0.0.1-274",
 	"description": "<div>Good old MultipleReturnToSender, but cooler. Send message by pressing multiple Return keys.</div><br><div>Supported apps/tweaks:</div><ul><li>Messages app (In-app composer and Quick Reply)</li><li>Couria</li><li>Telegram app</li><li>Viber app</li><ul>",
 	"changelog": {
 		"0.0.1-49": [
@@ -20,6 +20,10 @@
 			"<strong>NEW:</strong> Support for Viber app",
 			"Finally fixed the settings sync bug by Saving Changes on Respring",
 			"Overhauled settings look"
+		],
+		"0.0.1-274": [
+			"<strong>NEW:</strong> Support for WhatsApp",
+			"<strong>NEW:</strong> Support for Messenger app"
 		]
 	},
 	"screenshots": {

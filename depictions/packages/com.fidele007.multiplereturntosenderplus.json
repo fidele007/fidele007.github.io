@@ -3,7 +3,7 @@
 	"package": "com.fidele007.multiplereturntosender+",
 	"author": "fidele007",
 	"version": "0.0.1-274",
-	"description": "<div>Good old MultipleReturnToSender, but cooler. Send message by pressing multiple Return keys.</div><br><div>Supported apps/tweaks:</div><ul><li>Messages app (In-app composer and Quick Reply)</li><li>Couria</li><li>Telegram app</li><li>Viber app</li><ul>",
+	"description": "<div>Good old MultipleReturnToSender, but cooler. Send message by pressing multiple Return keys.</div><br><div>Supported apps/tweaks:</div><ul><li>Messages app (In-app composer and Quick Reply)</li><li>Couria</li><li>Telegram app</li><li>Viber app</li><li>WhatsApp</li><li>Messenger app</li><ul>",
 	"changelog": {
 		"0.0.1-49": [
 			"Initial Release"

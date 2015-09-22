@@ -2,10 +2,10 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.1-beta-3",
+	"version": "3.1-beta-5",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
-		"3.1-beta-3": [
+		"3.1-beta-5": [
 			"<strong>NEW:</strong> Added custom color option for SlideToUnlock text",
 			"<strong>NEW:</strong> Added position option for Date and Time",
 			"Rewrote time format instruction",

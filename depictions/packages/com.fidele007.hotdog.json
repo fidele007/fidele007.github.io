@@ -8,6 +8,7 @@
 		"3.1-beta-5": [
 			"<strong>NEW:</strong> Added custom color option for SlideToUnlock text",
 			"<strong>NEW:</strong> Added position option for Date and Time",
+			"Seconds now work on status bar clock (not on Lock Screen clock)",
 			"Rewrote time format instruction",
 			"Added Respring confirmation alert",
 			"Resolved conflict with StatusVolX"

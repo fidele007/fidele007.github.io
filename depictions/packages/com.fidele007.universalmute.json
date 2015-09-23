@@ -2,7 +2,7 @@
 	"name": "Universal Mute",
 	"package": "com.fidele007.universalmute",
 	"author": "fidele007",
-	"version": "1.0-1",
+	"version": "1.0-6",
 	"description": "<div>A simple tweak which mutes the media volume when the ringer is muted.</div><br><div>Configure options in Settings.</div>",
 	"changelog": {
 		"0.0.1-17": [
@@ -10,6 +10,9 @@
 		],
 		"1.0-1": [
 			"Added preset media volume in Settings"
+		],
+		"1.0-6": [
+			"Made use of IOHIDEventRef for Ringer Mute"
 		]
 	},
 	"screenshots": {

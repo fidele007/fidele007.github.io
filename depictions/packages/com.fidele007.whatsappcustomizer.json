@@ -2,7 +2,7 @@
 	"name": "WhatsAppCustomizer",
 	"package": "com.fidele007.whatsappcustomizer",
 	"author": "fidele007",
-	"version": "1.1.1-beta-1",
+	"version": "1.1.1-beta-81",
 	"description": "<div>Make your WhatsApp look unique with customization. Confirmed working on <strong>WhatsApp Messenger v.2.12.6</strong>.</div><br><div>Features included:</div><ul><li>Bubble color</li><li>Text color</li><li>Time stamp color</li><li>Message status color</li><li>Date bubble and text colors</li><li>Chat font size</li><ul>",
 	"changelog": {
 		"0.0.1-181": [
@@ -30,6 +30,11 @@
 		],
 		"1.1.1-beta-1": [
 			"Fixed seen status color bug"
+		],
+		"1.1.1-beta-81": [
+			"Added app tint color option",
+			"Added status bar color option",
+			"Added chat toolbar color option"
 		]
 	},
 	"screenshots": {

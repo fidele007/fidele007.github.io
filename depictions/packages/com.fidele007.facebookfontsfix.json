@@ -1,0 +1,18 @@
+{
+	"name": "Facebook Fonts Fix",
+	"package": "com.fidele007.facebookfontsfix",
+	"author": "fidele007",
+	"version": "42.0-beta-2",
+	"description": "<div>No more truncated text in Facebook app. Support for Facebook v43.0. See screenshots for examples.</div>",
+	"changelog": {
+		"42.0-beta-2": [
+			"Initial release"
+		]
+	},
+	"screenshots": {
+	},
+	"links": {
+		"<span class=\"glyphicon glyphicon-user\"></span> Yours truly on Twitter": "https://twitter.com/kienforcefidele",
+		"<span class=\"glyphicon glyphicon-gift\"></span> Contribution via PayPal": "https://paypal.me/fidele007"
+	}
+}

@@ -7,6 +7,9 @@
 	"changelog": {
 		"42.0-beta-2": [
 			"Initial release"
+		],
+		"42.0-beta-24": [
+			"Fixed bugs on iOS 8 devices"
 		]
 	},
 	"screenshots": {

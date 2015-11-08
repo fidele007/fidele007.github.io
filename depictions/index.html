@@ -15,7 +15,7 @@
 			.list-group-item:last-child {margin-bottom: -1px;}
 			.subshots {text-align: center;}
 			.subshots:nth-child(1) {margin-bottom: 10px;}
-			.screenshots img {border: thin solid #BEB6D8;}
+			.screenshots img {display: block; height: auto; line-height: 1; max-width: 100%; width: 100%;}
 			.package-buttons {margin-top: 10px;}
 			.repo-buttons {margin-top: 20px;}
 			.package-error {display: none;}
@@ -131,9 +131,9 @@
 						for (var s in sKeys) {
 							var screenshot = sKeys[s];
 							if (count % 2 === 0) {
-								$(".screenshots").append("<div class=\"subshots col-xs-12\"></div>");
+								$(".screenshots").append("<div class=\"subshots\"></div>");
 							}
-							$(".screenshots .subshots:last-child").append("<div class=\"col-xs-12\"><img class=\"img-responsive\" src=\"screenshots/" + dPackage + "/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"><p>" + screenshots[screenshot] + "</p><br></div>");
+							$(".screenshots .subshots:last-child").append("<div class=\"col-xs-12\"><img class=\"img-responsive\" src=\"screenshots/" + dPackage + "/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"><p><strong>" + screenshots[screenshot] + "</strong></p><br></div>");
 							count += 1;
 						}
 					}

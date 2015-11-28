@@ -14,7 +14,7 @@
 		"1.0-1": [
 			"Added Settings",
 			"Added option to disable and enable EmojiKey",
-			"Added option to skip EmojiKey when tapping the Globe button to change keyboards (compatible with <strong>ChooseBoard</strong>)",
+			"Added option to skip EmojiKey when tapping the Globe button to change keyboards",
 			"Added option to suppress language indicator on keyboard's spacebar",
 			"Clear keyboard cache upon unstallation"
 

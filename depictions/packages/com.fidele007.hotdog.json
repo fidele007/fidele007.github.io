@@ -15,11 +15,11 @@
 		],
 		"3.2-6": [
 			"Completely revamped HotDog settings",
-			"Added X and Y positions for Lock screen Date|Time",
+			"Added X and Y positions for lock screen Date and Time separately",
 			"Added X and Y positions for \"slide to unlock\" text",
-			"Added custom secondary string for \"slide to unlock\" text on failed Touch ID authentication",
+			"Added customizable secondary string for \"slide to unlock\" text on failed Touch ID authentication",
 			"Added French localization",
-			"Fixed the bug where slide to unlock text revert color back to default on failed Touch ID authentication",
+			"Fixed the bug where \"slide to unlock\" text revert color back to default on failed Touch ID authentication",
 			"Fixed the bug where seconds stop working after returning from passcode view on some devices"
 		]
 	},

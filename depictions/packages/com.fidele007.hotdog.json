@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.1-beta-5",
+	"version": "3.2-6",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -12,6 +12,15 @@
 			"Rewrote time format instruction",
 			"Added Respring confirmation alert",
 			"Resolved conflict with StatusVolX"
+		],
+		"3.2-6": [
+			"Completely revamped HotDog settings",
+			"Added X and Y positions for Lock screen Date|Time",
+			"Added X and Y positions for \"slide to unlock\" text",
+			"Added custom secondary string for \"slide to unlock\" text on failed Touch ID authentication",
+			"Added French localization",
+			"Fixed the bug where slide to unlock text revert color back to default on failed Touch ID authentication",
+			"Fixed the bug where seconds stop working after returning from passcode view on some devices"
 		]
 	},
 	"screenshots": {

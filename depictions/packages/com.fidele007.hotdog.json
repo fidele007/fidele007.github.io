@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.2-100",
+	"version": "3.2-108",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -27,6 +27,11 @@
 			"You can know use multiple lines for lock screen date string by using \"\\n\"  (read Date|Time format instructions for details)",
 			"Added option to change notifications view position on lock screen",
 			"Added option to always show date label immediately"
+		],
+		"3.2-108": [
+			"Fixed custom time font size crash on iOS 8 and iOS 7 devices",
+			"Fixed multiline date label not working on iOS 8 and lower devices",
+			"Disabled autocorrect in format text fields in HotDog settings"
 		]
 	},
 	"screenshots": {

@@ -24,7 +24,7 @@
 		],
 		"3.2-100": [
 			"Changing time font size now won't change the font's weight",
-			"You can know use multiple lines for lock screen date string by using \"\n\"  (read Date|Time format instructions for details)",
+			"You can know use multiple lines for lock screen date string by using \"\\n\"  (read Date|Time format instructions for details)",
 			"Added option to change notifications view position on lock screen",
 			"Added option to always show date label immediately"
 		]

@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.2-108",
+	"version": "3.2-194",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -32,6 +32,13 @@
 			"Fixed custom time font size crash on iOS 8 and iOS 7 devices",
 			"Fixed multiline date label not working on iOS 8 and lower devices",
 			"Disabled autocorrect in format text fields in HotDog settings"
+		],
+		"3.2-194": [
+			"Fixed notification interaction bug on lock screen when notification's position is changed",
+			"Notifications view will be reset to default position if Media Controls view is present",
+			"Added option to change X and Y coordinates of lock screen charging text and timer",
+			"Added option to hide NC and CC grabbers",
+			"Added option to show status bar time on lock screen"
 		]
 	},
 	"screenshots": {

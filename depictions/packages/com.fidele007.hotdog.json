@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.2-194",
+	"version": "3.2-606",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -39,6 +39,13 @@
 			"Added option to change X and Y coordinates of lock screen charging text and timer",
 			"Added option to hide NC and CC grabbers",
 			"Added option to show status bar time on lock screen"
+		],
+		"3.2-606": [
+			"<strong>NEW: </strong>Added option to align lock screen Date label (<strong>experimental</strong>)",
+			"Added compatibility with <strong>HideMeX</strong>",
+			"Fixed lock screen date and time position not working on white background",
+			"Improved settings, hopefully to fix crash for some users",
+			"<strong>KNOWN BUG: </strong>If Date label alignment is enabled, the Date position is a bit off when SpringBoard first starts, but it should correct itself after unlocking and relocking your device."
 		]
 	},
 	"screenshots": {

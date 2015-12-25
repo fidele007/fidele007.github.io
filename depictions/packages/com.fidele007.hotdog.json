@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.2-606",
+	"version": "3.2-611",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -46,6 +46,9 @@
 			"Fixed lock screen date and time position not working on white background",
 			"Improved settings, hopefully to fix crash for some users",
 			"<strong>KNOWN BUG: </strong>If Date label alignment is enabled, the Date position is a bit off when SpringBoard first starts, but it should correct itself after unlocking and relocking your device."
+		],
+		"3.2-611": [
+			"Added option to hide lock screen Battery Charging View in Others panel"
 		]
 	},
 	"screenshots": {

@@ -52,12 +52,11 @@
 		],
 		"3.2-1053": [
 			"Added option to hide lock screen notifications, suppress screen wake when receiving notifications and suppress notification sounds",
-			"Added options for moving media controls view, album art and volume slider (in Others)"
+			"Added options for moving media controls view, album art and volume slider (in Others)",
 			"Added options for lock screen status bar and home screen status bar",
 			"Added option for multiple-lined passcode view text",
-			"Added option to change Try Again text in passcode view (only for Touch ID devices)",
 			"Added option to hide Camera grabber and disable Camera",
-			"Added option to disable lock screen blur",
+			"Added option to disable lock screen blur"
 		]
 	},
 	"screenshots": {

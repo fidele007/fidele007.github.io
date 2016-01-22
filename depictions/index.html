@@ -8,7 +8,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<style>
-			body {background-color: #efeff4;font:16px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;}
+			h2 {color: #6d6d72; font-size: 14px; font-weight: 400;}
+			body {background-color: #efeff4;font:14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;}
 			a:link, a:visited, a:hover {text-decoration: none;}
 			.badge-label {border-radius:1em;}
 			.panel, .list-group-item, .alert {border-radius: 0 !important;}
@@ -37,25 +38,23 @@
         	</div> -->
 
         	<div class="package-info">
-
+				<h2>DESCRIPTION</h2>
 				<div class="row panel panel-default">
-					<div class="panel-heading">
-						<!-- <span class="glyphicon glyphicon-align-left"></span> --> Description
-					</div>
 					<div class="panel-body package-desc"></div>
 				</div>
 
+				<h2>RECENT CHANGES <div class="label label-info badge-label latest-version"></div></h2>
+
 				<div class="row panel panel-default">
-					<div class="panel-heading">
-						<!-- <span class="glyphicon glyphicon-pencil"></span> --> Recent Changes
+					<!-- <div class="panel-heading">
 						<div class="label label-info badge-label latest-version"></div>
-					</div>
+					</div> -->
 					<div class="panel-body changelog-list"></div>
 				</div>
 
 				<div class="row panel panel-default" id="screenshot-tab">
 					<div class="panel-heading screenshots-header">
-						<!-- <span class="glyphicon glyphicon-picture"></span> --> Screenshots
+						<!-- <span class="glyphicon glyphicon-picture"></span> --> SCREENSHOTS
 						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
 					</div>
 					<div class="panel-body row screenshots"></div>
@@ -63,7 +62,7 @@
 
 				<div class="row panel panel-default">
                 	<div class="panel-heading fullchangelog-header">
-						<!-- <span class="glyphicon glyphicon-tasks"></span> --> Full Changelog
+						<!-- <span class="glyphicon glyphicon-tasks"></span> --> FULL CHANGELOG
 						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
 					</div>
 					<div class="package-info package-versions fullchangelog"></div>

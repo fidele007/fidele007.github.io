@@ -22,7 +22,7 @@
 		"03.jpg": "Date in Facebook feed"
 	},
 	"links": {
-		"<span class=\"glyphicon glyphicon-user\"></span> Yours truly on Twitter": "https://twitter.com/kienforcefidele",
-		"<span class=\"glyphicon glyphicon-gift\"></span> Contribution via PayPal": "https://paypal.me/fidele007"
+		"<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
+		"<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
 	}
 }

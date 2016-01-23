@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<style>
-			h2 {color: #6d6d72; font-size: 14px; font-weight: 400;}
-			body {background-color: #efeff4;font:15px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;}
+			h2 {color: #6d6d72; font-size: 14px; font-weight: 400; text-transform: uppercase;}
+			body {background-color: #efeff4;font:16px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;}
 			a:link, a:visited, a:hover {text-decoration: none;}
 			.badge-label {border-radius:1em;}
 			.panel, .list-group-item, .alert {border-radius: 0 !important;}
@@ -38,12 +38,12 @@
         	</div> -->
 
         	<div class="package-info">
-				<h2>DESCRIPTION</h2>
+				<h2>Description</h2>
 				<div class="row panel panel-default">
 					<div class="panel-body package-desc"></div>
 				</div>
 
-				<h2>RECENT CHANGES <div class="label label-info badge-label latest-version"></div></h2>
+				<h2>New in <span class="latest-version"></span></h2>
 
 				<div class="row panel panel-default">
 					<!-- <div class="panel-heading">
@@ -54,19 +54,25 @@
 
 				<div class="row panel panel-default" id="screenshot-tab">
 					<div class="panel-heading screenshots-header">
-						<!-- <span class="glyphicon glyphicon-picture"></span> --> SCREENSHOTS
+						Screenshots
 						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
 					</div>
 					<div class="panel-body row screenshots"></div>
-				</div>
-
-				<div class="row panel panel-default">
-                	<div class="panel-heading fullchangelog-header">
-						<!-- <span class="glyphicon glyphicon-tasks"></span> --> FULL CHANGELOG
+					
+					<div class="panel-heading fullchangelog-header">
+                		Full Changelog
 						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
 					</div>
 					<div class="package-info package-versions fullchangelog"></div>
-            	</div>
+				</div>
+
+				<!-- <div class="row panel panel-default">
+                	<div class="panel-heading fullchangelog-header">
+                		Full Changelog
+						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
+					</div>
+					<div class="package-info package-versions fullchangelog"></div>
+            	</div> -->
 
 			</div>
 
@@ -97,7 +103,7 @@
 			$(document).ready(function() {
 				var dPackage = getParameterByName("p");
 				if (!dPackage) {
-					$(".package-error").text("This package doesn't seem to exist!").css("display", "block");
+					$(".package-error").text("This package doesn't seem to exist :(").css("display", "block");
 					$(".package-info").css("display", "none");
 					$(".package-name").text("Not Found");
 					return;
@@ -146,11 +152,11 @@
 					for (var v in versions) {
 						var version = versions[v];
 						var panel = $("<div class=\"panel-default \"></div>");
-						panel.append(" <div class=\"panel-heading\">" + version + "</div>");
+						panel.append(" <div class=\"panel-heading\" style=\"text-transform: uppercase; font-size:14px; font-weight:400; color: #6d6d72;\">" + version + "</div>");
 						panel.append(" <div class=\"panel-body changelog-list\"></div>");
-						if (version === latest) {
-							panel.find(".panel-heading").append(" <div class=\"label label-info badge-label latest-version\">Current</div>");
-						}
+						// if (version === latest) {
+						// 	panel.find(".panel-heading").append(" <div class=\"label label-info badge-label latest-version\">Current</div>");
+						// }
 						var changes = data.changelog[version];
 						for (var c in changes) {
 							var change = changes[c];

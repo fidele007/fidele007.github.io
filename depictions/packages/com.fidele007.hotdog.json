@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.2-1053",
+	"version": "3.3.1-326 (February 6th, 2016)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -57,6 +57,17 @@
 			"Added option for multiple-lined passcode view text",
 			"Added option to hide Camera grabber and disable Camera",
 			"Added option to disable lock screen blur"
+		],
+		"3.3.1-326 (February 6th, 2016)": [
+			"Added option to show lock screen Date|Time with media controls",
+			"Added back bold time as an option",
+			"Added two-color option for lock screen Date|Time",
+			"Added a different option for notification position with media controls",
+			"Added a separate <strong>Media</strong> section with several additional options",
+			"Added back lock screen idle timer duration in <strong>Others</strong> section",
+			"Fixed a bug where hiding lock screen camera grabber also disables its functionality",
+			"Fixed interaction bug with lock screen notifications",
+			"Improved settings"
 		]
 	},
 	"screenshots": {

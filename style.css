@@ -2,16 +2,13 @@ html, body {
     background-color: #eee;
 }
 
-body {
-	text-align: center;
-}
-
 h1 {
 	font-weight: bold;
 	margin-bottom: -15px;
 }
 
 h2 {
+  text-align: center;
 	font-weight: bold;
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -22,10 +19,11 @@ p {
 }
 
 .container {
-  display: inline-block;
-  padding: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px 20px 20px;
   background-color: #fff;
-  margin: 0 -20px;
   margin-bottom: 24px;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
@@ -39,4 +37,38 @@ ul {
   display: inline-block;
   text-align: left;
   line-height: 200%;
+}
+
+p small {
+    color: grey;
+    font-size: 12px;
+}
+
+#copyright {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.center-div {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  /*background-color: white;*/
+}
+
+@media (min-width: 480px) { 
+  .center-div {
+    width: 900px;
+  }
+
+  /*.column {
+    -webkit-columns: 350px 2;
+       -moz-columns: 350px 2;
+            columns: 350px 2;
+    -webkit-column-gap: 10em;
+       -moz-column-gap: 10em;
+            column-gap: 10em;        
+  }*/
 }

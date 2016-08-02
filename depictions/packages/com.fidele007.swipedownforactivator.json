@@ -30,9 +30,12 @@
 			"Better compatibility in Activator settings",
 			"Improved lock screen gesture recognizers"
 		],
-        "0.1-16+debug (August 2nd, 2016)":[
-            "Code optimization"
-        ]
+    "0.1-16+debug (August 2nd, 2016)":[
+        "Code optimization"
+    ],
+    "0.1-17+debug (August 2nd, 2016)":[
+        "Fix respring bug in preferences"
+    ]
 	},
 	"screenshots": {
 	},

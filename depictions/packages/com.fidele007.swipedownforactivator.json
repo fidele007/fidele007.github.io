@@ -2,7 +2,7 @@
 	"name": "Swipe for Activator",
 	"package": "com.fidele007.swipedownforactivator",
 	"author": "fidele007",
-	"version": "0.0.1-216 (February 26th, 2015)",
+	"version": "0.1-16+debug (August 2nd, 2016)",
 	"description": "<div>Trigger Activator actions through one of the following screen gestures:</div><ul><li>Swipe Down on Home Screen (native pull-down spotlight gesture)</li><li>Swipe Down on Lock Screen</li><li>Swipe Up on Home Screen</li><li>Swipe Up on Lock Screen</li></ul><div>There's an option to disable pull-down spotlight in Settings.</div>",
 	"changelog": {
 		"0.0.1-43": [
@@ -29,7 +29,10 @@
 		"0.0.1-216 (February 26th, 2015)":[
 			"Better compatibility in Activator settings",
 			"Improved lock screen gesture recognizers"
-		]
+		],
+        "0.1-16+debug (August 2nd, 2016)":[
+            "Code optimization"
+        ]
 	},
 	"screenshots": {
 	},

@@ -2,19 +2,23 @@
     "name": "HomeWifi",
     "package": "com.fidele007.homewifi",
     "author": "fidele007",
-    "version": "0.0.2-9+debug (July 18th, 2016)",
+    "version": "0.0.2-14+debug (2016-08-19)",
     "description": "<div>Disable your device's passcode when connected to a known Wi-Fi. You can now decide when to turn on/off HomeWifi via Activator actions on the HomeWifi flipswitch.</div>",
     "changelog": {
-        "0.0.1-323+debug (July 14th, 2016)": [
+        "0.0.1-323+debug (2016-07-14)": [
             "Initial Release"
         ],
-        "0.0.1-324+debug (July 14th, 2016)": [
+        "0.0.1-324+debug (2016-07-14)": [
             "Fixed a bug where, when <strong>Unlock with Touch ID</strong> is enabled, tapping on the home button brings up the passcode view"
         ],
-        "0.0.2-9+debug (July 18th, 2016)": [
+        "0.0.2-9+debug (2016-07-18)": [
             "Fixed crashing bug on iOS 8 devices",
             "Fixed a bug where known Wi-Fi list is deleted after toggling <strong>Enable</strong> or <strong>Unlock with Touch ID</strong>",
-            "Added HomeWifi flipswitch"
+            "<strong>NEW:</strong> Added HomeWifi flipswitch!"
+        ],
+        "0.0.2-14+debug (2016-08-19)": [
+            "<strong>NEW:</strong> Add Unlock with Touch ID options: Tap, Hold and Press",
+            "Better overlay control on lock screen when sliding to unlock"
         ]
     },
     "screenshots": {

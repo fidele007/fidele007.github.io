@@ -22,6 +22,13 @@ scanpkg.new("debs", function(err, result) {
             console.log("Removed existing Packages.bz2");
         }
 
+        if (fs.existsSync("data.tar.lzma")) {
+            fs.unlink("data.tar.lzma", function(err) {
+                return console.log(err);
+            });
+            console.log("Removed wtf data.tar.lzma");
+        }
+
         child_process.spawnSync("bzip2", ["Packages"]);
         console.log("Finished making Packages.bz2");
     });

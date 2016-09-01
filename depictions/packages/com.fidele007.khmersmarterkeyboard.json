@@ -11,7 +11,8 @@
     "1.1 (2016-09-02)": [
       "Emoji keyboard is now also themed",
       "Fix crashing bug when going to Khmer keyboard from the Emoji keyboard if SpaceCursor option is enabled",
-      "Improve keyboard theme"
+      "Change package name to <strong>Khmer Smarter Keyboard</strong>",
+      "Small improvements"
     ]
 	},
 	"screenshots": {

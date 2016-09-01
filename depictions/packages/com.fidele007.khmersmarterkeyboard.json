@@ -1,0 +1,18 @@
+{
+	"name": "Khmer Smarter Keyboard",
+	"package": "com.fidele007.khmersmarterkeyboard",
+	"author": "fidele007",
+	"version": "1.0 (2016-09-01)",
+	"description": "<div>ធ្វើ​ឲ្យ​ Khmer Smart Keyboard កាន់​តែ​ឆ្លាត​ និង​ប្រសើរ​ជាង​មុន​ទៅ​ទៀត ។ ចំណុច​សំខាន់ៗ​របស់​ Tweak នេះ​មាន​ដូច​ត​ទៅ៖<ul><li>ជម្រើស​ក្នុង​ការ​ប្រើ​ចន្លោះ​មើល​មិន​ឃើញ​</li><li>ផ្លាស់​ទីទស្សន៍ទ្រនិច (Cursor) ដោយ​អូស​លើ​ប៊ូតុង​ដក​ឃ្លា</li><li>ពណ៌​ផ្ទៃ​ក្ដារ​ចុច</li><li>ពណ៌​តួ​អក្សរ</li><ul>",
+	"changelog": {
+		"1.0 (2016-09-01)": [
+			"Initial Release"
+		]
+	},
+	"screenshots": {
+	},
+	"links": {
+		"<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
+		"<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
+	}
+}

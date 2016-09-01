@@ -2,12 +2,17 @@
 	"name": "Khmer Smarter Keyboard",
 	"package": "com.fidele007.khmersmarterkeyboard",
 	"author": "fidele007",
-	"version": "1.0 (2016-09-01)",
-	"description": "<div>ធ្វើ​ឲ្យ​ Khmer Smart Keyboard កាន់​តែ​ឆ្លាត​ និង​ប្រសើរ​ជាង​មុន​ទៅ​ទៀត ។ ចំណុច​សំខាន់ៗ​របស់​ Tweak នេះ​មាន​ដូច​ត​ទៅ៖</div><ul><li>ជម្រើស​ក្នុង​ការ​ប្រើ​ចន្លោះ​មើល​មិន​ឃើញ​</li><li>ផ្លាស់​ទីទស្សន៍ទ្រនិច (Cursor) ដោយ​អូស​លើ​ប៊ូតុង​ដក​ឃ្លា</li><li>ពណ៌​ផ្ទៃ​ក្ដារ​ចុច</li><li>ពណ៌​តួ​អក្សរ</li><ul><div>ដើម្បី​ធ្វើ​ការ​កំណត់ សូម​បើក​កម្មវិធី <strong>ក្ដារចុចឆ្លាតវៃ</strong> > <strong>កំណត់​ការ​ប្រើប្រាស់</strong> </div>",
+	"version": "1.1 (2016-09-02)",
+	"description": "<div>ធ្វើ​ឲ្យ​ Khmer Smart Keyboard កាន់​តែ​ឆ្លាត​ និង​ប្រសើរ​ជាង​មុន​ទៅ​ទៀត ។ ចំណុច​សំខាន់ៗ​របស់​ Tweak នេះ​មាន​ដូច​ត​ទៅ៖</div><ul><li>ជម្រើស​ក្នុង​ការ​ប្រើ​ចន្លោះ​មើល​មិន​ឃើញ​</li><li>ផ្លាស់​ទីទស្សន៍ទ្រនិច (Cursor) ដោយ​អូស​លើ​ប៊ូតុង​ដក​ឃ្លា</li><li>ពណ៌​ផ្ទៃ​ក្ដារ​ចុច</li><li>ពណ៌​តួ​អក្សរ</li></ul><div>ដើម្បី​ធ្វើ​ការ​កំណត់ សូម​បើក​កម្មវិធី <strong>ក្ដារចុចឆ្លាតវៃ</strong> > <strong>កំណត់​ការ​ប្រើប្រាស់</strong> ។</div>",
 	"changelog": {
 		"1.0 (2016-09-01)": [
 			"Initial Release"
-		]
+		],
+    "1.1 (2016-09-02)": [
+      "Emoji keyboard is now also themed",
+      "Fix crashing bug when going to Khmer keyboard from the Emoji keyboard if SpaceCursor option is enabled",
+      "Improve keyboard theme"
+    ]
 	},
 	"screenshots": {
 	},

@@ -35,6 +35,9 @@
     ],
     "0.1-17+debug (August 2nd, 2016)":[
         "Fix respring bug in preferences"
+    ],
+    "0.1-21+debug (2016-09-18)": [
+    	"Disable home screen swipe gestures on dock view. This is implemented to resolve conflict with UnderCut tweak which uses the swipe up gesture on the dock view."
     ]
 	},
 	"screenshots": {

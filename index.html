@@ -10,15 +10,29 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=256600168067206";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="container">
       <img src="site_logo_small.png" alt="Site Logo" height="90" width="90"/>
       <h1>Hello,</h1>
       <h2>Welcome to fidele007 Repo.</h2>
       <p>fidele007 Repo is a personal Cydia repository hosting "beta" tweaks and stuff.</p>
-      <br>
       <a class="btn btn-info" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://fidele007.github.io/">Add Source to Cydia</a>
+      <div>
+      <p class="small">Follow me on Twitter and Facebook to get the latest updates on my works:</p>
+      <div>
+        <a href="https://twitter.com/kienforcefidele" class="twitter-follow-button" data-show-count="false">Follow @kienforcefidele</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div class="fb-like" data-href="https://www.facebook.com/fidele007repo/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
     </div>
-    <div class="center-div">  
+    <div class="center-div">
       <h2>Tweak List</h2>
       <ul>
         <li><strong>Autocorrect Flipswitch for iOS9:</strong> Flipswitch toggle for Auto-Correction in iOS 9.</li>

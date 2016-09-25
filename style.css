@@ -58,7 +58,7 @@ p small {
   /*background-color: white;*/
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 480px) {
   .center-div {
     width: 900px;
   }
@@ -69,6 +69,10 @@ p small {
             columns: 350px 2;
     -webkit-column-gap: 10em;
        -moz-column-gap: 10em;
-            column-gap: 10em;        
+            column-gap: 10em;
   }*/
+}
+
+.btn-info {
+  margin-bottom: 20px;
 }

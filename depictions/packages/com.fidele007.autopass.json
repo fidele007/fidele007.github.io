@@ -1,0 +1,23 @@
+{
+  "name": "AutoPass",
+  "package": "com.fidele007.autopass",
+  "author": "fidele007",
+  "version": "0.0.2 (2016-10-03)",
+  "description": "<div>Autofill password in the App Store.</div>",
+  "changelog": {
+    "0.0.1-21+debug (2016-09-27)": [
+      "Initial release"
+    ],
+    "0.0.2 (2016-10-03)": [
+      "Add option to enable/disable the tweak",
+      "Make Auto OK an option",
+      "Remove preference file after uninstallation"
+    ]
+  },
+  "screenshots": {
+  },
+  "links": {
+    "<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
+    "<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
+  }
+}

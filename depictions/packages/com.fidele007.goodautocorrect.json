@@ -1,0 +1,18 @@
+{
+  "name": "GoodAutoCorrect",
+  "package": "com.fidele007.goodautocorrect",
+  "author": "fidele007",
+  "version": "0.0.2 (2016-10-23)",
+  "description": "<div>Enable and disable autocorrect automatically when you show and hide the prediction bar on stock iOS keyboard.</div>",
+  "changelog": {
+    "0.0.2 (2016-10-23)": [
+      "Fix crash in apps with no-prediction-bar keyboard"
+    ]
+  },
+  "screenshots": {
+  },
+  "links": {
+    "<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
+    "<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
+  }
+}

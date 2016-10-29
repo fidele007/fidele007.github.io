@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.1-326 (February 6th, 2016)",
+	"version": "3.3.2-90 (2016/10/29)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -68,6 +68,13 @@
 			"Fixed a bug where hiding lock screen camera grabber also disables its functionality",
 			"Fixed interaction bug with lock screen notifications",
 			"Improved settings"
+		],
+		"3.3.2-90 (2016/10/29)": [
+			"Fix lock screen clock position not moving when using seconds",
+			"Fix album art issue with ColorFlow",
+			"Fix various status bar bugs",
+			"Fix album art not resizing correctly",
+			"Add icon for each section in preference"
 		]
 	},
 	"screenshots": {

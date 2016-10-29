@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.2-90 (2016/10/29)",
+	"version": "3.3.2-92 (2016/10/29)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -75,6 +75,9 @@
 			"Fix various status bar bugs",
 			"Fix album art not resizing correctly",
 			"Add icon for each section in preference"
+		],
+		"3.3.2-92 (2016/10/29)": [
+			"Mitigate status bar conflict with CallBar. However, you won't be able to properly style your status bar unless you disable CallBarStatusBar.dylib."
 		]
 	},
 	"screenshots": {

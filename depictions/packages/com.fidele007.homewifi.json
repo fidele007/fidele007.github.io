@@ -2,7 +2,7 @@
     "name": "HomeWifi",
     "package": "com.fidele007.homewifi",
     "author": "fidele007",
-    "version": "0.0.2-14+debug (2016-08-19)",
+    "version": "0.0.3-1+debug (2016-11-08)",
     "description": "<div>Disable your device's passcode when connected to a known Wi-Fi. You can now decide when to turn on/off HomeWifi via Activator actions on the HomeWifi flipswitch.</div>",
     "changelog": {
         "0.0.1-323+debug (2016-07-14)": [
@@ -19,6 +19,12 @@
         "0.0.2-14+debug (2016-08-19)": [
             "<strong>NEW:</strong> Add Unlock with Touch ID options: Tap, Hold and Press",
             "Better overlay control on lock screen when sliding to unlock"
+        ],
+        "0.0.3-1+debug (2016-11-08)": [
+            "Improve automatic unlock algorithm",
+            "Limit number of failed automatic unlock attemps",
+            "Unlock/lock device when Wi-Fi changes on lock screen",
+            "Unlock/lock device when HomeWifi is enabled/disabled on lock screen"
         ]
     },
     "screenshots": {

@@ -2,24 +2,14 @@
   "name": "BetterBreadcrumb10",
   "package": "com.fidele007.betterbreadcrumb10",
   "author": "fidele007",
-<<<<<<< HEAD
-  "version": "0.0.5 (2016-12-12)",
-=======
-  "version": "0.0.3 (2016-09-17)",
->>>>>>> parent of 191ee62... Update BetterBreadcrumb10 to fix No Connection bug in YT
+  "version": "0.0.4 (2016-12-11)",
   "description": "<div>Breadcrumb10 has glitches here and there where the Wi-Fi icon overlaps with other status bar icons or sometimes just doesn’t disappear even when the Wi-Fi is turned off. It's the little things that bug me so I make another one and name it BetterBreadcrumb10. If you don't notice any glitches using Breadcrumb10 or that they don't bother you, you don't need this.</div>",
   "changelog": {
     "0.0.3 (2016-09-17)": [
       "Fix right arrow image of breadcrumb"
-<<<<<<< HEAD
     ],
     "0.0.4 (2016-12-11)": [
       "Fix No Connection bug in YouTube app"
-    ],
-    "0.0.5 (2016-12-12)": [
-      "Fix jumpy Wi-Fi/3G icon"
-=======
->>>>>>> parent of 191ee62... Update BetterBreadcrumb10 to fix No Connection bug in YT
     ]
   },
   "screenshots": {

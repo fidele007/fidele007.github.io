@@ -1,0 +1,18 @@
+{
+	"name": "Miscreet",
+	"package": "com.fidele007.miscreet",
+	"author": "fidele007",
+	"version": "0.0.1 (2016-12-13)",
+	"description": "<div>Ninja mode in Messenger.</div><br><div>Currently included features:</div><ul><li>Disable automatic <b>Seen</b> feature. You can mark a conversation as read by holding the conversation screen and press <b>Yes</b>. You can still know if the other person has seen your messages (unless of course they have another ninja tweak installed as well).</li><li>Disable <b>typing indicator</b> so that the other person does not see if you're typing a message.</li><li>Disable <b>tapping on the resizable emoji button</b> to prevent accidental tap. You can send the big emoji by holding the emoji or force pressing it.</li><ul>",
+	"changelog": {
+		"0.0.1 (2016-12-13)": [
+			"Initial Release"
+		]
+	},
+	"screenshots": {
+	},
+	"links": {
+		"<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
+		"<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
+	}
+}

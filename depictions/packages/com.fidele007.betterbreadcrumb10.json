@@ -2,7 +2,7 @@
   "name": "BetterBreadcrumb10",
   "package": "com.fidele007.betterbreadcrumb10",
   "author": "fidele007",
-  "version": "0.0.5 (2016-12-12)",
+  "version": "0.0.6 (2016-12-14)",
   "description": "<div>Breadcrumb10 has glitches here and there where the Wi-Fi icon overlaps with other status bar icons or sometimes just doesn’t disappear even when the Wi-Fi is turned off. It's the little things that bug me so I make another one and name it BetterBreadcrumb10. If you don't notice any glitches using Breadcrumb10 or that they don't bother you, you don't need this.</div>",
   "changelog": {
     "0.0.3 (2016-09-17)": [
@@ -14,6 +14,9 @@
     "0.0.5 (2016-12-12)": [
       "Fix annoying jumpy Wi-Fi/3G/4G/LTE icon (hopefully for good)",
       "Prevent hooking into some non-app bundles"
+    ],
+    "0.0.6 (2016-12-14)": [
+      "Fix the tweak not working immediately when breadcrumb mode is active."
     ]
   },
   "screenshots": {

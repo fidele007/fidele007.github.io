@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.2-92 (2016/10/29)",
+	"version": "3.3.2-94 (2016/12/24)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -78,6 +78,16 @@
 		],
 		"3.3.2-92 (2016/10/29)": [
 			"Mitigate status bar conflict with CallBar. However, you won't be able to properly style your status bar unless you disable CallBarStatusBar.dylib."
+		],
+		"3.3.2-94 (2016/12/24)": [
+			"Add AM/PM format option for time label",
+			"Add option to change slide to unlock text's font size",
+			"Add alignment option for lock screen time label",
+			"Add different options for hiding slide to unlock text and chevron",
+			"Fix font size for aligned date and time labels",
+			"Fix double status bar conflict with Roundification tweak",
+			"Improve status bar coloring",
+			"Better preference synchronization"
 		]
 	},
 	"screenshots": {

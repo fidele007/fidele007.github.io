@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.2-94 (2016/12/24)",
+	"version": "3.3.3-1 (2017/01/26)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -88,6 +88,9 @@
 			"Fix double status bar conflict with Roundification tweak",
 			"Improve status bar coloring",
 			"Better preference synchronization"
+		],
+		"3.3.3-1 (2017/01/26)": [
+			"Initial support for iOS 10: Lock screen date & time and slide to unlock do not currently work due to API change from iOS 9 to iOS 10"
 		]
 	},
 	"screenshots": {

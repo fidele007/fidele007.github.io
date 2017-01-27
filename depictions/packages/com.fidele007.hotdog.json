@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.3-1 (2017/01/26)",
+	"version": "3.3.3-25 (2017/01/27)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -91,6 +91,10 @@
 		],
 		"3.3.3-1 (2017/01/26)": [
 			"Initial support for iOS 10: Lock screen date & time and slide to unlock do not currently work due to API change from iOS 9 to iOS 10"
+		],
+		"3.3.3-25 (2017/01/27)": [
+			"Really fix the crashing bug (all color options are disabled due to <b>libcolorpicker</b> not yet updated for iOS 10)",
+			"Partial update for Slide to Unlock: support changing \"Press Home to unlock\""
 		]
 	},
 	"screenshots": {

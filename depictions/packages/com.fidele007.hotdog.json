@@ -2,9 +2,15 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.3-25 (2017/01/27)",
+	"version": "3.3.3-99 (2017/01/30)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
+		"3.3.3-99 (2017/01/30)": [
+			"Update Status bar options for iOS 10",
+			"Update Slide to Unlock/Press Home to unlock options for iOS 10",
+			"Update lock screen idle timer for iOS 10",
+			"<strong>NOTE:</strong> Lock screen date/time options are still disabled"
+		],
 		"3.1-beta-5": [
 			"<strong>NEW:</strong> Added custom color option for SlideToUnlock text",
 			"<strong>NEW:</strong> Added position option for Date and Time",

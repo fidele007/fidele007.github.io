@@ -5,27 +5,23 @@
   "version": "0.9-12 (2016-01-30)",
   "description": "<div>Tested on iOS 9.3.3-10.2.<br><br>An updated and hopefully bug-free version of StatusVol 2. No new features will be included or should be expected. All credits to Steve Rolfe who brought this tweak to life.<br><br><a href='https://github.com/fidele007/StatusVol2'>GitHub link.</a></div>",
   "changelog": {
-    "0.9-12 (2016-01-30)": [
-      "Update for iOS 10"
-    ],
-    "0.0.9-7 (2016-01-10)": [
-      "Disable dynamic colors on lock screen in an attempt to fix crashing bug on lock screen"
-    ],
-    "0.0.9-4 (2016-01-10)": [
-      "An attempt to fix crashing bug when changing volume on lock screen"
-    ],
-    "0.0.9 (2016-01-04)": [
-      "Fix status bar time not hiding when Hide Time is enabled"
-    ],
-    "0.0.8 (2016-01-04)": [
+    "0.8 (2016-01-04)": [
       "Fix orientation bug",
       "Fix crashing bug in landscape mode if dynamic colors are enabled"
+    ],
+    "0.9 (2016-01-04)": [
+      "Fix status bar time not hiding when Hide Time is enabled"
+    ],
+    "0.9-4 (2016-01-10)": [
+      "An attempt to fix crashing bug when changing volume on lock screen"
+    ],
+    "0.9-7 (2016-01-10)": [
+      "Disable dynamic colors on lock screen in an attempt to fix crashing bug on lock screen"
+    ],
+    "0.9-12 (2016-01-30)": [
+      "Update for iOS 10"
     ]
   },
-  "screenshots": {
-  },
-  "links": {
-    "<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
-    "<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
-  }
+  "screenshots": {},
+  "links": {}
 }

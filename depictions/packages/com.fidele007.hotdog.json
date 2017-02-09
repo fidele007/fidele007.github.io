@@ -5,12 +5,6 @@
 	"version": "3.3.3-99 (2017/01/30)",
 	"description": "<div>A simple tweak to customize your iOS look.</div>",
 	"changelog": {
-		"3.3.3-99 (2017/01/30)": [
-			"Update Status bar options for iOS 10",
-			"Update Slide to Unlock/Press Home to unlock options for iOS 10",
-			"Update lock screen idle timer for iOS 10",
-			"<strong>NOTE:</strong> Lock screen date/time options are still disabled"
-		],
 		"3.1-beta-5": [
 			"<strong>NEW:</strong> Added custom color option for SlideToUnlock text",
 			"<strong>NEW:</strong> Added position option for Date and Time",
@@ -101,12 +95,14 @@
 		"3.3.3-25 (2017/01/27)": [
 			"Really fix the crashing bug (all color options are disabled due to <b>libcolorpicker</b> not yet updated for iOS 10)",
 			"Partial update for Slide to Unlock: support changing \"Press Home to unlock\""
+		],
+		"3.3.3-99 (2017/01/30)": [
+			"Update Status bar options for iOS 10",
+			"Update Slide to Unlock/Press Home to unlock options for iOS 10",
+			"Update lock screen idle timer for iOS 10",
+			"<strong>NOTE:</strong> Lock screen date/time options are still disabled"
 		]
 	},
-	"screenshots": {
-	},
-	"links": {
-		"<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
-		"<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
-	}
+	"screenshots": {},
+	"links": {}
 }

@@ -29,8 +29,5 @@
     "02.jpg": "Notifications",
     "03.jpg": "Date in Facebook feed"
   },
-  "links": {
-    "<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
-    "<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
-  }
+  "links": {}
 }

@@ -3,16 +3,12 @@
   "package": "com.chewmieser.statusvolx",
   "author": "fidele007",
   "version": "0.4 (2016-01-17)",
-  "description": "<div>Tested on iOS 9.3.3, not tested on iOS 10.1.1.<br><br>An updated and hopefully bug-free version of StatusVol X. No new features will be included or should be expected. All credits to Steve Rolfe who brought this tweak to life.<br><br><a href='https://github.com/fidele007/StatusVolX'>GitHub link.</a></div>",
+  "description": "<div>Tested on iOS 9.3.3 and 10.2.<br><br>An updated and hopefully bug-free version of StatusVol X. No new features will be included or should be expected. All credits to Steve Rolfe who brought this tweak to life.<br><br><a href='https://github.com/fidele007/StatusVolX'>GitHub link.</a></div>",
   "changelog": {
     "0.4 (2016-01-17)" : [
       "Fix landscape orientation bug"
     ]
   },
-  "screenshots": {
-  },
-  "links": {
-    "<img class=\"icon\" src=\"twitter.png\"><strong> @kienforcefidele</strong>": "https://twitter.com/kienforcefidele",
-    "<img class=\"icon\" src=\"paypal.png\"><strong> Contribution via PayPal</strong>": "https://paypal.me/fidele007"
-  }
+  "screenshots": {},
+  "links": {}
 }

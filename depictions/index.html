@@ -177,7 +177,7 @@
 					var lKeys = Object.keys(links);
 					for (var l in lKeys) {
 						var link = lKeys[l];
-						var wrap = $("<a style=\"color:#333;\" href=\"" + links[link] + "\" target=\"_blank\"><li class=\"list-group-item\"></li></a>");
+						var wrap = $("<a style=\"color:#333;\" href=\"" + links[link] + "\"><li class=\"list-group-item\"></li></a>");
 						wrap.find(".list-group-item").append($.parseHTML(link));
 						$(".package-buttons .list-group").append(wrap);
 					}

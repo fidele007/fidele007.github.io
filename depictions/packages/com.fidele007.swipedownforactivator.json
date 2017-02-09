@@ -2,7 +2,7 @@
 	"name": "Swipe for Activator",
 	"package": "com.fidele007.swipedownforactivator",
 	"author": "fidele007",
-	"version": "0.2 (2017-02-09)",
+	"version": "0.2.1 (2017-02-09)",
 	"description": "<div>Trigger Activator actions through one of the following screen gestures:</div><ul><li>Swipe Down on Home Screen (native pull-down spotlight gesture)</li><li>Swipe Down on Lock Screen</li><li>Swipe Up on Home Screen</li><li>Swipe Up on Lock Screen</li></ul><div>There's an option to disable pull-down spotlight in Settings.</div>",
 	"changelog": {
 		"0.0.1-43": [
@@ -41,6 +41,9 @@
     ],
     "0.2 (2017-02-09)": [
     	"Update for iOS 10"
+    ],
+    "0.2.1 (2017-02-09)": [
+      "Fix vibration bug on homescreen swipe up"
     ]
 	},
 	"screenshots": {},

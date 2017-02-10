@@ -3,7 +3,7 @@
   "package": "com.fidele007.slidetounlock10",
   "author": "fidele007",
   "version": "0.0.2 (2016-02-10)",
-  "description": "<div>Bring back Slide to Unlock to iOS 10. This tweak brings up the passcode view when you slide to the right (normally to show Today view), or unlocks your device if you have no passcode set.</div>",
+  "description": "<div>Bring back Slide to Unlock to iOS 10. This tweak brings up the passcode view when you slide to the right (normally to show Today view), or unlocks your device if you have no passcode set.<br><br>You need to keep Today View enabled for the tweak to work.</div>",
   "changelog": {
     "0.0.1 (2016-02-10)": [
       "Initial release"

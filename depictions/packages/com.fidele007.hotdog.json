@@ -104,6 +104,7 @@
 		],
 		"3.3.3-275 (2017/02/10)":[
 			"<strong>NEW:</strong> Lock screen Date/Time should now work on iOS 10!",
+			"Improve status bar hiding",
 			"Status bar <i>hiding</i> and <i>coloring</i> options are now bundled into a separate dylib named HotDogStatusBarUI.dylib, meaning you can disable it if it turns out to be too buggy. The results are, for now, inconsistent for different users, especially the coloring thing. (I'll come back for you one day, status bar! <i>One day!</i>)",
 			"Lock screen idle timer duration should now work properly.",
 			"<span style=\"color:#602abf\">Press Home to unlock</span>'s immediate popup and hiding should work better now.",

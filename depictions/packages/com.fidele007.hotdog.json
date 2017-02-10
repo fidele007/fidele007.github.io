@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.3-275 (2017/02/10)",
+	"version": "3.3.3-281 (2017/02/10)",
 	"description": "<div>A cool tweak to customize your iOS experience.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -110,6 +110,12 @@
 			"<span style=\"color:#602abf\">Press Home to unlock</span>'s immediate popup and hiding should work better now.",
 			"Updated <strong><span style=\"color:#bf2a2a\">c</span><span style=\"color:#362abf\">o</span><span style=\"color:#bf2a86\">l</span><span style=\"color:#2a83bf\">o</span><span style=\"color:#2abf51\">r</span></strong> pickers!",
 			"<span style=\"color:#f4425f;font-weight:bold;\">Still not working:</span><ul style=\"list-style-type:square\"><li>Call view</li><li>Media</li><li>Notifications except <span style=\"color:#2a6abf;\">No Notifications</span> custom text</li><li>Others except Lock screen idle timer duration</li></ul>"
+		],
+		"3.3.3-276 (2017/02/10)":[
+			"Fix default position bug for LS Date/Time"
+		],
+		"3.3.3-281 (2017/02/10)":[
+			"Fix crashing album art bug on iOS 9 and down"
 		]
 	},
 	"screenshots": {},

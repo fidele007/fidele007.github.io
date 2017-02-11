@@ -27,30 +27,25 @@
 		.fullchangelog-header {font-size: 16px;max-height: 43px}
 	</style>
 </head>
-<body>
-	<div class="container">
+	<body>
+		<div class="container">
+			<div class="row alert alert-danger package-error"></div>
+				<!-- <div class="panel row panel-default">
+					<div class="panel-heading">
+						<h1 class="package-name"></h1>
+						<small class="package-author"></small>
+					</div>
+				</div> -->
 
-		<div class="row alert alert-danger package-error"></div>
+			<div class="package-info">
+				<h2>Description</h2>
+				<div class="row panel panel-default">
+					<div class="panel-body package-desc"></div>
+				</div>
 
-			<!-- <div class="panel row panel-default">
-							<div class="panel-heading">
-									<h1 class="package-name"></h1>
-					<small class="package-author"></small>
-							</div>
-						</div> -->
+				<h2>New in <span class="latest-version"></span></h2>
 
-						<div class="package-info">
-							<h2>Description</h2>
-							<div class="row panel panel-default">
-								<div class="panel-body package-desc"></div>
-							</div>
-
-							<h2>New in <span class="latest-version"></span></h2>
-
-							<div class="row panel panel-default">
-					<!-- <div class="panel-heading">
-						<div class="label label-info badge-label latest-version"></div>
-					</div> -->
+				<div class="row panel panel-default">
 					<div class="panel-body changelog-list" style="padding:10px;"></div>
 				</div>
 
@@ -67,114 +62,87 @@
 					</div>
 					<div class="package-info package-versions fullchangelog"></div>
 				</div>
-
-				<!-- <div class="row panel panel-default">
-									<div class="panel-heading fullchangelog-header">
-										Full Changelog
-						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
-					</div>
-					<div class="package-info package-versions fullchangelog"></div>
-				</div> -->
-
 			</div>
 
 			<div class="row package-buttons">
 				<ul class="list-group"></ul>
 			</div>
-					<!-- <div class="row repo-buttons panel panel-default">
-						<div class="panel-heading">
-					<span class="glyphicon glyphicon-console"></span> This is a modified Boomerang's depiction.
-				</div>
-							<ul class="list-group">
-									<li class="list-group-item">
-						<a href="https://github.com/Jake0oo0/boomerang" target="_blank">
-												<span class="glyphicon glyphicon-wrench"></span> Boomerang Repository
-						</a>
-									</li>
-					<li class="list-group-item">
-									<a href="https://twitter.com/itsjake88" target="_blank">
-							<span class="glyphicon glyphicon-heart"></span> Follow Boomerang Dev
-						</a>
-									</li>
-							</ul>
-						</div> -->
+		</div>
 
-					</div>
+		<script>
+			if (typeof document.onselectstart!="undefined") {
+				document.onselectstart=new Function ("return false");
+			} else {
+				document.onmousedown=new Function ("return false");
+				document.onmouseup=new Function ("return true");
+			}
 
-					<script>
-						if (typeof document.onselectstart!="undefined") {
-						  document.onselectstart=new Function ("return false");
-						} else {
-						  document.onmousedown=new Function ("return false");
-						  document.onmouseup=new Function ("return true");
+			$(document).ready(function() {
+				function iOSversion() {
+					if (/iP(hone|od|ad)/.test(navigator.platform)) {
+						// supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+						var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+						return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+					}
+				}
+				var ver = iOSversion();
+				if (ver != null) {
+					console.log(ver[0]);
+				}
+
+				var dPackage = getParameterByName("p");
+				if (!dPackage) {
+					$(".package-error").text("This package doesn't seem to exist :(").css("display", "block");
+					$(".package-info").css("display", "none");
+					$(".package-name").text("Not Found");
+					return;
+				}
+
+				$.getJSON("packages/" + dPackage + ".json", function(data) {
+					document.title = data.name + " by " + data.author;
+					$(".package-name").text(data.name);
+					$(".package-desc").html(data.description);
+					$(".latest-version").text(data.version);
+					$(".package-author").text(" by " + data.author);
+
+					var cList = $(".changelog-list");
+					var changes = data.changelog[data.version];
+					for (var i = 0; i < changes.length - 1; i++) {
+						cList.append("<div style=\"border-bottom:1px solid #dad8d8;margin-left:-10px;margin-right:-10px;padding-bottom:5px;margin-bottom:5px;\">" + "<div style=\"margin-left:15px;margin-right:15px\">" + changes[i] + "</div>" + "</div>")
+					}
+					cList.append("<div style=\"margin-left:5px;margin-right:5px\">" + changes[changes.length-1] + "</div>");
+
+					$(".screenshots-header").click(function() {
+						$(".screenshots").slideToggle(function() {
+						});
+					});
+					var count = 0;
+					var screenshots = data.screenshots;
+					var sKeys = Object.keys(screenshots);
+					if (jQuery.isEmptyObject(screenshots)) {
+						$("#screenshot-tab").hide();
+					} else {
+						for (var s in sKeys) {
+							var screenshot = sKeys[s];
+							if (count % 2 === 0) {
+								$(".screenshots").append("<div class=\"subshots\"></div>");
+							}
+							$(".screenshots .subshots:last-child").append("<div class=\"col-xs-12\"><img class=\"img-responsive\" src=\"screenshots/" + dPackage + "/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"><p><strong>" + screenshots[screenshot] + "</strong></p><br></div>");
+							count += 1;
 						}
+					}
 
-						$(document).ready(function() {
-							function iOSversion() {
-							  if (/iP(hone|od|ad)/.test(navigator.platform)) {
-							    // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
-							    var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-							    return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
-							  }
-							}
-							var ver = iOSversion();
-							if (ver != null) {
-								console.log(ver[0]);
-							}
-
-							var dPackage = getParameterByName("p");
-							if (!dPackage) {
-								$(".package-error").text("This package doesn't seem to exist :(").css("display", "block");
-								$(".package-info").css("display", "none");
-								$(".package-name").text("Not Found");
-								return;
-							}
-
-							$.getJSON("packages/" + dPackage + ".json", function(data) {
-								document.title = data.name + " by " + data.author;
-								$(".package-name").text(data.name);
-								$(".package-desc").html(data.description);
-								$(".latest-version").text(data.version);
-								$(".package-author").text(" by " + data.author);
-
-								var cList = $(".changelog-list");
-								var changes = data.changelog[data.version];
-								for (var i = 0; i < changes.length - 1; i++) {
-									cList.append("<div style=\"border-bottom:1px solid #dad8d8;margin-left:-10px;margin-right:-10px;padding-bottom:5px;margin-bottom:5px;\">" + "<div style=\"margin-left:15px;margin-right:15px\">" + changes[i] + "</div>" + "</div>")
-								}
-								cList.append("<div style=\"margin-left:5px;margin-right:5px\">" + changes[changes.length-1] + "</div>");
-
-								$(".screenshots-header").click(function() {
-									$(".screenshots").slideToggle(function() {
-									});
-								});
-								var count = 0;
-								var screenshots = data.screenshots;
-								var sKeys = Object.keys(screenshots);
-								if (jQuery.isEmptyObject(screenshots)) {
-									$("#screenshot-tab").hide();
-								} else {
-									for (var s in sKeys) {
-										var screenshot = sKeys[s];
-										if (count % 2 === 0) {
-											$(".screenshots").append("<div class=\"subshots\"></div>");
-										}
-										$(".screenshots .subshots:last-child").append("<div class=\"col-xs-12\"><img class=\"img-responsive\" src=\"screenshots/" + dPackage + "/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"><p><strong>" + screenshots[screenshot] + "</strong></p><br></div>");
-										count += 1;
-									}
-								}
-
-								$(".fullchangelog-header").click(function() {
-									$(".fullchangelog").slideToggle(function() {
-									});
-								});
-								var latest = data.version;
-								var versions = Object.keys(data.changelog).reverse();
-								for (var v in versions) {
-									var version = versions[v];
-									var panel = $("<div class=\"panel-default \"></div>");
-									panel.append(" <div class=\"panel-heading\" style=\"text-transform: uppercase; font-size:14px; font-weight:400; color: #6d6d72;\">" + version + "</div>");
-									panel.append(" <div class=\"panel-body changelog-list\" style=\"padding:10px;\"></div>");
+					$(".fullchangelog-header").click(function() {
+						$(".fullchangelog").slideToggle(function() {
+						});
+					});
+					var latest = data.version;
+					var versions = Object.keys(data.changelog).reverse();
+					for (var v in versions) {
+						var version = versions[v];
+						var panel = $("<div class=\"panel-default \"></div>");
+						panel.append(" <div class=\"panel-heading\" style=\"text-transform: uppercase; font-size:14px; font-weight:400; color: #6d6d72;\">" + version + "</div>");
+						panel.append(" <div class=\"panel-body changelog-list\" style=\"padding:10px;\"></div>");
 						if (version === latest) {
 							panel.find(".panel-heading").append(" <div class=\"label label-info badge-label latest-version\">Current</div>");
 						}
@@ -189,9 +157,9 @@
 
 					var links = data.links;
 					var extra = {
-												"<img class=\"icon\" src=\"info.png\"><span style=\"font-size: 16px;font-weight:bold\">@kienforcefidele</span>": "https://twitter.com/kienforcefidele",
-												"<img class=\"icon\" src=\"love.png\"><span style=\"font-size: 16px;font-weight:bold\">Give energy ༼ つ ◕_◕ ༽つ <span style=\"font-style:italic;font-weight:bold;\"><span style=\"color:#253b80;\">Pay</span><span style=\"color:#419bd7;\">Pal</strong></span></span>": "https://paypal.me/fidele007"
-											};
+						"<img class=\"icon\" src=\"info.png\"><span style=\"font-size: 16px;font-weight:bold\">@kienforcefidele</span>": "https://twitter.com/kienforcefidele",
+						"<img class=\"icon\" src=\"love.png\"><span style=\"font-size: 16px;font-weight:bold\">Give energy ༼ つ ◕_◕ ༽つ <span style=\"font-style:italic;font-weight:bold;\"><span style=\"color:#253b80;\">Pay</span><span style=\"color:#419bd7;\">Pal</strong></span></span>": "https://paypal.me/fidele007"
+					};
 					$.extend(links, extra);
 					var lKeys = Object.keys(links);
 					for (var l in lKeys) {
@@ -202,27 +170,27 @@
 					}
 				})
 
-							.fail(function() {
-								$(".package-error").text("An error occurred while retrieving package info!").css("display", "block");
-								$(".package-info").css("display", "none");
-								$(".package-name").text("Repository Error");
-								return;
-							});
+				.fail(function() {
+					$(".package-error").text("An error occurred while retrieving package info!").css("display", "block");
+					$(".package-info").css("display", "none");
+					$(".package-name").text("Repository Error");
+					return;
+				});
 
-							function getParameterByName(name) {
-								name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-								var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-								results = regex.exec(location.search);
-								return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
-							}
-						});
-					</script>
-				</body>
-				<footer>
-				  <div class="container">
-				  <p style="text-align: right;">
-				    <small>Icons made by <a href="https://www.iconfinder.com/Zerg" target="_blank">KOKOTA</a>.</small>
-				  </p>
-				  </div>
-				</footer>
-				</html>
+				function getParameterByName(name) {
+					name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+					var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+					return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+				}
+			});
+		</script>
+	</body>
+	<footer>
+		<div class="container">
+			<p style="text-align: right;">
+				<small>Icons made by <a href="https://www.iconfinder.com/Zerg" target="_blank">KOKOTA</a>.</small>
+			</p>
+		</div>
+	</footer>
+</html>

@@ -13,7 +13,7 @@
 		a:link, a:visited, a:hover {text-decoration: none;}
 		.badge-label {border-radius:1em;}
 		.panel, .list-group-item, .alert {border-radius: 0 !important;}
-		.list-group-item:last-child {margin-bottom: -1px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAn0lEQVRIx73VUQqAIBAEUCm6WWIQ/hZBh+nmtkGGyKKzuiTMj8FD1sFMCMHkoTVTVu5bLRxmKdcbMVrCmtAUcwwmRiM2Uc4CCKPpCVXQfIbdKHfLXSi/CaKUAQIF6EYZIbAVrdcAQ/eIYmUVoJrgAYESTOtSvvn9VxsQ81CxUUzzcfDFuWti0ge2iuUnXHoxboauB0N+oyKs1EPbgj25AROsvvXJNxxhAAAAAElFTkSuQmCC);background-position:96.5% center;background-repeat:no-repeat;background-size: 10px 13px;}
+		.list-group-item:last-child {margin-bottom: -1px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAAn0lEQVRIx73VUQqAIBAEUCm6WWIQ/hZBh+nmtkGGyKKzuiTMj8FD1sFMCMHkoTVTVu5bLRxmKdcbMVrCmtAUcwwmRiM2Uc4CCKPpCVXQfIbdKHfLXSi/CaKUAQIF6EYZIbAVrdcAQ/eIYmUVoJrgAYESTOtSvvn9VxsQ81CxUUzzcfDFuWti0ge2iuUnXHoxboauB0N+oyKs1EPbgj25AROsvvXJNxxhAAAAAElFTkSuQmCC);background-position:96.5% center;background-repeat:no-repeat;background-size: 10px 13px;max-height: 43px;}
 		.subshots {text-align: center;}
 		.subshots:nth-child(1) {margin-bottom: 10px;}
 		.screenshots img {display: block; height: auto; line-height: 1; max-width: 100%; width: 100%;}
@@ -23,8 +23,8 @@
 		.screenshots {display: none;}
 		.fullchangelog {display: none;}
 		.latest-version {vertical-align: right;}
-		.icon {height:30px;width:30px;margin-right:8px;}
-		.fullchangelog-header {font-size: 16px;}
+		.icon {height:30px;width:30px;margin-right:8px;margin-top: -4px;}
+		.fullchangelog-header {font-size: 16px;max-height: 43px}
 	</style>
 </head>
 <body>
@@ -62,7 +62,7 @@
 					<div class="panel-body row screenshots"></div>
 
 					<div class="panel-heading fullchangelog-header">
-						<img class="icon" src="new-changelog.png"> Full Changelog
+						<img class="icon" src="changelog.png"> Full Changelog
 						<small><span class="glyphicon glyphicon-triangle-bottom"></span></small>
 					</div>
 					<div class="package-info package-versions fullchangelog"></div>
@@ -182,8 +182,8 @@
 
 					var links = data.links;
 					var extra = {
-												"<img class=\"icon\" src=\"twitter.png\"><span style=\"font-size: 16px;font-weight:bold\">@kienforcefidele</span>": "https://twitter.com/kienforcefidele",
-												"<img class=\"icon\" src=\"paypal.png\"><span style=\"font-size: 16px;font-weight:bold\">Give energy ༼ つ ◕_◕ ༽つ <span style=\"font-style:italic;font-weight:bold;\"><span style=\"color:#253b80;\">Pay</span><span style=\"color:#419bd7;\">Pal</strong></span></span>": "https://paypal.me/fidele007"
+												"<img class=\"icon\" src=\"info.png\"><span style=\"font-size: 16px;font-weight:bold\">@kienforcefidele</span>": "https://twitter.com/kienforcefidele",
+												"<img class=\"icon\" src=\"love.png\"><span style=\"font-size: 16px;font-weight:bold\">Give energy ༼ つ ◕_◕ ༽つ <span style=\"font-style:italic;font-weight:bold;\"><span style=\"color:#253b80;\">Pay</span><span style=\"color:#419bd7;\">Pal</strong></span></span>": "https://paypal.me/fidele007"
 											};
 					$.extend(links, extra);
 					var lKeys = Object.keys(links);
@@ -211,4 +211,11 @@
 						});
 					</script>
 				</body>
+				<footer>
+				  <div class="container">
+				  <p style="text-align: right;">
+				    <small>Icons made by <a href="https://www.iconfinder.com/Zerg" target="_blank">KOKOTA</a>.</small>
+				  </p>
+				  </div>
+				</footer>
 				</html>

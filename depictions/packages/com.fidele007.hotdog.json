@@ -120,6 +120,6 @@
 	},
 	"screenshots": {},
 	"links": {
-		"<img class=\"icon\" src=\"statistics.png\"><span style=\"font-size: 16px;font-weight:bold\">Download statistics</span>": "http://apt.thebigboss.org/getfilehistory2.php?file=HotDog"
+		"<img class=\"icon\" src=\"statistics.png\"><span>Download Statistics</span>": "http://apt.thebigboss.org/getfilehistory2.php?file=HotDog"
 	}
 }

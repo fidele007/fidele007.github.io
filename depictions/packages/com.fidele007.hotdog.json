@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.3-281 (2017/02/10)",
+	"version": "3.3.3-487 (2017/02/26)",
 	"description": "<div>A cool tweak to customize your iOS experience.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -116,6 +116,14 @@
 		],
 		"3.3.3-281 (2017/02/10)":[
 			"Fix crashing album art bug on iOS 9 and down"
+		],
+		"3.3.3-487 (2017/02/26)":[
+			"Support for <b>Notifications</b> section",
+			"Support for <b>Media</b> section",
+			"Support for <b>Call View</b> section",
+			"Fix default lock screen idle time",
+			"Fix date/time label appearing with media controls view when they are not supposed to",
+			"Fix crashing bug on iOS 7 due to deprecated methods in Passcode view"
 		]
 	},
 	"screenshots": {},

@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.3-487 (2017/02/26)",
+	"version": "3.3.3-684 (2017/03/02)",
 	"description": "<div>A cool tweak to customize your iOS experience.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -124,6 +124,18 @@
 			"Fix default lock screen idle time",
 			"Fix date/time label appearing with media controls view when they are not supposed to",
 			"Fix crashing bug on iOS 7 due to deprecated methods in Passcode view"
+		],
+		"3.3.3-684 (2017/03/02)": [
+			"Full support for <b>Others</b> section",
+			"Add option to hide LS blur (Others)",
+			"Add option to hide LS page indicator (Others)",
+			"Alpha values for Date & Time view are manually managed now, so <i>expect</i> more bugs ;p",
+			"Attempt to fix album art disappearing after dismissing notifications. (seriously, fuck Apple for thinking it's a good idea to start hiding shit when they don't even directly overlap each other.)",
+			"Fix date view flickering bug on LS turn on with media controls",
+			"Fix date view disappearing bug when media controls are automatically dismissed",
+			"Fix bug where charging text overlaps with the date label when it's not supposed to",
+			"Fix date view showing when in search view in Today View",
+			"Fix \"Press home to unlock\" color incompatibility with ColorFlow 3"
 		]
 	},
 	"screenshots": {},

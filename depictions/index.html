@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<style>
-		h2 {color: #6d6d72; font-size: 14px; font-weight: 400; text-transform: uppercase;}
-		body {background-color: #efeff4;font:14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;}
+		h2 {color: #6d6d72; font-size: 15px; font-weight: 400; text-transform: uppercase;}
+		body {background-color: #efeff4;font:15px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;}
 		a:link, a:visited, a:hover {text-decoration: none;}
 		.badge-label {border-radius:1em;}
 		.panel, .list-group-item, .alert {border-radius: 0 !important;}
@@ -107,7 +107,7 @@
 					var cList = $(".changelog-list");
 					var changes = data.changelog[data.version];
 					for (var i = 0; i < changes.length - 1; i++) {
-						cList.append("<div style=\"border-bottom:1px solid #dad8d8;margin-left:-10px;margin-right:-10px;padding-bottom:5px;margin-bottom:5px;\">" + "<div style=\"margin-left:15px;margin-right:15px\">" + changes[i] + "</div>" + "</div>")
+						cList.append("<div style=\"border-bottom:1px solid #dad8d8;margin-left:-10px;margin-right:-10px;padding-bottom:7px;margin-bottom:7px;\">" + "<div style=\"margin-left:15px;margin-right:15px\">" + changes[i] + "</div>" + "</div>")
 					}
 					cList.append("<div style=\"margin-left:5px;margin-right:5px\">" + changes[changes.length-1] + "</div>");
 					$(".screenshots-header").click(function() {
@@ -139,7 +139,7 @@
 					for (var v in versions) {
 						var version = versions[v];
 						var panel = $("<div class=\"panel-default \"></div>");
-						panel.append(" <div class=\"panel-heading\" style=\"text-transform: uppercase; font-size:14px; font-weight:400; color: #6d6d72;\">" + version + "</div>");
+						panel.append(" <div class=\"panel-heading\" style=\"text-transform: uppercase; font-size:15px; font-weight:400; color: #6d6d72;\">" + version + "</div>");
 						panel.append(" <div class=\"panel-body changelog-list\" style=\"padding:10px;\"></div>");
 						if (version === latest) {
 							panel.find(".panel-heading").append(" <div class=\"label label-info badge-label latest-version\">Current</div>");
@@ -147,7 +147,7 @@
 						var changes = data.changelog[version];
 						for (var i = 0; i < changes.length - 1; i++) {
 							var change = changes[i];
-							panel.find(".changelog-list").append("<div style=\"border-bottom:1px solid #dad8d8;margin-left:-10px;margin-right:-10px;padding-bottom:5px;margin-bottom:5px;\">" + "<div style=\"margin-left:15px;margin-right:15px\">" + change + "</div>" + "</div>");
+							panel.find(".changelog-list").append("<div style=\"border-bottom:1px solid #dad8d8;margin-left:-10px;margin-right:-10px;padding-bottom:7px;margin-bottom:7px;\">" + "<div style=\"margin-left:15px;margin-right:15px\">" + change + "</div>" + "</div>");
 						}
 						panel.find(".changelog-list").append("<div style=\"margin-left:5px;margin-right:5px\">" + changes[changes.length-1] + "</div>");
 						$(".package-versions").append(panel);

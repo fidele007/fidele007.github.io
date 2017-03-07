@@ -2,7 +2,7 @@
 	"name": "HotDog",
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
-	"version": "3.3.3-684 (2017/03/02)",
+	"version": "3.3.3-1085 (2017/03/07)",
 	"description": "<div>A cool tweak to customize your iOS experience.</div>",
 	"changelog": {
 		"3.1-beta-5": [
@@ -136,6 +136,18 @@
 			"Fix bug where charging text overlaps with the date label when it's not supposed to",
 			"Fix date view showing when in search view in Today View",
 			"Fix \"Press home to unlock\" color incompatibility with ColorFlow 3"
+		],
+		"3.3.3-1085 (2017/03/07)": [
+			"Fix date view moving back to its default position due to ColorFlow 3",
+			"Another attempt at fixing the disappearing album art bug (fingers crossed)",
+			"Add an option to hide date/time view (for those who hold a grudge against the native date/time labels)",
+			"Add more position options for lock screen media controls",
+			"Add options to make lock screen volume slider knob smaller (you can even make your own knob images by replacing the ones in /Library/Application Support/HotDog)",
+			"Add Hebrew localization (thanks to /u/Aransh)",
+			"Add lock button in Settings to easily go back to lock screen",
+			"Add option to hide lock icon on lock screen status bar",
+			"Add option to hide status bar time while media is playing",
+			"Improve \"Press Home to Unlock\" showing immediately"
 		]
 	},
 	"screenshots": {},

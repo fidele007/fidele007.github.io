@@ -138,6 +138,7 @@
 			"Fix \"Press home to unlock\" color incompatibility with ColorFlow 3"
 		],
 		"3.3.3-1085 (2017/03/07)": [
+			"<span style=\"color:#f4425f;font-weight:bold;\">WARNING:</span> All preferences in Media section will be reset. Back them up before updating.",
 			"Fix date view moving back to its default position due to ColorFlow 3",
 			"Another attempt at fixing the disappearing album art bug (fingers crossed)",
 			"Add an option to hide date/time view (for those who hold a grudge against the native date/time labels)",

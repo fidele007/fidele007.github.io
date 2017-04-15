@@ -2,7 +2,7 @@
 	"name": "Universal Mute",
 	"package": "com.fidele007.universalmute",
 	"author": "fidele007",
-	"version": "1.0-7",
+	"version": "1.1.2 (2017/04/15)",
 	"description": "<div>A simple tweak which mutes the media volume when the ringer is muted.</div><br><div>Configure options in Settings.</div>",
 	"changelog": {
 		"0.0.1-17": [
@@ -16,6 +16,9 @@
 		],
 		"1.0-7": [
 			"Universal Mute now works with Ringer flipswitch"
+		],
+		"1.1.2 (2017/04/15)": [
+			"Disable media volume mute on SpringBoard start if audio is playing (compatibility with <b>Don't Stop the Party!</b>)"
 		]
 	},
 	"screenshots": {},

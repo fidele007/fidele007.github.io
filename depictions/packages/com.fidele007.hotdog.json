@@ -3,6 +3,8 @@
 	"package": "com.fidele007.hotdog",
 	"author": "fidele007",
 	"version": "3.3.3-1085 (2017/03/07)",
+	"minOSVersion": "7.0",
+	"maxOSVersion": "10.2",
 	"description": "<div>A cool tweak to customize your iOS experience.</div>",
 	"changelog": {
 		"3.1-beta-5": [

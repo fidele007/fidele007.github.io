@@ -4,7 +4,7 @@
 	"author": "fidele007",
 	"version": "1.5 (2019-11-02)",
 	"minOSVersion": "7.0",
-	"maxOSVersion": "12.4",
+	"maxOSVersion": "12.4.0",
 	"description": "<div>Replace Dictation key with Emoji key 😃. For the tweak to work, you have to have Emoji keyboard chosen as one of your active keyboards in Settings > General > Keyboard > Keyboards.</div><br/><div>Features included:</div><ul><li>Tap on the Emoji key (which now replaces the Dication key) to go to the Emoji Keyboard.</li><li>Tap <strong>ABC</strong> on the Emoji Keyboard to go back to your previous keyboard.</li></ul>",
 	"changelog": {
 		"0.0.1-37": [

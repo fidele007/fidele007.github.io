@@ -165,7 +165,7 @@ $(document).ready(function () {
 
         var links = data.links;
         var extra = {
-            "<img class=\"icon\" src=\"info.png\"><span>Twitter @kienforcefidele</span>": "https://twitter.com/fidel3007",
+            "<img class=\"icon\" src=\"info.png\"><span>Twitter @fidel3007</span>": "https://twitter.com/fidel3007",
             "<img class=\"icon\" src=\"love.png\"><span>Give Energy ༼ つ ◕_◕ ༽つ <span style=\"font-style:italic;font-weight:bold;\"><span style=\"color:#253b80;\">Pay</span><span style=\"color:#419bd7;\">Pal</strong></span></span>": "https://paypal.me/fidele007"
         };
         $.extend(links, extra);

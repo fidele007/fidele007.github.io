@@ -39,9 +39,9 @@ $(document).ready(function () {
             }
         }
 
-        if (version1Array.length > compareCount && version1Array[i + 1] !== '0') {
+        if (version1Array.length > compareCount && version1Array[compareCount] !== '0') {
             return 1;
-        } else if (version2Array.length > compareCount && version2Array[i + 1] !== '0') {
+        } else if (version2Array.length > compareCount && version2Array[compareCount] !== '0') {
             return -1;
         }
 

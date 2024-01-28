@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Akkhara</title>
+	<style>
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			padding: 1em;
+		}
+
+		#logo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+
+		#content > div {
+			margin-top: 1em;
+		}
+
+		#content a {
+			text-overflow: ellipsis;
+		}
+
+		div.scroll-container {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			background-color: #333;
+			overflow: auto;
+			white-space: nowrap;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		div.scroll-container img {
+			border-radius: 10px;
+		}
+
+		@media screen and (prefers-color-scheme: dark) {
+			body {
+				background-color: #121212;
+				color: white;
+			}
+
+			a:link {
+				color: #58a6ff;
+			}
+
+			a:visited {
+				color: #6d4b8d;
+			}
+
+			a:hover {
+				color: #ffffff;
+			}
+
+			a:active {
+				color: #ff4040;
+				text-decoration: none;
+				font-weight: normal;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="home">
+		🏠 <a href="/">Home</a>
+	</div>
+	<div id="logo">
+		<img src="akkhara.png" width="100px" title="Akkhara Logo"></img>
+		<div><strong>Akkhara (អក្ខរ)</strong></div>
+	</div>
+	<div id="content">
+		<div>
+			<div>
+				<img src="./android.png" alt="Android Logo" width="16"> Android: <a
+					href="https://play.google.com/store/apps/details?id=com.fidele007.akara">https://play.google.com/store/apps/details?id=com.fidele007.akara</a>
+			</div>
+			<div>
+				<img src="./apple.png" alt="Apple Logo" width="16"> iOS: <a
+					href="https://apps.apple.com/us/app/akkhara/id6472619833">https://apps.apple.com/us/app/akkhara/id6472619833</a>
+			</div>
+		</div>
+		<div>
+			Akkhara is a multi-language dictionary designed to enhance the way you explore and understand language.
+			Akkhara aims not just to simply be a dictionary; it's your linguistic companion, offering a seamless and
+			enriching experience for language enthusiasts, students, professionals and casual users alike.</div>
+
+		<div>Some of the most highlighting features include:</div>
+		<ul>
+			<li>Comprehensive word database</li>
+			<li>Multilingual support</li>
+			<li>Keyword search and in-definition word search</li>
+			<li>Approximative keyword search (fuzzy search)</li>
+			<li>Multi-dictionary search</li>
+			<li>Offline access</li>
+		</ul>
+
+		<div class="scroll-container">
+			<img src="./screenshot_1.png" alt="Multilingual Dictionaries" width="250px">
+			<img src="./screenshot_2.png" alt="Offline" width="250px">
+			<img src="./screenshot_3.png" alt="Approximative Search" width="250px">
+			<img src="./screenshot_4.png" alt="In-Definition Search" width="250px">
+			<img src="./screenshot_5.png" alt="Customizations" width="250px">
+		</div>
+
+		<div>
+			⚙️ <a href="./support.html">Support</a>
+		</div>
+	</div>
+</body>
+
+</html>

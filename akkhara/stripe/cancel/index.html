@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stripe Payment Cancelled</title>
+	<link rel="icon" type="image/x-icon" href="/akkhara/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/style/layout.css">
+	<style>
+		body {
+			text-align: center;
+		}
+	</style>
+	<script defer>
+		if (window.location.href.indexOf("appLinkFailed") < 0) {
+			setTimeout(function () {
+				window.location.search += 'appLinkFailed=true';
+			}, 200);
+
+			window.location = "akkhara://settings?action=verify_stripe_purchase";
+		}
+	</script>
+</head>
+
+<body>
+	<div id="logo">
+		<img src="/akkhara/akkhara.png" width="100px" title="Akkhara Logo"></img>
+		<div><strong>Akkhara (អក្ខរ)</strong></div>
+	</div>
+	<p>Your purchase has been cancelled. Redirecting you back to the application...</p>
+</body>
+
+</html>

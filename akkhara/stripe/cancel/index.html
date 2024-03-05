@@ -13,9 +13,9 @@
 		}
 	</style>
 	<script defer>
-		if (window.location.href.indexOf("appLinkFailed") < 0) {
+		if (window.location.href.indexOf("fallback") < 0) {
 			setTimeout(function () {
-				window.location.search += 'appLinkFailed=true';
+				window.location.search += 'fallback';
 			}, 200);
 
 			window.location = "akkhara://settings?action=verify_stripe_purchase";

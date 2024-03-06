@@ -13,12 +13,15 @@
 		}
 	</style>
 	<script defer>
+		const params = new URL(window.location.href).searchParams;
+		const sessionId = params.get('session_id');
 		if (window.location.href.indexOf("fallback") < 0) {
 			setTimeout(function () {
-				window.location.search += 'fallback';
+				window.location.search += '&fallback';
 			}, 200);
 
-			window.location = "akkhara://settings?action=verify_stripe_purchase";
+			// console.log("sessionId: " + sessionId);
+			window.location = "akkhara://settings?action=verify_stripe_payment&session_id=" + sessionId;
 		}
 	</script>
 </head>

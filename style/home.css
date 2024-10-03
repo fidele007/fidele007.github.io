@@ -73,12 +73,12 @@ p small {
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
-  padding: 10px;
+  /* padding: 10px; */
   /*background-color: white;*/
 }
 
 .btn-info {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* TABS */
@@ -122,7 +122,7 @@ label.nav {
 input[type="radio"]:checked + .page + label.nav {
   background: #9b59b6;
   color: #ffffff;
-  padding-left: 20px;
+  padding: 5px;
 }
 
 .nav div {
@@ -144,9 +144,9 @@ label.nav svg {
   grid-column-start: 1;
   grid-row-start: 2;
   grid-column-end: span 3;
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
   display: flex;
-  /* align-items: center; */
+  justify-content: center;
 }
 
 .page-contents > * {
@@ -235,6 +235,10 @@ label.nav svg {
   transition-delay: 4.2s;
 }
 
+.page-contents .column {
+  display: flex;
+}
+
 input[type="radio"] + .page {
   transition: transform 0.2s;
   transform: translateX(100%);
@@ -260,7 +264,7 @@ input[type="radio"]:checked + .page .page-contents > * {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 820px;
+  /* max-width: 820px; */
   gap: 25px;
 }
 
@@ -272,6 +276,11 @@ input[type="radio"]:checked + .page .page-contents > * {
 .card--2 .card__img,
 .card--2 .card__img--hover {
   background-image: url("../khmer-system-fonts-win10.png");
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url("../plot-twist-video-thumbnail.jpg");
 }
 
 .card__like {
@@ -325,16 +334,18 @@ input[type="radio"]:checked + .page .page-contents > * {
   border-top-right-radius: 12px;
   top: 0;
 }
+
 .card {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
   min-width: 290px;
-  width: 33.3%;
+  width: 25%;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
+
 .card:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
   transform: scale(1.05, 1.05);
@@ -386,6 +397,15 @@ input[type="radio"]:checked + .page .page-contents > * {
 /* Desktop */
 @media (min-width: 480px) {
   .center-div {
-    max-width: 900px;
+    max-width: 925px;
   }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }

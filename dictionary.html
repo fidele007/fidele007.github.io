@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+	<title>All-in-One Dictionary</title>
+	<style>
+		@media (prefers-color-scheme: dark) {
+			body {
+				background: #1b1b1b;
+			}
+		}
+
+		.page {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#search-box-container {
+			display: flex;
+			width: max-content;
+			z-index: 10;
+			position: sticky;
+			position: -webkit-sticky;
+			top: 0;
+			background-color: lightgray;
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		#result-container {
+			margin-top: 5px;
+		}
+
+		#result-container .row {
+			display: flex;
+			resize: vertical;
+			overflow: auto;
+		}
+
+		iframe {
+			width: 100%;
+			min-height: 500px;
+			height: 100%;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page">
+		<div id="search-box-container">
+			<form id="search-box" onsubmit="return onSubmitKeyword(event)">
+				<input id="keyword" type="text" placeholder="Type keyword here">
+				<input type="submit" name="submit" value="Submit" />
+				<input type="submit" name="submit-clipboard" value="Submit from Clipboard" />
+			</form>
+		</div>
+
+		<div id="result-container">
+			<div class="row">
+				<iframe style="display: none;" id="tonlesapdict"></iframe>
+				<iframe style="display: none;" id="english-khmer"></iframe>
+			</div>
+			<div class="row">
+				<iframe style="display: none;" id="antkh"></iframe>
+				<iframe style="display: none;" id="merriam-webster"></iframe>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function searchKeyword(keyword) {
+		if (!keyword) {
+			return;
+		}
+
+		const tonlesapIframe = document.getElementById('tonlesapdict');
+		const tonlesapUrl = `https://www.tonlesapdict.com/dictionary/${keyword.replace(' ', '-')}`;
+		tonlesapIframe.setAttribute('src', tonlesapUrl);
+		tonlesapIframe.style.display = 'block';
+
+		const englishKhmerIframe = document.getElementById('english-khmer');
+		const englishKhmerUrl = `http://english-khmer.com/index.php?gcm=1&gword=${encodeURIComponent(keyword)}`;
+		englishKhmerIframe.setAttribute('src', englishKhmerUrl);
+		englishKhmerIframe.style.display = 'block';
+
+		const antkhIframe = document.getElementById('antkh');
+		const antkhUrl = `http://dict.antkh.com/dictionaries/${encodeURIComponent(keyword)}.aspx`;
+		antkhIframe.setAttribute('src', antkhUrl);
+		antkhIframe.style.display = 'block';
+
+		const merriamIframe = document.getElementById('merriam-webster');
+		const merriamUrl = `https://www.merriam-webster.com/dictionary/${encodeURIComponent(keyword)}`;
+		merriamIframe.setAttribute('src', merriamUrl);
+		merriamIframe.style.display = 'block';
+	}
+
+	function onSubmitKeyword(e) {
+		e.preventDefault();
+
+		if (e.submitter.name == 'submit') {
+			const keywordInput = document.getElementById('keyword');
+			const keyword = keywordInput.value.trim();
+			console.log(`keyword: ${keyword}`);
+
+			searchKeyword(keyword);
+		} else if (e.submitter.name =='submit-clipboard') {
+			navigator.clipboard.readText()
+			.then(text => {
+				console.log('Pasted content: ', text);
+				if (text) {
+					document.getElementById('keyword').value = text;
+				}
+
+				searchKeyword(text);
+			})
+			.catch(err => {
+				console.error('Failed to read clipboard contents: ', err);
+			});
+		}
+	}
+</script>
+
+</html>

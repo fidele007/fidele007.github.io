@@ -61,7 +61,7 @@
 
 		<div id="result-container">
 			<div class="row">
-				<iframe style="display: none;" id="tonlesapdict"></iframe>
+				<iframe style="display: none;" id="tonlesapdict" allow="clipboard-write"></iframe>
 				<iframe style="display: none;" id="english-khmer"></iframe>
 			</div>
 			<div class="row">
@@ -83,7 +83,7 @@
 		tonlesapIframe.style.display = 'block';
 
 		const englishKhmerIframe = document.getElementById('english-khmer');
-		const englishKhmerUrl = `http://english-khmer.com/index.php?gcm=1&gword=${encodeURIComponent(keyword)}`;
+		const englishKhmerUrl = `https://english-khmer.com/index.php?gcm=1&gword=${encodeURIComponent(keyword)}`;
 		englishKhmerIframe.setAttribute('src', englishKhmerUrl);
 		englishKhmerIframe.style.display = 'block';
 

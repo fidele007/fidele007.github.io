@@ -8,6 +8,30 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/style/layout.css">
 	<style>
+		#home {
+			display: flex;
+		}
+
+		#home a {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			text-decoration: none;
+			padding: 5px 7px;
+			border-radius: 24px;
+			border: 1px solid transparent;
+			color: inherit;
+		}
+
+		#home a:visited, #home a:active {
+			color: inherit;
+		}
+
+		#home a:hover {
+			border: 1px solid #33333350;
+			background-color: #4b4b4b69;
+		}
+
 		body {
 			padding: 1em;
 		}
@@ -25,6 +49,17 @@
 
 		#content a {
 			text-overflow: ellipsis;
+		}
+
+		#app-badges {
+			display: flex;
+    		justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		#app-badges a {
+			text-decoration: none;
 		}
 
 		div.scroll-container {
@@ -108,28 +143,30 @@
 			background-color: rgb(101, 152, 177);
 		}
 
+		.center-div {
+			display: flex;
+			justify-content: center;
+		}
+
+		.support-btn {
+            background-color: #1867a0;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .support-btn:hover {
+            background-color: #0b4975;
+            transform: scale(1.1);
+        }
+
 		@media screen and (prefers-color-scheme: dark) {
 			body {
 				background-color: #121212;
 				color: white;
-			}
-
-			a:link {
-				color: #58a6ff;
-			}
-
-			a:visited {
-				color: #6d4b8d;
-			}
-
-			a:hover {
-				color: #ffffff;
-			}
-
-			a:active {
-				color: #ff4040;
-				text-decoration: none;
-				font-weight: normal;
 			}
 		}
 	</style>
@@ -137,22 +174,32 @@
 
 <body>
 	<div id="home">
-		🏠 <a href="/">Home</a>
+		<a href="/">
+			<img src="/site_logo_small.png" width="32px" title="Developer Logo"></img>
+			Home
+		</a>
 	</div>
 	<div id="logo">
 		<img src="akkhara.png" width="100px" title="Akkhara Logo"></img>
 		<div><strong>Akkhara (អក្ខរ)</strong></div>
 	</div>
 	<div id="content">
-		<div>
-			<div>
-				<img src="./android.png" alt="Android Logo" width="16"> Android: <a
-					href="https://play.google.com/store/apps/details?id=com.fidele007.akara">https://play.google.com/store/apps/details?id=com.fidele007.akara</a>
-			</div>
-			<div>
-				<img src="./apple.png" alt="Apple Logo" width="16"> iOS: <a
-					href="https://apps.apple.com/us/app/akkhara/id6472619833">https://apps.apple.com/us/app/akkhara/id6472619833</a>
-			</div>
+		<div id="app-badges">
+			<a href="https://apps.apple.com/app/id6472619833" target="_blank">
+				<img src="./images/badges/appstore-badge.svg" height="50"/>
+			</a>
+			<a href="https://play.google.com/store/apps/details?id=com.fidele007.akara" target="_blank">
+				<img src="./images/badges/playstore-badge.svg" height="50"/>
+			</a>
+			<a href="https://apps.microsoft.com/detail/9nwsnxzwcq36?mode=direct" target="_blank">
+				<img src="./images/badges/msstore-badge.svg" height="50"/>
+			</a>
+			<a href="https://snapcraft.io/akkhara" target="_blank">
+				<img src="./images/badges/snapstore-badge.svg" height="50"/>
+			</a>
+			<a href="https://flathub.org/apps/io.github.fidele007.akkhara" target="_blank">
+				<img src="./images/badges/flathub-badge.svg" height="50"/>
+			</a>
 		</div>
 		<div>
 			Akkhara is a multi-language dictionary designed to enhance the way you explore and understand language.
@@ -177,8 +224,8 @@
 			<img src="./screenshot_5.png" alt="Customizations" width="250px">
 		</div>
 
-		<div>
-			⚙️ <a href="./support.html">Support</a>
+		<div class="center-div">
+			<button class="support-btn" onclick="window.open('./support.html')">Support</button>
 		</div>
 
 		<div>

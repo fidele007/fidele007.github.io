@@ -1,327 +1,404 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Force Fidele KIEN</title>
-  <link rel="icon" type="image/png" href="site_logo_small.png">
+  <meta name="description" content="Force Fidele KIEN paper digital portfolio.">
+  <title>Force Fidele KIEN | Paper Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@300;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#FAF9F6",
+            background: "#FAF9F6",
+            "on-surface": "#1E293B",
+            primary: "#1E293B",
+            "on-primary": "#FAF9F6",
+            secondary: "#F97316",
+            "on-secondary": "#ffffff",
+            outline: "#D1D5DB",
+            "outline-variant": "#E5E7EB",
+            "surface-container": "#F3F4F6",
+            "surface-container-low": "#FFFFFF",
+            "on-surface-variant": "#475569"
+          },
+          borderRadius: {
+            DEFAULT: "0px",
+            lg: "0px",
+            xl: "0px",
+            full: "9999px"
+          },
+          fontFamily: {
+            headline: ["Sora", "sans-serif"],
+            display: ["Sora", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+            label: ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1E293B;
+      cursor: default;
+    }
 
-  <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style/home.css">
+    .paper-grid {
+      background-image:
+        linear-gradient(#E5E7EB 1px, transparent 1px),
+        linear-gradient(90deg, #E5E7EB 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .print-border {
+      border: 2px solid #1E293B;
+    }
+
+    .safety-orange-glow {
+      box-shadow: 4px 4px 0 #F97316;
+    }
+
+    .navy-shadow {
+      box-shadow: 4px 4px 0 #1E293B;
+    }
+
+    .material-symbols-outlined {
+      vertical-align: middle;
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+
+    ::selection {
+      background: #F97316;
+      color: #fff;
+    }
+
+    #mobile-menu {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #mobile-menu.hidden-menu {
+      transform: translateX(100%);
+    }
+  </style>
 </head>
+<body class="font-body selection:bg-secondary selection:text-white overflow-x-hidden">
+  <div class="fixed inset-0 paper-grid pointer-events-none opacity-40 z-0"></div>
 
-<body>
-  <div class="container">
-    <img src="site_logo_small.png" alt="Site Logo" height="90" width="90" />
-    <h1>Force Fidele KIEN</h1>
-    <h2>Software Developer</h2>
-    <div>
-      <a href="CV_ForceFideleKIEN_English.pdf" target="_blank" class="link-icon">
-        <svg width="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="currentColor" fill-rule="evenodd" d="M11 2a1 1 0 10-2 0v7.74L5.173 6.26a1 1 0 10-1.346 1.48l5.5 5a1 1 0 001.346 0l5.5-5a1 1 0 00-1.346-1.48L11 9.74V2zm-7.895 9.204A1 1 0 001.5 12v3.867a2.018 2.018 0 002.227 2.002c1.424-.147 3.96-.369 6.273-.369 2.386 0 5.248.236 6.795.383a2.013 2.013 0 002.205-2V12a1 1 0 10-2 0v3.884l-13.895-4.68zm0 0L2.5 11l.605.204zm0 0l13.892 4.683a.019.019 0 01-.007.005h-.006c-1.558-.148-4.499-.392-6.984-.392-2.416 0-5.034.23-6.478.38h-.009a.026.026 0 01-.013-.011V12a.998.998 0 00-.394-.796z"></path> </g></svg>
-        Download CV
+  <header class="fixed top-0 left-0 w-full z-[100] bg-surface/80 border-b-2 border-primary backdrop-blur-sm px-4 md:px-8 h-[70px] flex justify-between items-center">
+    <a class="flex items-center gap-3 md:gap-4" href="#top" aria-label="Force Fidele KIEN home">
+      <div class="bg-primary p-1 shrink-0">
+        <img alt="Force Fidele Logo" class="h-6 w-6 md:h-8 md:w-8 object-contain invert" src="site_logo_small.png">
+      </div>
+      <span class="font-headline text-lg md:text-xl font-bold tracking-tighter uppercase whitespace-nowrap">Force Fidele KIEN</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Primary navigation">
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#projects">01. Projects</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#experience">02. Experience</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#education">03. Education</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#about">04. About</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a class="hidden sm:block bg-secondary text-white px-6 py-2 font-label text-xs uppercase font-bold tracking-widest navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="mailto:force@fidele007.com">
+        Contact_Admin
       </a>
+      <button class="md:hidden w-10 h-10 border-2 border-primary flex items-center justify-center bg-white" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
-    <hr />
-    <div class="social-container">
-      <a href="https://www.linkedin.com/in/force-fidele-kien" target="_blank" class="link-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin"
-          class="lucide lucide-linkedin w-5 h-5">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-          <rect width="4" height="12" x="2" y="9"></rect>
-          <circle cx="4" cy="4" r="2"></circle>
-        </svg>
-        LinkedIn
-      </a>
+  </header>
 
-      <a href="https://github.com/fidele007" target="_blank" class="link-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="github"
-          class="lucide lucide-github w-5 h-5">
-          <path
-            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
-          </path>
-          <path d="M9 18c-4.51 2-5-2-7-2"></path>
-        </svg>
-        GitHub
-      </a>
+  <div class="fixed inset-0 z-[110] bg-surface border-l-4 border-primary hidden-menu md:hidden flex flex-col p-8 pt-24 gap-8" id="mobile-menu">
+    <button class="absolute top-6 right-6 w-10 h-10 border-2 border-primary flex items-center justify-center bg-white" id="menu-close" type="button" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#projects">01. Projects</a>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#experience">02. Experience</a>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#education">03. Education</a>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#about">04. About</a>
+    <a class="mt-auto bg-secondary text-white px-6 py-4 font-label text-sm uppercase font-bold tracking-widest navy-shadow text-center" href="mailto:force@fidele007.com">
+      Contact_Admin
+    </a>
+  </div>
 
-      <a href="https://x.com/forcefidele" target="_blank" class="link-icon">
-        <svg width="18" height="18" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"
-          stroke="currentColor">
-          <path
-            d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
-            fill="currentColor" />
-        </svg>
-        X (formerly Twitter)
-      </a>
-
-      <a href="mailto:forcefidele@gmail.com" target="_blank" class="link-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail"
-          class="lucide lucide-mail w-5 h-5">
-          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-        </svg>
-        Email
-      </a>
-    </div>
-
-    <div class="center-div">
-      <div class="layout">
-        <input name="nav" type="radio" class="nav projects-radio" id="projects" checked="checked" />
-        <div class="page projects-page">
-          <div class="page-contents">
-            <section class="cards">
-              <article class="card card--1">
-                <div class="card__info-hover">
-                </div>
-                <div class="card__img"></div>
-                <a href="./akkhara/index.html" class="card_link" rel="noopener" target="_blank" title="Akkhara">
-                  <div class="card__img--hover"></div>
-                </a>
-                <div class="card__info">
-                  <span class="card__category">Software</span>
-                  <h3 class="card__title">Akkhara (អក្ខរ)</h3>
-                  <span class="card__subtitle">The only all-in-one dictionary you need.</span>
-                </div>
-              </article>
-              <article class="card card--2">
-                <div class="card__info-hover" />
-          </div>
-          <div class="card__img"></div>
-          <a href="https://github.com/fidele007/Khmer-System-Fonts-Win10" class="card_link" rel="noopener"
-            target="_blank" title="Khmer System Fonts for Windows">
-            <div class="card__img--hover"></div>
+  <main class="relative z-10 pt-32 md:pt-40 px-4 sm:px-8 md:px-12 lg:px-24 max-w-7xl mx-auto" id="top">
+    <section class="mb-24 md:mb-48 border-l-4 border-primary pl-4 md:pl-12">
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-secondary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs mb-2">Ref: P-2024 / Archive</span>
+        <h1 class="font-headline text-3xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tighter uppercase mb-6">Solving problems with <span class="text-secondary">code</span></h1>
+        <p class="font-body text-on-surface-variant text-lg md:text-2xl max-w-2xl font-medium leading-tight">
+          Technical Project Manager & Software Engineer with 8 years of experience in software development. Expert in C#, Java, Python, and .NET, specializing in high-performance architectures and leading Agile/Scrum teams.
+        </p>
+      </div>
+      <div class="mt-12 md:mt-16 flex items-center gap-4 md:gap-6">
+        <div class="flex gap-2 md:gap-4 shrink-0">
+          <a class="w-12 h-12 md:w-14 md:h-14 border-2 border-primary flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition-all" href="https://github.com/fidele007" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <span class="material-symbols-outlined">terminal</span>
           </a>
-          <div class="card__info">
-            <span class="card__category">Software</span>
-            <h3 class="card__title">Khmer System Fonts for Windows</h3>
-            <span class="card__subtitle">Replacing the default Khmer font in Windows with a better one.</span>
+          <a class="w-12 h-12 md:w-14 md:h-14 border-2 border-primary flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition-all" href="#projects" aria-label="Projects">
+            <span class="material-symbols-outlined">code</span>
+          </a>
+        </div>
+        <div class="h-0.5 flex-grow bg-primary"></div>
+      </div>
+    </section>
+
+    <section class="mb-24 md:mb-48" id="projects">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 md:mb-12 border-b-2 border-primary pb-4 gap-4">
+        <h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter uppercase">Selected_Works</h2>
+        <span class="font-label text-xs md:text-sm font-bold bg-primary text-white px-4 py-1 self-start sm:self-auto">Catalogue // 01</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+        <article class="md:col-span-8 group relative border-2 border-primary p-2 bg-white navy-shadow hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+          <a class="block relative aspect-video overflow-hidden border border-outline-variant" href="akkhara/" aria-label="Open Akkhara">
+            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="akkhara/akkhara_banner.png" alt="Akkhara app banner">
+            <div class="absolute top-2 left-2 md:top-4 md:left-4 bg-primary text-white font-label text-[8px] md:text-[10px] px-2 md:px-3 py-1 uppercase font-bold tracking-widest">Case_Study_01</div>
+          </a>
+          <div class="p-4 md:p-6">
+            <h3 class="font-headline text-2xl md:text-3xl font-bold mb-2 uppercase group-hover:text-secondary transition-colors">Akkhara (អក្ខរ)</h3>
+            <p class="text-on-surface-variant max-w-xl font-body text-xs md:text-sm font-medium mb-4">
+              Multilingual dictionary application built with Flutter, available on iOS, Android, macOS, Linux, and Windows.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="font-label text-[9px] md:text-[10px] border border-primary px-2 py-0.5 uppercase font-bold">Flutter</span>
+              <span class="font-label text-[9px] md:text-[10px] border border-primary px-2 py-0.5 uppercase font-bold">Cross-Platform</span>
+            </div>
           </div>
-          </article>
-          <article class="card card--3">
-            <div class="card__info-hover" />
-        </div>
-        <div class="card__img"></div>
-        <a href="https://ai.google.dev/competition/projects/plot-twist" class="card_link" rel="noopener" target="_blank"
-          title="Plot Twist">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Software</span>
-          <h3 class="card__title">Plot Twist</h3>
-          <span class="card__subtitle">The A.I. RPG companion that always has time for you whenever, wherever — my entry
-            into the Gemini API Developer Competition launched by Google in May 2024.</span>
-        </div>
         </article>
-        </section>
-      </div>
-    </div>
-    <label class="nav" for="projects">
-      <div>
-        <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path
-            d="M12 15V15C14.2091 15 16 13.2091 16 11V11M12 15V15C9.79086 15 8 13.2091 8 11V11M12 15V20M12 20H16M12 20H8M8 6V4H16V6M8 6H6C4.89543 6 4 6.89543 4 8V8.43845C4 9.35618 4.62459 10.1561 5.51493 10.3787L8 11M8 6V11M16 11L18.4851 10.3787C19.3754 10.1561 20 9.35618 20 8.43845V8C20 6.89543 19.1046 6 18 6H16M16 11V6"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        My Projects
+
+        <article class="md:col-span-4 group relative border-2 border-primary p-4 md:p-6 bg-white navy-shadow hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all flex flex-col">
+          <div class="bg-white p-4 border border-outline-variant mb-6 flex-grow flex items-center justify-center overflow-hidden min-h-[160px]">
+            <img alt="Bakong KHQR PHP SDK mark" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700" src="site_logo.png">
+          </div>
+          <span class="font-label text-[10px] text-secondary font-bold uppercase mb-2">PHP SDK</span>
+          <h3 class="font-headline text-xl md:text-2xl font-bold mb-4 uppercase">Bakong KHQR PHP SDK</h3>
+          <p class="text-on-surface-variant text-[10px] md:text-xs font-medium leading-relaxed mb-6">
+            A pure PHP rewrite of Cambodia's Bakong KHQR contactless payment SDK, published on Packagist.
+          </p>
+          <a class="mt-auto w-full border-2 border-primary py-2 font-label text-[10px] font-bold uppercase hover:bg-primary hover:text-white transition-all text-center block" href="https://github.com/fidele007/bakong-khqr-php" target="_blank" rel="noreferrer">View_Source</a>
+        </article>
+
+        <article class="md:col-span-12 border-2 border-primary p-4 md:p-8 bg-secondary text-white navy-shadow flex flex-col md:flex-row justify-between items-center gap-8">
+          <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center w-full">
+            <div class="w-full md:w-1/2 aspect-video overflow-hidden border border-white/20 group">
+              <img alt="Plot Twist video thumbnail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="plot-twist-video-thumbnail.jpg">
+            </div>
+            <div class="flex-1">
+              <h3 class="font-headline text-3xl md:text-4xl font-black mb-4 uppercase">Plot Twist</h3>
+              <p class="text-white/90 font-medium leading-tight text-base md:text-lg mb-6">The A.I. RPG companion built with Gemini API. My entry into the Gemini API Developer Competition launched by Google in May 2024.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-white text-primary text-[10px] font-bold uppercase">Gemini API</span>
+                <span class="px-2 py-1 bg-white text-primary text-[10px] font-bold uppercase">AI</span>
+                <span class="px-2 py-1 bg-white text-primary text-[10px] font-bold uppercase">Gaming</span>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
 
-    </label>
-
-    <input name="nav" type="radio" class="nav tweaks-radio" id="tweaks" />
-    <div class="page tweaks-page">
-      <div class="page-contents">
-        <div> iOS Jailbreaking is the equivalent of Android's rooting where you hack your device's OS so that you can
-          modify and "tweak" it however you want. Back then I did not have a Macbook, so my first iOS development is on
-          a Windows laptop making various tweaks to improve my experience (and hopefully others) on iOS.</div>
-        <hr>
-        <a class="btn btn-info"
-          href="cydia://url/https://cydia.saurik.com/api/share#?source=https://fidele007.github.io/">
-          <img src="cydia_logo.png" title="Cydia Logo" width="32px" height="32px" />
-          &nbsp;Add Source to Cydia
+      <div class="mt-12 md:mt-16 flex justify-center">
+        <a class="group flex items-center gap-4 border-2 border-primary px-6 md:px-8 py-3 md:py-4 bg-white navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="https://github.com/fidele007" target="_blank" rel="noreferrer">
+          <span class="font-label text-xs md:text-sm font-bold uppercase tracking-[0.2em]">View_All_Works</span>
+          <span class="material-symbols-outlined text-secondary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
         </a>
-        <ul>
-          <li><strong>Autocorrect Flipswitch for iOS9:</strong> Flipswitch toggle for Auto-Correction in iOS 9.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.alwaysmoreforspotlight">AlwaysMore for
-                Spotlight</a>:</strong> A simple tweak to always show more for iOS 9 Spotlight.</li>
-          <li><strong>BackCamDefault:</strong> Set back camera as the default.</li>
-          <li><strong>BetterBreadcrumb10:</strong> A better version of Breadcrumb10 tweak.</li>
-          <li><strong>BetterVideo:</strong> Improve built-in video player with several features.</li>
-          <li><strong>CallerIDToggle:</strong> Flipswitch to toggle Caller ID.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.cardactivator">CardActivator</a>:</strong>
-            Activator actions via App Switcher card gestures.</li>
-          <li><strong>CCLink:</strong> Copy now playing title/link from the Control Center by tapping and holding.
-          </li>
-          <li><strong>CydiaCounter:</strong> Count the number of installed packages in Cydia.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.echo">Echo</a>:</strong> Make your
-            device come
-            alive with customizable sounds.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.emojikey">EmojiKey</a>:</strong>
-            Replace Dictation
-            key with Emoji key 😃</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.facebookfontsfix">Facebook Fonts
-                Fix</a>:</strong>
-            Fix truncated Khmer text in Facebook app.</li>
-          <li><strong>GoodAutoCorrect:</strong> Disable Auto-Correction automatically when you hide the prediction
-            bar.</li>
-          <li><strong>HomeWifi:</strong> Bypass passcode on known Wi-Fi.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.hotdog">HotDog</a>:</strong> Make your
-            device
-            unique via customization with several little options.</li>
-          <li><strong>iMessage Read Receipts Flipswitch:</strong> Flipswitch for Send Read Receipts in iMessage.
-          </li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.modmyi.khmerlockclockios8cydget">Khmer Lock Clock
-                iOS 8
-                Cydget</a>:</strong> Khmer Lock Clock for Cydget - works as long as Cydget is updated for new iOS
-            versions.</li>
-          <li><strong>LastGrabberApp:</strong> Last app on the bottom left of your lock screen.</li>
-          <li><strong>LastNotification:</strong> Show your last notification via an Activator action.</li>
-          <li><strong>MessengerNotification:</strong> Messages app-like notification for Messenger.</li>
-          <li><strong>MultipleReturnToSender+:</strong> A better version of MultipleReturnToSender tweak.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.nop8gelimits">NoP8geLimits</a>:</strong> No
-            SpringBoard and Folder page limits.</li>
-          <li><strong>NormalBattery:</strong> Show normal battery color when Low Power Mode is enabled.</li>
-          <li><strong>NotiCopy:</strong> Long press on notifications to copy the text.</li>
-          <li><strong>OnlyActiveApps:</strong> Show only active apps in your App Switcher.</li>
-          <li><strong>ShowSongMetadata iOS 9:</strong> Show song metadata in Music app with a press of a button.
-          </li>
-          <li><strong>Status Bar in App Switcher:</strong> Show status bar in App Switcher.</li>
-          <li><strong>Swipe for Activator:</strong> Invoke Activator actions via swiping up and down on Lock Screen
-            and Home
-            Screen.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.triplespace">TripleSpace</a>:</strong>
-            Insert
-            shortcut by tapping on the space bar three times in a row.</li>
-          <li><strong><a href="http://cydia.saurik.com/package/com.fidele007.universalmute">Universal
-                Mute</a>:</strong> Mute
-            media volume when the ringer is muted.</li>
-          <li><strong>VolumePageTurner:</strong> Turn pages in Kindle app using headset volume buttons.</li>
-          <li><strong><a
-                href="http://cydia.saurik.com/package/com.fidele007.whatsappcustomizer">WhatsAppCustomizer</a>:</strong>
-            Make
-            your WhatsApp look unique with customization.</li>
-        </ul>
       </div>
-    </div>
-    <label class="nav" for="tweaks">
-      <div>
-        <svg width="18px" height="18px" viewBox="0 0 24 24" stroke="currentColor" fill="none">
-          <path
-            d="M6 13H5C3.89543 13 3 12.1046 3 11V7C3 5.89543 3.89543 5 5 5H13C13.5523 5 14 5.44772 14 6V12C14 12.5523 13.5523 13 13 13H11M6 13L5.32612 17.7172C5.154 18.922 6.08892 20 7.30602 20H8.26541C9.26071 20 10.1046 19.2681 10.2453 18.2828L11 13M6 13H11M18 9C18 10.6569 16.6569 12 15 12H14M18 9C18 7.34315 16.6569 6 15 6H14M18 9H23"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        iOS Jailbreak Tweaks
-      </div>
-    </label>
+    </section>
 
-    <input name="nav" type="radio" class="iosFonts-radio" id="iosFonts" />
-    <div class="page iosFonts-page">
-      <div class="page-contents">
-        <div>During my iOS jailbreaking days, I also ported a bunch of Khmer fonts to iOS 🐶</div>
-        <hr>
-        <div class="column">
-          <ul>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerhanumanios8">Khmer Hanuman iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmeraphireakios8">Khmer Aphireak iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerbokorios8">Khmer Bokor iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmersangammnfixios8">Khmer Sangam MN Fix iOS
-                8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmernokoraios8">Khmer Nokora iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpreyvengboldios8">Khmer Preyveng Bold iOS
-                8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpreyvengios8">Khmer Preyveng iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerfreehandios8">Khmer Freehand iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerfasthandios8">Khmer Fasthand iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerkantumruyios8">Khmer Kantumruy iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerdangrekios8">Khmer Dang-rek iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerwatphnomios8">Khmer Wat Phnom iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmercnbattambang">Khmer CN Battambang</li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerstuengsaenios8">Khmer Stueng Saen iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmertimbrekampucheaios8">Khmer Timbre Kampuchea
-                iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpensurinios8">Khmer Pen-Surin iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmermnios8">Khmer MN iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpreahvihearios8">Khmer Preah Vihear iOS
-                8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerisethfirstios8">Khmer iSeth First iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerakbalthomfreehandios8">Khmer AKbalthom
-                Freehand iOS
-                8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerkepios8">Khmer Kep iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerlimons4ios8">Khmer Limon S4 iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerlimons1ios8">Khmer Limon S1 iOS 8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmervirakmodernmonoios8">Khmer Virak Modern
-                Mono iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmersiemreapios8">Khmer Siem Reap iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerasvadekhongios8">Khmer Asvadek Hong iOS
-                8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerakbalthomkhmerhandios8">Khmer Akbalthom
-                Khmerhand iOS
-                8</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmersithmonusios8">Khmer Sith Monus iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpreyvengheartsios8">Khmer Preyveng Hearts
-                iOS 8</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.konkhmersleokchher">Kon Khmer Sleok Chher</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerhanumanios9">Khmer Hanuman iOS 9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpreyvengios9">Khmer Preyveng iOS 9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerdangrekios9">Khmer Dangrek iOS 9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmernokoraios9">Khmer Nokora iOS 9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerakbalthomkhmerhandios9">Khmer Akbalthom
-                Khmerhand iOS
-                9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerkantumruyios9">Khmer Kantumruy iOS 9</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerbokorios9">Khmer Bokor iOS 9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerwatphnomios9">Khmer Wat Phnom iOS 9</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmervirakmonomodernios9">Khmer Virak Mono
-                Modern iOS 9</a>
-            </li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerlimons1ios9">Khmer Limon S1 iOS 9</a></li>
-            <li><a href="http://cydia.saurik.com/package/com.modmyi.khmerpensurinios9">Khmer Pen-Surin iOS 9</a>
-            </li>
-          </ul>
+    <section class="mb-24 md:mb-48 grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32">
+      <div id="experience">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-12 md:mb-16 border-b-2 border-primary pb-4">
+          <h2 class="font-headline text-3xl md:text-4xl font-black tracking-tighter uppercase">Experience</h2>
+          <a class="flex items-center gap-2 border border-primary px-3 py-1 bg-white hover:bg-secondary hover:text-white transition-all font-label text-[10px] font-bold uppercase tracking-widest w-fit" href="CV_ForceFideleKIEN_English.pdf" target="_blank" rel="noreferrer">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Download_CV
+          </a>
+          <div class="hidden sm:block flex-grow h-px bg-outline"></div>
+        </div>
+        <div class="space-y-12 md:space-y-16">
+          <article class="relative group">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-end mb-2">
+                <span class="font-label text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Dec 2018 - Aug 2025</span>
+                <span class="font-label text-[9px] md:text-[10px] border border-primary px-2 font-bold">LDR_01</span>
+              </div>
+              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase group-hover:text-secondary transition-colors">Technical Project Manager</h3>
+              <span class="text-primary/70 font-label text-xs md:text-sm font-bold uppercase mt-1">Tessi - I&T</span>
+              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6">
+                Leading Agile/Scrum teams for EDM Solution - Sqalia Global XP. Managing technical specifications, deliverables, and CI/CD implementation with GitLab and Jenkins.
+              </p>
+            </div>
+          </article>
+
+          <article class="relative group">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-end mb-2">
+                <span class="font-label text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Oct 2017 - Nov 2018</span>
+              </div>
+              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase">Software Engineer / Team Lead</h3>
+              <span class="text-primary/70 font-label text-xs md:text-sm font-bold uppercase mt-1">NEOFI Solutions</span>
+              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6">
+                Design and development of the NEOFI Link desktop application. Automated testing using Telerik/Selenium and architecture using MVVM.
+              </p>
+            </div>
+          </article>
+
+          <article class="relative group">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-end mb-2">
+                <span class="font-label text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Mar 2017 - Sept 2017</span>
+              </div>
+              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase">Research Intern</h3>
+              <span class="text-primary/70 font-label text-xs md:text-sm font-bold uppercase mt-1">Thales Research & Technology</span>
+              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6">
+                Designed and optimized machine learning algorithms. Developed with Java, Python, and Matlab for unit and integration testing.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-    <label class="nav" for="iosFonts">
-      <div>
-        <svg width="14" height="14" viewBox="0 0 54.8 68.5" xmlns="http://www.w3.org/2000/svg">
-          <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" stroke="currentColor" stroke-width="0.1mm"
-            fill="currentColor">
-            <path
-              d="M 49.9 36.9 L 49.9 68.5 L 40.7 68.5 L 40.7 36.9 A 4.678 4.678 0 0 0 39.946 34.383 A 7.016 7.016 0 0 0 38.95 33.15 Q 37.251 31.451 34.469 30.412 A 17.907 17.907 0 0 0 34.3 30.35 A 17.407 17.407 0 0 0 30.402 29.448 A 22.202 22.202 0 0 0 27.8 29.3 A 21.49 21.49 0 0 0 23.963 29.629 A 17.229 17.229 0 0 0 21.1 30.4 A 16.786 16.786 0 0 0 18.955 31.351 Q 17.863 31.935 17.021 32.635 A 9.102 9.102 0 0 0 16.4 33.2 A 6.608 6.608 0 0 0 15.381 34.489 A 4.648 4.648 0 0 0 14.7 36.9 L 14.7 68.5 L 5.5 68.5 L 5.5 36.9 A 9.438 9.438 0 0 1 7.145 31.615 A 13.237 13.237 0 0 1 8.55 29.85 A 19.346 19.346 0 0 1 12.614 26.589 A 26.402 26.402 0 0 1 16.65 24.6 A 28.747 28.747 0 0 1 25.121 22.696 A 34.242 34.242 0 0 1 27.7 22.6 A 32.465 32.465 0 0 1 34.311 23.249 A 26.782 26.782 0 0 1 38.95 24.65 A 26.233 26.233 0 0 1 42.967 26.673 Q 45.291 28.122 46.95 29.95 A 12.629 12.629 0 0 1 48.805 32.558 A 9.228 9.228 0 0 1 49.9 36.9 Z M 13.2 21.2 L 5.9 25.5 Q 3.5 23.2 1.75 20.7 Q 0 18.2 0 15.2 Q 0 13.6 0.65 12.05 A 8.664 8.664 0 0 1 1.283 10.842 Q 1.65 10.25 2.148 9.614 A 20.215 20.215 0 0 1 3 8.6 A 33.872 33.872 0 0 1 4.377 7.157 Q 5.06 6.479 5.865 5.74 A 75.298 75.298 0 0 1 7.6 4.2 Q 9.6 2.5 11.35 1.25 Q 12.882 0.156 13.993 0.019 A 2.524 2.524 0 0 1 14.3 0 A 2.305 2.305 0 0 1 15.061 0.144 Q 15.929 0.448 17.05 1.4 Q 18.313 2.472 20.251 4.247 A 257.641 257.641 0 0 1 21.5 5.4 A 52.006 52.006 0 0 0 22.658 6.455 Q 23.297 7.019 23.881 7.49 A 27.735 27.735 0 0 0 24.4 7.9 Q 25.646 8.858 26.616 8.898 A 2.039 2.039 0 0 0 26.7 8.9 A 2.407 2.407 0 0 0 27.464 8.764 Q 28.113 8.547 28.879 7.98 A 9.047 9.047 0 0 0 29.05 7.85 Q 30.4 6.8 32.3 4.9 Q 34.6 2.8 36.2 1.5 A 10.581 10.581 0 0 1 36.963 0.931 Q 37.738 0.41 38.342 0.26 A 1.909 1.909 0 0 1 38.8 0.2 A 1.801 1.801 0 0 1 39.278 0.272 Q 39.857 0.433 40.65 0.95 Q 41.527 1.522 42.899 2.821 A 46.604 46.604 0 0 1 43.8 3.7 L 47.8 7.7 A 9.204 9.204 0 0 0 49.438 8.925 A 7.682 7.682 0 0 0 50.8 9.55 Q 52.4 10.1 54.8 10 Q 54.413 11.743 53.838 12.944 A 6.851 6.851 0 0 1 53.15 14.1 Q 52.29 15.247 51.329 15.824 A 4.386 4.386 0 0 1 50.9 16.05 A 6.46 6.46 0 0 1 49.797 16.445 A 4.863 4.863 0 0 1 48.6 16.6 Q 46.7 16.6 45.25 15.55 Q 43.8 14.5 42.6 13.15 Q 41.4 11.8 40.3 10.75 A 4.194 4.194 0 0 0 39.41 10.09 A 3.12 3.12 0 0 0 37.9 9.7 Q 36.75 9.7 35.6 10.6 A 6.486 6.486 0 0 0 35.3 10.85 Q 34 12 32.5 13.3 Q 30.819 14.716 29.294 15.544 A 13.023 13.023 0 0 1 28.9 15.75 Q 27.2 16.6 25.6 16.6 A 4.945 4.945 0 0 1 23.801 16.247 A 6.961 6.961 0 0 1 22.55 15.6 Q 21.509 14.928 20.129 13.895 A 84.15 84.15 0 0 1 18.7 12.8 Q 17.016 11.498 15.918 10.754 A 19.941 19.941 0 0 0 15.3 10.35 Q 14.276 9.71 13.325 9.616 A 3.306 3.306 0 0 0 13 9.6 A 3.236 3.236 0 0 0 11.521 9.963 A 3.794 3.794 0 0 0 11.45 10 A 4.451 4.451 0 0 0 10.69 10.519 Q 10.361 10.794 10.043 11.152 A 7.415 7.415 0 0 0 10 11.2 Q 9.3 11.9 8.8 12.8 A 3.938 3.938 0 0 0 8.354 14.145 A 5.124 5.124 0 0 0 8.3 14.9 A 4.277 4.277 0 0 0 8.989 17.21 A 5.804 5.804 0 0 0 9.5 17.9 Q 10.584 19.165 12.729 20.837 A 47.686 47.686 0 0 0 13.2 21.2 Z"
-              vector-effect="non-scaling-stroke" />
-          </g>
-        </svg>
-        Khmer Fonts for iOS
+
+      <div id="education">
+        <div class="flex items-center gap-4 mb-12 md:mb-16 border-b-2 border-primary pb-4">
+          <h2 class="font-headline text-3xl md:text-4xl font-black tracking-tighter uppercase">Academic</h2>
+          <div class="flex-grow h-px bg-outline"></div>
+        </div>
+        <div class="space-y-8 md:space-y-12">
+          <article class="p-6 md:p-8 border-2 border-primary bg-white navy-shadow hover:bg-surface-container transition-colors group relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-secondary text-white p-1">
+              <span class="material-symbols-outlined text-sm">school</span>
+            </div>
+            <span class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest mb-2 block">2016 - 2017</span>
+            <h3 class="font-headline text-xl md:text-2xl font-bold uppercase leading-tight">Master in Machine Learning</h3>
+            <p class="text-on-surface-variant text-xs md:text-sm font-bold mt-4">Université Paris-Saclay - Information and Content</p>
+          </article>
+
+          <article class="p-6 md:p-8 border-2 border-primary bg-white navy-shadow hover:bg-surface-container transition-colors group relative overflow-hidden">
+            <span class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest mb-2 block">2014 - 2017</span>
+            <h3 class="font-headline text-xl md:text-2xl font-bold uppercase leading-tight">Engineering Degree in Computer Science</h3>
+            <p class="text-on-surface-variant text-xs md:text-sm font-bold mt-4">ENSIIE - Data Structures & Algorithms</p>
+          </article>
+
+          <div class="mt-8 md:mt-12 bg-primary text-white p-6 md:p-8">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="font-label text-xs md:text-sm uppercase font-bold tracking-tighter text-secondary">Technical_Stack</span>
+            </div>
+            <ul class="space-y-4 font-label text-[9px] md:text-[10px] font-bold uppercase tracking-widest">
+              <li class="flex justify-between border-b border-white/20 pb-2">
+                <span>C#, Java, Python, PHP</span>
+                <span class="text-secondary ml-4">Languages</span>
+              </li>
+              <li class="flex justify-between border-b border-white/20 pb-2">
+                <span>.NET, Vue.js, Docker</span>
+                <span class="text-secondary ml-4">Tech</span>
+              </li>
+              <li class="flex justify-between border-b border-white/20 pb-2">
+                <span>SQL Server, PostgreSQL</span>
+                <span class="text-secondary ml-4">DB</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </label>
+    </section>
+
+    <section class="mb-24 md:mb-48 border-2 border-primary p-2 md:p-4 bg-white" id="about">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="relative p-2 md:p-4 border-b-2 md:border-b-0 md:border-r-2 border-primary">
+          <div class="border-2 border-primary p-2 bg-surface">
+            <img class="w-full aspect-[4/5] object-cover grayscale brightness-90 hover:brightness-100 transition-all duration-700" src="site_logo.png" alt="Force Fidele identity mark">
+          </div>
+          <div class="absolute bottom-6 right-2 md:bottom-10 md:right-0 bg-primary text-white p-2 md:p-4 font-label text-[8px] md:text-[10px] uppercase font-bold transform translate-x-1/4 md:translate-x-1/2 rotate-90">Subject: Fidele_KIEN</div>
+        </div>
+        <div class="p-6 md:p-16 flex flex-col justify-center bg-surface-container-low">
+          <h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6 md:mb-8 leading-none">The_Mission</h2>
+          <p class="font-body text-on-surface-variant text-base md:text-xl font-medium leading-relaxed mb-8 md:mb-12">
+            I believe that software is the most powerful tool for human evolution. My goal is to build interfaces that feel like natural extensions of the mind: fast, beautiful, and intuitive.
+          </p>
+          <div class="grid grid-cols-2 gap-6 md:gap-12 mb-8 md:mb-12">
+            <div>
+              <span class="font-headline text-secondary font-black text-3xl md:text-5xl block mb-2 leading-none">10+</span>
+              <span class="font-label text-[8px] md:text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Years Code Experience</span>
+            </div>
+            <div>
+              <span class="font-headline text-secondary font-black text-3xl md:text-5xl block mb-2 leading-none">150+</span>
+              <span class="font-label text-[8px] md:text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Completed Repos</span>
+            </div>
+          </div>
+          <a class="flex items-center gap-4 font-label text-[10px] md:text-xs uppercase font-bold tracking-widest text-primary hover:text-secondary transition-all group" href="CV_ForceFideleKIEN_English.pdf" target="_blank" rel="noreferrer">
+            [ Download Full Dossier ]
+            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full flex flex-col items-center py-16 md:py-24 border-t-4 border-primary mt-12 md:mt-24 bg-white relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 md:px-8 py-2 font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] whitespace-nowrap">Finis_Archive</div>
+    <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-8 md:mb-12 px-4 text-center">
+      <a class="text-on-surface font-bold hover:text-secondary transition-colors uppercase font-label text-xs tracking-widest" href="https://twitter.com/fidel3007" target="_blank" rel="noreferrer">Twitter</a>
+      <a class="text-on-surface font-bold hover:text-secondary transition-colors uppercase font-label text-xs tracking-widest" href="https://github.com/fidele007" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="text-on-surface font-bold hover:text-secondary transition-colors uppercase font-label text-xs tracking-widest" href="https://www.linkedin.com/in/force-fidele-kien/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+    <div class="font-label text-[8px] md:text-[10px] font-bold text-on-surface-variant mb-4 tracking-widest uppercase text-center px-4">© 2024 Force Fidele KIEN. All Rights Reserved. PRNT-v3.0</div>
+    <div class="flex gap-4 md:gap-6">
+      <a class="text-on-surface-variant hover:text-secondary transition-colors text-[8px] md:text-[10px] font-bold font-label uppercase" href="akkhara/privacy.html">Privacy_Policy</a>
+      <span class="text-outline">/</span>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors text-[8px] md:text-[10px] font-bold font-label uppercase" href="akkhara/terms.html">Terms_of_Service</a>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex flex-col gap-4 items-end">
+    <div class="bg-white border-2 border-primary p-3 md:p-4 navy-shadow hidden sm:block">
+      <div class="text-[9px] md:text-[10px] font-bold font-label uppercase text-secondary mb-1">System_Status</div>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+        <span class="text-[9px] md:text-[10px] font-bold font-label uppercase">Online_Active</span>
+      </div>
+    </div>
+    <a class="w-12 h-12 md:w-14 md:h-14 bg-secondary text-white flex items-center justify-center navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="mailto:force@fidele007.com" aria-label="Email Force Fidele KIEN">
+      <span class="material-symbols-outlined">mail</span>
+    </a>
   </div>
 
+  <script>
+    const paperGrid = document.querySelector(".paper-grid");
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelectorAll(".mobile-nav-link");
+
+    window.addEventListener("scroll", () => {
+      paperGrid.style.backgroundPosition = `0px ${window.pageYOffset * 0.2}px`;
+    });
+
+    function toggleMenu() {
+      const isOpening = mobileMenu.classList.contains("hidden-menu");
+      mobileMenu.classList.toggle("hidden-menu");
+      document.body.classList.toggle("overflow-hidden", isOpening);
+      menuToggle.setAttribute("aria-expanded", String(isOpening));
+    }
+
+    menuToggle.addEventListener("click", toggleMenu);
+    menuClose.addEventListener("click", toggleMenu);
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden-menu");
+        document.body.classList.remove("overflow-hidden");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    console.log("%c FORCE FIDELE KIEN // DIGITAL ARCHIVE V3.0 ", "background: #1E293B; color: #F97316; font-weight: bold; padding: 10px; border-radius: 5px;");
+  </script>
 </body>
-<footer>
-  <div class="col-xs-12 col-md-12 col-lg-12">
-    <p id="copyright" class="center-block">
-      <small>Copyright ©
-        <script>document.write(new Date().getFullYear());</script> Force Fidele KIEN, All Rights Reserved.
-      </small>
-    </p>
-  </div>
-</footer>
-
 </html>

@@ -7,7 +7,15 @@
   <title>Force Fidele KIEN | Paper Digital Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@300;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const theme = localStorage.getItem("site-theme") || "system";
+      const useDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.classList.toggle("dark", useDark);
+      document.documentElement.classList.toggle("light", !useDark);
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@300;500;700&family=Google+Sans:wght@400;500;700&family=Noto+Sans+Khmer:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -37,7 +45,7 @@
           fontFamily: {
             headline: ["Sora", "sans-serif"],
             display: ["Sora", "sans-serif"],
-            body: ["Inter", "sans-serif"],
+            body: ["Inter", "Google Sans", "Noto Sans Khmer", "sans-serif"],
             label: ["Space Grotesk", "sans-serif"]
           }
         }
@@ -49,6 +57,15 @@
       background-color: #FAF9F6;
       color: #1E293B;
       cursor: default;
+    }
+
+    html {
+      scroll-padding-top: 92px;
+    }
+
+    section,
+    main {
+      scroll-margin-top: 92px;
     }
 
     .paper-grid {
@@ -75,6 +92,14 @@
       font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
     }
 
+    html[lang="km"] body,
+    html[lang="km"] .font-headline,
+    html[lang="km"] .font-body,
+    html[lang="km"] .font-label,
+    html[lang="km"] .control-select {
+      font-family: "Google Sans", "Noto Sans Khmer", sans-serif !important;
+    }
+
     ::selection {
       background: #F97316;
       color: #fff;
@@ -87,6 +112,89 @@
     #mobile-menu.hidden-menu {
       transform: translateX(100%);
     }
+
+    .control-select {
+      appearance: none;
+      background-color: #ffffff;
+      border: 2px solid #1E293B;
+      color: #1E293B;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 0.45rem 1.75rem 0.45rem 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .dark body,
+    .dark .bg-surface,
+    .dark .bg-white,
+    .dark .bg-surface\/80 {
+      background-color: #111827 !important;
+      color: #F9FAFB !important;
+    }
+
+    .dark .paper-grid {
+      opacity: 0.2;
+      background-image:
+        linear-gradient(#374151 1px, transparent 1px),
+        linear-gradient(90deg, #374151 1px, transparent 1px);
+    }
+
+    .dark .border-primary,
+    .dark .print-border,
+    .dark .control-select {
+      border-color: #F9FAFB !important;
+    }
+
+    .dark .bg-primary {
+      background-color: #F9FAFB !important;
+      color: #111827 !important;
+    }
+
+    .dark .text-primary,
+    .dark .text-on-surface,
+    .dark .text-on-surface-variant,
+    .dark .text-primary\/70 {
+      color: #F9FAFB !important;
+    }
+
+    .dark .bg-secondary {
+      background-color: #FB923C !important;
+    }
+
+    .dark .text-secondary {
+      color: #FB923C !important;
+    }
+
+    .dark .navy-shadow {
+      box-shadow: 4px 4px 0 #FB923C;
+    }
+
+    .bg-secondary.navy-shadow,
+    .dark .bg-secondary.navy-shadow {
+      box-shadow: 4px 4px 0 #1E293B;
+    }
+
+    .dark .bg-secondary.navy-shadow {
+      box-shadow: 4px 4px 0 #0F172A;
+    }
+
+    .dark .control-select,
+    .dark #menu-toggle,
+    .dark #menu-close {
+      background-color: #111827 !important;
+      color: #F9FAFB !important;
+    }
+
+    .dark .technical-stack-panel {
+      background-color: #1E293B !important;
+      color: #F9FAFB !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body class="font-body selection:bg-secondary selection:text-white overflow-x-hidden">
@@ -94,20 +202,33 @@
 
   <header class="fixed top-0 left-0 w-full z-[100] bg-surface/80 border-b-2 border-primary backdrop-blur-sm px-4 md:px-8 h-[70px] flex justify-between items-center">
     <a class="flex items-center gap-3 md:gap-4" href="#top" aria-label="Force Fidele KIEN home">
-      <div class="bg-primary p-1 shrink-0">
-        <img alt="Force Fidele Logo" class="h-6 w-6 md:h-8 md:w-8 object-contain invert" src="site_logo_small.png">
+      <div class="p-1 shrink-0">
+        <img alt="Force Fidele Logo" class="h-6 w-6 md:h-8 md:w-8 object-contain" src="site_logo_small.png">
       </div>
       <span class="font-headline text-lg md:text-xl font-bold tracking-tighter uppercase whitespace-nowrap">Force Fidele KIEN</span>
     </a>
     <nav class="hidden md:flex items-center gap-8" aria-label="Primary navigation">
-      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#about">01. About</a>
-      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#projects">02. Projects</a>
-      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#experience">03. Experience</a>
-      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#education">04. Education</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#about" data-i18n="nav.about">01. About</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#projects" data-i18n="nav.projects">02. Projects</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#experience" data-i18n="nav.experience">03. Experience</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="#education" data-i18n="nav.education">04. Education</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <a class="hidden sm:block bg-secondary text-white px-6 py-2 font-label text-xs uppercase font-bold tracking-widest navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="mailto:force@fidele007.com">
-        Contact_Admin
+    <div class="flex items-center gap-2 md:gap-4">
+      <label class="sr-only" for="language-select" data-i18n="lang.label">Language</label>
+      <select class="control-select font-label hidden sm:block" id="language-select" data-language-select>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="km">ខ្មែរ</option>
+      </select>
+      <label class="sr-only" for="theme-select" data-i18n="theme.label">Theme</label>
+      <select class="control-select font-label hidden lg:block" id="theme-select" data-theme-select>
+        <option value="system" data-i18n="theme.system">System</option>
+        <option value="light" data-i18n="theme.light">Light</option>
+        <option value="dark" data-i18n="theme.dark">Dark</option>
+      </select>
+      <a class="hidden sm:flex items-center gap-3 border-2 border-primary px-5 py-2 bg-white navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group" href="mailto:forcefidele@gmail.com?subject=Portfolio%20contact%20request">
+        <span class="font-label text-xs uppercase font-bold tracking-widest text-primary" data-i18n="action.contact">Contact_Admin</span>
+        <span class="material-symbols-outlined text-secondary text-sm group-hover:translate-x-1 transition-transform">mail</span>
       </a>
       <button class="md:hidden w-10 h-10 border-2 border-primary flex items-center justify-center bg-white" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
         <span class="material-symbols-outlined">menu</span>
@@ -119,12 +240,25 @@
     <button class="absolute top-6 right-6 w-10 h-10 border-2 border-primary flex items-center justify-center bg-white" id="menu-close" type="button" aria-label="Close menu">
       <span class="material-symbols-outlined">close</span>
     </button>
-    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#about">01. About</a>
-    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#projects">02. Projects</a>
-    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#experience">03. Experience</a>
-    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#education">04. Education</a>
-    <a class="mt-auto bg-secondary text-white px-6 py-4 font-label text-sm uppercase font-bold tracking-widest navy-shadow text-center" href="mailto:force@fidele007.com">
-      Contact_Admin
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#about" data-i18n="nav.about">01. About</a>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#projects" data-i18n="nav.projects">02. Projects</a>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#experience" data-i18n="nav.experience">03. Experience</a>
+    <a class="mobile-nav-link font-headline text-3xl font-black uppercase tracking-tighter" href="#education" data-i18n="nav.education">04. Education</a>
+    <div class="grid grid-cols-2 gap-3 mt-auto">
+      <select class="control-select font-label w-full" data-language-select>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="km">ខ្មែរ</option>
+      </select>
+      <select class="control-select font-label w-full" data-theme-select>
+        <option value="system" data-i18n="theme.system">System</option>
+        <option value="light" data-i18n="theme.light">Light</option>
+        <option value="dark" data-i18n="theme.dark">Dark</option>
+      </select>
+    </div>
+    <a class="flex items-center justify-center gap-3 border-2 border-primary px-6 py-4 bg-white navy-shadow text-center group" href="mailto:forcefidele@gmail.com?subject=Portfolio%20contact%20request">
+      <span class="font-label text-sm uppercase font-bold tracking-widest text-primary" data-i18n="action.contact">Contact_Admin</span>
+      <span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">mail</span>
     </a>
   </div>
 
@@ -133,11 +267,11 @@
       <div class="absolute top-72 md:top-80 left-0 bg-primary text-white p-2 md:p-4 font-label text-[8px] md:text-[10px] uppercase font-bold transform -translate-x-1/2 rotate-90">Subject: Fidele_KIEN</div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div class="lg:col-span-7 flex flex-col gap-4">
-          <span class="font-label text-secondary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs mb-2">Ref: P-2024 / Archive</span>
-          <h1 class="font-headline text-3xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tighter uppercase mb-6">Solving problems <span class="text-secondary whitespace-nowrap">with code</span></h1>
+          <span class="font-label text-secondary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs mb-2" data-i18n="hero.ref">Ref: P-2024 / Archive</span>
+          <h1 class="font-headline text-3xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tighter uppercase mb-6" data-i18n="hero.title">Solving problems with code</h1>
           <div class="flex flex-col sm:flex-row sm:items-center gap-6 md:gap-8">
             <img class="w-32 h-32 md:w-40 md:h-40 object-cover border-2 border-primary navy-shadow shrink-0" src="assets/profile-pro-squared.jpeg" alt="Force Fidele KIEN professional profile photo">
-            <p class="font-body text-on-surface-variant text-base md:text-xl max-w-2xl font-medium leading-tight">
+            <p class="font-body text-on-surface-variant text-base md:text-xl max-w-2xl font-medium leading-tight" data-i18n="hero.bio">
               Technical Project Manager & Software Engineer with 8 years of experience in software development. Expert in C#, Java, Python, and .NET, specializing in high-performance architectures and leading Agile/Scrum teams.
             </p>
           </div>
@@ -154,22 +288,22 @@
           </div>
         </div>
         <div class="lg:col-span-5 border-2 border-primary p-6 md:p-8 bg-white navy-shadow">
-          <span class="font-label text-[10px] md:text-xs text-secondary font-bold uppercase tracking-[0.2em] mb-4 block">The_Mission</span>
-          <p class="font-body text-on-surface-variant text-base md:text-xl font-medium leading-relaxed mb-8">
+          <span class="font-label text-[10px] md:text-xs text-secondary font-bold uppercase tracking-[0.2em] mb-4 block" data-i18n="mission.label">The_Mission</span>
+          <p class="font-body text-on-surface-variant text-base md:text-xl font-medium leading-relaxed mb-8" data-i18n="mission.copy">
             The best software starts with a problem worth solving. I strive to transform complexity into simple, reliable tools that help people work, learn, and create more effectively.
           </p>
           <div class="grid grid-cols-2 gap-6 md:gap-10 mb-8">
             <div>
               <span class="font-headline text-secondary font-black text-3xl md:text-5xl block mb-2 leading-none">10+</span>
-              <span class="font-label text-[8px] md:text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Years Code Experience</span>
+              <span class="font-label text-[8px] md:text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" data-i18n="stats.years">Years Code Experience</span>
             </div>
             <div>
-              <span class="font-headline text-secondary font-black text-3xl md:text-5xl block mb-2 leading-none">150+</span>
-              <span class="font-label text-[8px] md:text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Completed Repos</span>
+              <span class="font-headline text-secondary font-black text-3xl md:text-5xl block mb-2 leading-none" data-repo-count>97</span>
+              <span class="font-label text-[8px] md:text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" data-i18n="stats.repos">Public GitHub Repos</span>
             </div>
           </div>
           <a class="flex items-center gap-4 font-label text-[10px] md:text-xs uppercase font-bold tracking-widest text-primary hover:text-secondary transition-all group" href="CV_ForceFideleKIEN_English.pdf" target="_blank" rel="noreferrer">
-            [ Download Full Dossier ]
+            <span data-i18n="action.download">[ Download Full Dossier ]</span>
             <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
           </a>
         </div>
@@ -178,8 +312,8 @@
 
     <section class="mb-24" id="projects">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 md:mb-12 border-b-2 border-primary pb-4 gap-4">
-        <h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter uppercase">Selected_Works</h2>
-        <span class="font-label text-xs md:text-sm font-bold bg-primary text-white px-4 py-1 self-start sm:self-auto">Catalogue // 01</span>
+        <h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter uppercase" data-i18n="projects.title">Selected_Works</h2>
+        <span class="font-label text-xs md:text-sm font-bold bg-primary text-white px-4 py-1 self-start sm:self-auto" data-i18n="projects.catalogue">Catalogue // 01</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
@@ -190,7 +324,7 @@
           </a>
           <div class="p-4 md:p-6">
             <h3 class="font-headline text-2xl md:text-3xl font-bold mb-2 uppercase group-hover:text-secondary transition-colors">Akkhara (អក្ខរ)</h3>
-            <p class="text-on-surface-variant max-w-xl font-body text-xs md:text-sm font-medium mb-4">
+            <p class="text-on-surface-variant max-w-xl font-body text-xs md:text-sm font-medium mb-4" data-i18n="projects.akkhara.desc">
               Multilingual dictionary application built with Flutter, available on iOS, Android, macOS, Linux, and Windows.
             </p>
             <div class="flex flex-wrap gap-2">
@@ -204,12 +338,12 @@
           <div class="bg-white p-4 border border-outline-variant mb-6 flex-grow flex items-center justify-center overflow-hidden min-h-[160px]">
             <img alt="Bakong KHQR PHP SDK mark" class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700" src="site_logo.png">
           </div>
-          <span class="font-label text-[10px] text-secondary font-bold uppercase mb-2">PHP SDK</span>
-          <h3 class="font-headline text-xl md:text-2xl font-bold mb-4 uppercase">Bakong KHQR PHP SDK</h3>
-          <p class="text-on-surface-variant text-[10px] md:text-xs font-medium leading-relaxed mb-6">
+          <span class="font-label text-[10px] text-secondary font-bold uppercase mb-2" data-i18n="projects.bakong.label">PHP SDK</span>
+          <h3 class="font-headline text-xl md:text-2xl font-bold mb-4 uppercase" data-i18n="projects.bakong.title">Bakong KHQR PHP SDK</h3>
+          <p class="text-on-surface-variant text-[10px] md:text-xs font-medium leading-relaxed mb-6" data-i18n="projects.bakong.desc">
             A pure PHP rewrite of Cambodia's Bakong KHQR contactless payment SDK, published on Packagist.
           </p>
-          <a class="mt-auto w-full border-2 border-primary py-2 font-label text-[10px] font-bold uppercase hover:bg-primary hover:text-white transition-all text-center block" href="https://github.com/fidele007/bakong-khqr-php" target="_blank" rel="noreferrer">View_Source</a>
+          <a class="mt-auto w-full border-2 border-primary py-2 font-label text-[10px] font-bold uppercase hover:bg-primary hover:text-white transition-all text-center block" href="https://github.com/fidele007/bakong-khqr-php" target="_blank" rel="noreferrer" data-i18n="action.viewSource">View_Source</a>
         </article>
 
         <article class="md:col-span-12 border-2 border-primary p-4 md:p-8 bg-secondary text-white navy-shadow flex flex-col md:flex-row justify-between items-center gap-8">
@@ -218,8 +352,8 @@
               <img alt="Plot Twist video thumbnail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="plot-twist-video-thumbnail.jpg">
             </div>
             <div class="flex-1">
-              <h3 class="font-headline text-3xl md:text-4xl font-black mb-4 uppercase">Plot Twist</h3>
-              <p class="text-white/90 font-medium leading-tight text-base md:text-lg mb-6">The A.I. RPG companion built with Gemini API. My entry into the Gemini API Developer Competition launched by Google in May 2024.</p>
+              <h3 class="font-headline text-3xl md:text-4xl font-black mb-4 uppercase" data-i18n="projects.plot.title">Plot Twist</h3>
+              <p class="text-white/90 font-medium leading-tight text-base md:text-lg mb-6" data-i18n="projects.plot.desc">The A.I. RPG companion built with Gemini API. My entry into the Gemini API Developer Competition launched by Google in May 2024.</p>
               <div class="flex flex-wrap gap-2">
                 <span class="px-2 py-1 bg-white text-primary text-[10px] font-bold uppercase">Gemini API</span>
                 <span class="px-2 py-1 bg-white text-primary text-[10px] font-bold uppercase">AI</span>
@@ -231,8 +365,8 @@
       </div>
 
       <div class="mt-12 md:mt-16 flex justify-center">
-        <a class="group flex items-center gap-4 border-2 border-primary px-6 md:px-8 py-3 md:py-4 bg-white navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="https://github.com/fidele007" target="_blank" rel="noreferrer">
-          <span class="font-label text-xs md:text-sm font-bold uppercase tracking-[0.2em]">View_All_Works</span>
+        <a class="group flex items-center gap-4 border-2 border-primary px-6 md:px-8 py-3 md:py-4 bg-white navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="works.html">
+          <span class="font-label text-xs md:text-sm font-bold uppercase tracking-[0.2em]" data-i18n="action.viewAll">View_All_Works</span>
           <span class="material-symbols-outlined text-secondary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
         </a>
       </div>
@@ -241,10 +375,10 @@
     <section class="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32">
       <div id="experience">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-12 md:mb-16 border-b-2 border-primary pb-4">
-          <h2 class="font-headline text-3xl md:text-4xl font-black tracking-tighter uppercase">Experience</h2>
+          <h2 class="font-headline text-3xl md:text-4xl font-black tracking-tighter uppercase" data-i18n="experience.title">Experience</h2>
           <a class="flex items-center gap-2 border border-primary px-3 py-1 bg-white hover:bg-secondary hover:text-white transition-all font-label text-[10px] font-bold uppercase tracking-widest w-fit" href="CV_ForceFideleKIEN_English.pdf" target="_blank" rel="noreferrer">
             <span class="material-symbols-outlined text-sm">download</span>
-            Download_CV
+            <span data-i18n="action.downloadCv">Download_CV</span>
           </a>
           <div class="hidden sm:block flex-grow h-px bg-outline"></div>
         </div>
@@ -255,9 +389,9 @@
                 <span class="font-label text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Dec 2018 - Aug 2025</span>
                 <span class="font-label text-[9px] md:text-[10px] border border-primary px-2 font-bold">LDR_01</span>
               </div>
-              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase group-hover:text-secondary transition-colors">Technical Project Manager</h3>
+              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase group-hover:text-secondary transition-colors" data-i18n="experience.tessi.role">Technical Project Manager</h3>
               <span class="text-primary/70 font-label text-xs md:text-sm font-bold uppercase mt-1">Tessi - I&T</span>
-              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6">
+              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6" data-i18n="experience.tessi.desc">
                 Leading Agile/Scrum teams for EDM Solution - Sqalia Global XP. Managing technical specifications, deliverables, and CI/CD implementation with GitLab and Jenkins.
               </p>
             </div>
@@ -268,9 +402,9 @@
               <div class="flex justify-between items-end mb-2">
                 <span class="font-label text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Oct 2017 - Nov 2018</span>
               </div>
-              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase">Software Engineer / Team Lead</h3>
+              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase" data-i18n="experience.neofi.role">Software Engineer / Team Lead</h3>
               <span class="text-primary/70 font-label text-xs md:text-sm font-bold uppercase mt-1">NEOFI Solutions</span>
-              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6">
+              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6" data-i18n="experience.neofi.desc">
                 Design and development of the NEOFI Link desktop application. Automated testing using Telerik/Selenium and architecture using MVVM.
               </p>
             </div>
@@ -281,9 +415,9 @@
               <div class="flex justify-between items-end mb-2">
                 <span class="font-label text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.2em]">Mar 2017 - Sept 2017</span>
               </div>
-              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase">Research Intern</h3>
+              <h3 class="font-headline text-xl md:text-2xl font-bold uppercase" data-i18n="experience.thales.role">Research Intern</h3>
               <span class="text-primary/70 font-label text-xs md:text-sm font-bold uppercase mt-1">Thales Research & Technology</span>
-              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6">
+              <p class="mt-4 md:mt-6 text-on-surface-variant text-xs md:text-sm font-medium leading-relaxed border-l-2 border-outline-variant pl-4 md:pl-6" data-i18n="experience.thales.desc">
                 Designed and optimized machine learning algorithms. Developed with Java, Python, and Matlab for unit and integration testing.
               </p>
             </div>
@@ -293,7 +427,7 @@
 
       <div id="education">
         <div class="flex items-center gap-4 mb-12 md:mb-16 border-b-2 border-primary pb-4">
-          <h2 class="font-headline text-3xl md:text-4xl font-black tracking-tighter uppercase">Academic</h2>
+          <h2 class="font-headline text-3xl md:text-4xl font-black tracking-tighter uppercase" data-i18n="education.title">Academic</h2>
           <div class="flex-grow h-px bg-outline"></div>
         </div>
         <div class="space-y-8 md:space-y-12">
@@ -302,19 +436,19 @@
               <span class="material-symbols-outlined text-sm">school</span>
             </div>
             <span class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest mb-2 block">2016 - 2017</span>
-            <h3 class="font-headline text-xl md:text-2xl font-bold uppercase leading-tight">Master in Machine Learning</h3>
+            <h3 class="font-headline text-xl md:text-2xl font-bold uppercase leading-tight" data-i18n="education.master">Master in Machine Learning</h3>
             <p class="text-on-surface-variant text-xs md:text-sm font-bold mt-4">Université Paris-Saclay - Information and Content</p>
           </article>
 
           <article class="p-6 md:p-8 border-2 border-primary bg-white navy-shadow hover:bg-surface-container transition-colors group relative overflow-hidden">
             <span class="font-label text-[10px] text-secondary font-bold uppercase tracking-widest mb-2 block">2014 - 2017</span>
-            <h3 class="font-headline text-xl md:text-2xl font-bold uppercase leading-tight">Engineering Degree in Computer Science</h3>
+            <h3 class="font-headline text-xl md:text-2xl font-bold uppercase leading-tight" data-i18n="education.engineer">Engineering Degree in Computer Science</h3>
             <p class="text-on-surface-variant text-xs md:text-sm font-bold mt-4">ENSIIE - Data Structures & Algorithms</p>
           </article>
 
-          <div class="mt-8 md:mt-12 bg-primary text-white p-6 md:p-8">
+          <div class="technical-stack-panel mt-8 md:mt-12 bg-primary text-white p-6 md:p-8">
             <div class="flex items-center gap-4 mb-6">
-              <span class="font-label text-xs md:text-sm uppercase font-bold tracking-tighter text-secondary">Technical_Stack</span>
+              <span class="font-label text-xs md:text-sm uppercase font-bold tracking-tighter text-secondary" data-i18n="stack.title">Technical_Stack</span>
             </div>
             <ul class="space-y-4 font-label text-[9px] md:text-[10px] font-bold uppercase tracking-widest">
               <li class="flex justify-between border-b border-white/20 pb-2">
@@ -338,33 +472,34 @@
   </main>
 
   <footer class="w-full flex flex-col items-center py-16 md:py-24 border-t-4 border-primary mt-12 md:mt-24 bg-white relative">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 md:px-8 py-2 font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] whitespace-nowrap">Finis_Archive</div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 md:px-8 py-2 font-label text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] whitespace-nowrap" data-i18n="footer.end">Finis_Archive</div>
     <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-8 md:mb-12 px-4 text-center">
       <a class="text-on-surface font-bold hover:text-secondary transition-colors uppercase font-label text-xs tracking-widest" href="https://twitter.com/fidel3007" target="_blank" rel="noreferrer">Twitter</a>
       <a class="text-on-surface font-bold hover:text-secondary transition-colors uppercase font-label text-xs tracking-widest" href="https://github.com/fidele007" target="_blank" rel="noreferrer">GitHub</a>
       <a class="text-on-surface font-bold hover:text-secondary transition-colors uppercase font-label text-xs tracking-widest" href="https://www.linkedin.com/in/force-fidele-kien/" target="_blank" rel="noreferrer">LinkedIn</a>
     </div>
-    <div class="font-label text-[8px] md:text-[10px] font-bold text-on-surface-variant mb-4 tracking-widest uppercase text-center px-4">© 2024 Force Fidele KIEN. All Rights Reserved. PRNT-v3.0</div>
-    <div class="flex gap-4 md:gap-6">
+    <div class="font-label text-[8px] md:text-[10px] font-bold text-on-surface-variant mb-4 tracking-widest uppercase text-center px-4">© <script>document.write(new Date().getFullYear());</script> <span data-i18n="footer.rights">Force Fidele KIEN. All Rights Reserved. PRNT-v3.0</span></div>
+    <!-- <div class="flex gap-4 md:gap-6">
       <a class="text-on-surface-variant hover:text-secondary transition-colors text-[8px] md:text-[10px] font-bold font-label uppercase" href="akkhara/privacy.html">Privacy_Policy</a>
       <span class="text-outline">/</span>
       <a class="text-on-surface-variant hover:text-secondary transition-colors text-[8px] md:text-[10px] font-bold font-label uppercase" href="akkhara/terms.html">Terms_of_Service</a>
-    </div>
+    </div> -->
   </footer>
 
   <div class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex flex-col gap-4 items-end">
     <div class="bg-white border-2 border-primary p-3 md:p-4 navy-shadow hidden sm:block">
-      <div class="text-[9px] md:text-[10px] font-bold font-label uppercase text-secondary mb-1">System_Status</div>
+      <div class="text-[9px] md:text-[10px] font-bold font-label uppercase text-secondary mb-1" data-i18n="status.label">System_Status</div>
       <div class="flex items-center gap-2">
         <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span class="text-[9px] md:text-[10px] font-bold font-label uppercase">Online_Active</span>
+        <span class="text-[9px] md:text-[10px] font-bold font-label uppercase" data-i18n="status.value">Online_Active</span>
       </div>
     </div>
-    <a class="w-12 h-12 md:w-14 md:h-14 bg-secondary text-white flex items-center justify-center navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="mailto:force@fidele007.com" aria-label="Email Force Fidele KIEN">
+    <a class="w-12 h-12 md:w-14 md:h-14 bg-white text-secondary border-2 border-primary flex items-center justify-center navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="mailto:forcefidele@gmail.com?subject=Portfolio%20contact%20request" aria-label="Email Force Fidele KIEN">
       <span class="material-symbols-outlined">mail</span>
     </a>
   </div>
 
+  <script src="assets/site.js"></script>
   <script>
     const paperGrid = document.querySelector(".paper-grid");
     const menuToggle = document.getElementById("menu-toggle");

@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Public repository index for Force Fidele KIEN.">
+  <title>All Works | Force Fidele KIEN</title>
+  <script>
+    (() => {
+      const theme = localStorage.getItem("site-theme") || "system";
+      const useDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.classList.toggle("dark", useDark);
+      document.documentElement.classList.toggle("light", !useDark);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@300;500;700&family=Google+Sans:wght@400;500;700&family=Noto+Sans+Khmer:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#FAF9F6",
+            background: "#FAF9F6",
+            "on-surface": "#1E293B",
+            primary: "#1E293B",
+            secondary: "#F97316",
+            outline: "#D1D5DB",
+            "outline-variant": "#E5E7EB",
+            "surface-container": "#F3F4F6",
+            "on-surface-variant": "#475569"
+          },
+          fontFamily: {
+            headline: ["Sora", "sans-serif"],
+            body: ["Inter", "Google Sans", "Noto Sans Khmer", "sans-serif"],
+            label: ["Space Grotesk", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1E293B;
+      cursor: default;
+    }
+
+    .paper-grid {
+      background-image:
+        linear-gradient(#E5E7EB 1px, transparent 1px),
+        linear-gradient(90deg, #E5E7EB 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .navy-shadow {
+      box-shadow: 4px 4px 0 #1E293B;
+    }
+
+    .material-symbols-outlined {
+      vertical-align: middle;
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+
+    html[lang="km"] body,
+    html[lang="km"] .font-headline,
+    html[lang="km"] .font-body,
+    html[lang="km"] .font-label,
+    html[lang="km"] .control-select {
+      font-family: "Google Sans", "Noto Sans Khmer", sans-serif !important;
+    }
+
+    .control-select {
+      appearance: none;
+      background-color: #ffffff;
+      border: 2px solid #1E293B;
+      color: #1E293B;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 0.45rem 1.75rem 0.45rem 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .dark body,
+    .dark .bg-surface,
+    .dark .bg-white,
+    .dark .bg-surface\/80 {
+      background-color: #111827 !important;
+      color: #F9FAFB !important;
+    }
+
+    .dark .paper-grid {
+      opacity: 0.2;
+      background-image:
+        linear-gradient(#374151 1px, transparent 1px),
+        linear-gradient(90deg, #374151 1px, transparent 1px);
+    }
+
+    .dark .border-primary,
+    .dark .control-select {
+      border-color: #F9FAFB !important;
+    }
+
+    .dark .bg-primary {
+      background-color: #F9FAFB !important;
+      color: #111827 !important;
+    }
+
+    .dark .text-primary,
+    .dark .text-on-surface,
+    .dark .text-on-surface-variant {
+      color: #F9FAFB !important;
+    }
+
+    .dark .text-secondary {
+      color: #FB923C !important;
+    }
+
+    .dark .bg-secondary {
+      background-color: #FB923C !important;
+    }
+
+    .dark .navy-shadow {
+      box-shadow: 4px 4px 0 #FB923C;
+    }
+
+    .bg-secondary.navy-shadow,
+    .dark .bg-secondary.navy-shadow {
+      box-shadow: 4px 4px 0 #1E293B;
+    }
+
+    .dark .bg-secondary.navy-shadow {
+      box-shadow: 4px 4px 0 #0F172A;
+    }
+
+    .dark .control-select {
+      background-color: #111827 !important;
+      color: #F9FAFB !important;
+    }
+  </style>
+</head>
+<body class="font-body selection:bg-secondary selection:text-white overflow-x-hidden">
+  <div class="fixed inset-0 paper-grid pointer-events-none opacity-40 z-0"></div>
+
+  <header class="fixed top-0 left-0 w-full z-[100] bg-surface/80 border-b-2 border-primary backdrop-blur-sm px-4 md:px-8 h-[70px] flex justify-between items-center">
+    <a class="flex items-center gap-3 md:gap-4" href="index.html" aria-label="Force Fidele KIEN home">
+      <div class="p-1 shrink-0">
+        <img alt="Force Fidele Logo" class="h-6 w-6 md:h-8 md:w-8 object-contain" src="site_logo_small.png">
+      </div>
+      <span class="font-headline text-lg md:text-xl font-bold tracking-tighter uppercase whitespace-nowrap">Force Fidele KIEN</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Primary navigation">
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="index.html" data-i18n="nav.home">00. Home</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="index.html#projects" data-i18n="nav.projects">02. Projects</a>
+      <a class="font-label text-xs uppercase font-bold tracking-widest hover:text-secondary transition-colors" href="works.html" data-i18n="nav.works">05. All Works</a>
+    </nav>
+    <div class="flex items-center gap-2 md:gap-4">
+      <select class="control-select font-label" data-language-select aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="km">ខ្មែរ</option>
+      </select>
+      <select class="control-select font-label" data-theme-select aria-label="Theme">
+        <option value="system" data-i18n="theme.system">System</option>
+        <option value="light" data-i18n="theme.light">Light</option>
+        <option value="dark" data-i18n="theme.dark">Dark</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-32 md:pt-40 px-4 sm:px-8 md:px-12 lg:px-24 max-w-7xl mx-auto">
+    <section class="border-l-4 border-primary pl-4 md:pl-12 mb-12">
+      <span class="font-label text-secondary font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block" data-i18n="works.eyebrow">GitHub // Public Repository Index</span>
+      <h1 class="font-headline text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tighter uppercase mb-6" data-i18n="works.title">All_Public_Works</h1>
+      <p class="font-body text-on-surface-variant text-base md:text-xl max-w-3xl font-medium leading-tight" data-i18n="works.copy">
+        Live list of public repositories from GitHub. The public profile currently verifies 97 repositories, not 150+.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a class="group flex items-center gap-3 border-2 border-primary px-5 py-3 bg-white navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="index.html">
+          <span class="font-label text-xs font-bold uppercase tracking-[0.2em]" data-i18n="works.home">Back_To_Portfolio</span>
+        </a>
+        <a class="group flex items-center gap-3 border-2 border-primary px-5 py-3 bg-secondary text-white navy-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="https://github.com/fidele007" target="_blank" rel="noreferrer">
+          <span class="font-label text-xs font-bold uppercase tracking-[0.2em]">GitHub</span>
+          <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 mb-24" data-repo-list>
+      <p class="border-2 border-primary bg-white p-6 navy-shadow" data-i18n="works.loading">Loading public repositories...</p>
+    </section>
+  </main>
+
+  <footer class="w-full flex flex-col items-center py-12 border-t-4 border-primary bg-white relative">
+    <div class="font-label text-[8px] md:text-[10px] font-bold text-on-surface-variant tracking-widest uppercase text-center px-4">© <script>document.write(new Date().getFullYear());</script> <span data-i18n="footer.rights">Force Fidele KIEN. All Rights Reserved. PRNT-v3.0</span></div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

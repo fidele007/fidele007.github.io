@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e76f24">
+  <meta name="description" content="Palate turns foreign restaurant menus into dishes you can understand, recognize, and order with confidence.">
+  <title>Palate | Read any menu. Order with confidence.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bowlby+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --saffron: oklch(0.69 0.17 49);
+      --saffron-deep: oklch(0.54 0.16 43);
+      --cream: oklch(0.965 0.022 77);
+      --paper: oklch(0.925 0.04 76);
+      --ink: oklch(0.205 0.025 53);
+      --ink-soft: oklch(0.39 0.04 55);
+      --lime: oklch(0.8 0.11 116);
+      --line: oklch(0.34 0.035 54 / 0.22);
+      --shadow: 0 28px 70px oklch(0.18 0.03 50 / 0.24);
+      --display: "Bowlby One", sans-serif;
+      --body: "Atkinson Hyperlegible", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { max-width: 100%; scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.55;
+      max-width: 100%;
+      overflow-x: clip;
+    }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      pointer-events: none;
+      content: "";
+      opacity: 0.22;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.10'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    main { overflow-x: clip; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--cream);
+      font-weight: 700;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 86px;
+    }
+    .brand { display: inline-flex; align-items: center; min-height: 44px; gap: 11px; text-decoration: none; }
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 14px 14px 14px 5px;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--display);
+      font-size: 22px;
+      transform: rotate(-3deg);
+    }
+    .brand-name { font-family: var(--display); font-size: 20px; letter-spacing: -0.03em; }
+    .nav-links { display: flex; align-items: center; gap: 30px; font-size: 16px; font-weight: 700; }
+    .nav-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+    .nav-links a:not(.nav-cta):hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+    .nav-cta { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px; border-radius: 999px; background: var(--ink); color: var(--cream); }
+    .nav-cta:hover { background: var(--saffron-deep); }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.8fr);
+      gap: clamp(36px, 6vw, 96px);
+      align-items: center;
+      min-height: calc(100svh - 86px);
+      padding: 56px 0 96px;
+    }
+    .eyebrow { margin: 0 0 22px; font-size: 15px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+    .hero h1 {
+      max-width: 10ch;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(3.65rem, 8.4vw, 7.5rem);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      line-height: 0.92;
+      text-wrap: balance;
+    }
+    .hero h1 span { color: var(--saffron-deep); }
+    .lede { max-width: 54ch; margin: 30px 0 34px; color: var(--ink-soft); font-size: clamp(1.1rem, 1.6vw, 1.32rem); }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms cubic-bezier(.16,1,.3,1), box-shadow 180ms cubic-bezier(.16,1,.3,1);
+    }
+    .button:hover { transform: translateY(-3px); box-shadow: 0 7px 0 var(--ink); }
+    .button:active { transform: translateY(1px); box-shadow: none; }
+    .button-primary { background: var(--saffron); }
+    .button-secondary { border-color: transparent; }
+
+    .hero-visual { position: relative; min-height: 650px; }
+    .photo {
+      position: absolute;
+      inset: 4% -12% 3% 8%;
+      border-radius: 48% 48% 12% 42%;
+      object-fit: cover;
+      width: 104%;
+      height: 92%;
+      box-shadow: var(--shadow);
+    }
+    .sun {
+      position: absolute;
+      top: -5%;
+      right: -18%;
+      width: 290px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--saffron);
+    }
+    .phone {
+      position: absolute;
+      right: 2%;
+      bottom: -2%;
+      width: min(270px, 58%);
+      padding: 11px;
+      border: 3px solid var(--ink);
+      border-radius: 38px;
+      background: var(--ink);
+      box-shadow: 14px 18px 0 oklch(0.18 0.03 50 / .2);
+      transform: rotate(4deg);
+    }
+    .phone-screen { min-height: 485px; padding: 20px 16px; border-radius: 27px; background: var(--cream); }
+    .phone-top { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; }
+    .dish-image { width: 100%; height: 180px; margin-top: 23px; border-radius: 19px; object-fit: cover; }
+    .translation-label { margin: 20px 0 4px; color: var(--saffron-deep); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .phone h2 { margin: 0; font-family: var(--display); font-size: 23px; font-weight: 400; line-height: 1.1; }
+    .original { margin: 5px 0 14px; color: var(--ink-soft); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag { padding: 5px 9px; border-radius: 999px; background: var(--paper); font-size: 11px; font-weight: 700; }
+    .price { display: flex; justify-content: space-between; margin-top: 19px; padding-top: 13px; border-top: 1px solid var(--line); font-size: 13px; font-weight: 700; }
+    .stamp {
+      position: absolute;
+      left: -5%;
+      bottom: 5%;
+      display: grid;
+      width: 132px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      background: var(--lime);
+      font-weight: 700;
+      line-height: 1.05;
+      text-align: center;
+      transform: rotate(-12deg);
+    }
+
+    .marquee { overflow: hidden; border-block: 2px solid var(--ink); background: var(--saffron); }
+    .marquee-track { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+    .marquee span { padding: 15px 24px; font-family: var(--display); font-size: 18px; white-space: nowrap; }
+    .marquee span::after { margin-left: 48px; content: "✦"; }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+
+    .how { padding: clamp(100px, 13vw, 180px) 0; }
+    .section-intro { display: grid; grid-template-columns: .65fr 1.35fr; gap: 40px; margin-bottom: 72px; }
+    .kicker { margin: 9px 0 0; font-weight: 700; }
+    .section-intro h2 { max-width: 13ch; margin: 0; font-family: var(--display); font-size: clamp(2.6rem, 5vw, 5.3rem); font-weight: 400; letter-spacing: -.04em; line-height: .98; }
+    .steps { border-top: 2px solid var(--ink); }
+    .step { display: grid; grid-template-columns: 90px 1fr 1fr; gap: 36px; align-items: start; padding: 42px 0; border-bottom: 1px solid var(--line); }
+    .step-number { font-family: var(--display); color: var(--saffron-deep); font-size: 30px; }
+    .step h3 { margin: 0; font-size: clamp(1.55rem, 2.5vw, 2.2rem); line-height: 1.15; }
+    .step p { max-width: 46ch; margin: 0; color: var(--ink-soft); }
+
+    .confidence { background: var(--ink); color: var(--cream); }
+    .confidence-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 670px; }
+    .confidence-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(80px, 10vw, 150px) clamp(20px, 7vw, 96px) clamp(80px, 10vw, 150px) 0; }
+    .confidence h2 { max-width: 9ch; margin: 0 0 32px; font-family: var(--display); font-size: clamp(3rem, 6vw, 6rem); font-weight: 400; letter-spacing: -.05em; line-height: .95; }
+    .confidence p { max-width: 48ch; margin: 0; color: oklch(0.82 0.025 70); }
+    .confidence-image { width: 50vw; max-width: none; min-height: 540px; height: 100%; object-fit: cover; }
+
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; padding: 110px 0; }
+    .feature { padding: 0 clamp(22px, 4vw, 56px); border-inline-start: 1px solid var(--line); }
+    .feature:first-child { padding-left: 0; border: 0; }
+    .feature:last-child { padding-right: 0; }
+    .feature strong { display: block; margin-bottom: 14px; font-family: var(--display); font-size: 22px; font-weight: 400; line-height: 1.15; }
+    .feature p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+    .final { position: relative; overflow: hidden; padding: clamp(100px, 15vw, 190px) 0; background: var(--saffron); text-align: center; }
+    .final::before, .final::after { position: absolute; z-index: 0; width: 270px; aspect-ratio: 1; border: 3px solid var(--ink); border-radius: 50%; content: ""; }
+    .final::before { top: -160px; left: 3%; }
+    .final::after { right: 4%; bottom: -185px; width: 360px; }
+    .final h2 { position: relative; max-width: 10ch; margin: 0 auto 28px; font-family: var(--display); font-size: clamp(3.3rem, 8vw, 7.8rem); font-weight: 400; letter-spacing: -.06em; line-height: .9; }
+    .final p { position: relative; max-width: 42ch; margin: 0 auto 34px; }
+    .final .button { position: relative; background: var(--cream); }
+    .final > .shell { position: relative; z-index: 1; }
+
+    footer { background: var(--ink); color: var(--cream); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 30px; align-items: center; min-height: 120px; }
+    .footer-links { display: flex; gap: 24px; font-size: 15px; }
+    .footer-links a { display: inline-flex; align-items: center; min-height: 44px; color: oklch(0.8 0.02 70); text-underline-offset: 4px; }
+
+    [data-reveal] { animation: reveal 700ms cubic-bezier(.16,1,.3,1) both; }
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 850px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { grid-template-columns: 1fr; padding-top: 50px; }
+      .hero h1 { max-width: 9ch; }
+      .hero-visual { min-height: 590px; }
+      .photo { inset-inline: 4% -8%; width: 96%; }
+      .section-intro, .confidence-inner { grid-template-columns: 1fr; }
+      .section-intro { gap: 20px; }
+      .step { grid-template-columns: 60px 1fr; }
+      .step p { grid-column: 2; }
+      .confidence-copy { padding-inline: 0; }
+      .confidence-image { width: 100vw; height: 560px; margin-left: -20px; }
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 17px; }
+      .shell { width: min(100% - 28px, 1180px); }
+      .nav { min-height: 74px; }
+      .nav-cta { padding: 9px 14px; }
+      .hero { min-height: 0; padding: 56px 0 72px; }
+      .hero h1 { font-size: clamp(3.25rem, 17vw, 5rem); }
+      .actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+      .hero-visual { min-height: 500px; margin-top: 12px; }
+      .photo { height: 82%; }
+      .phone { right: -1%; width: 230px; }
+      .phone-screen { min-height: 405px; }
+      .dish-image { height: 130px; }
+      .stamp { left: -2%; bottom: 10%; width: 105px; font-size: 14px; }
+      .step { grid-template-columns: 44px 1fr; gap: 14px; padding: 30px 0; }
+      .features { grid-template-columns: 1fr; gap: 42px; padding: 80px 0; }
+      .feature, .feature:first-child, .feature:last-child { padding: 0; border: 0; }
+      .confidence-image { height: 430px; margin-left: -14px; }
+      .final::before { top: -210px; }
+      .final h2 { max-width: 9ch; font-size: clamp(2.8rem, 14vw, 4rem); }
+      .footer-inner { align-items: flex-start; flex-direction: column; padding: 36px 0; }
+    }
+
+    @media (max-width: 360px) {
+      .final h2 { max-width: 10ch; font-size: 2.35rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .marquee-track { animation: none; }
+      [data-reveal] { animation: none; }
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="shell">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Palate home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-name">Palate</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#why">Why Palate</a>
+        <a class="nav-cta" href="#download">Get the app</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero shell">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">Your dining companion, wherever you roam</p>
+        <h1>Read any menu. <span>Taste the world.</span></h1>
+        <p class="lede">Point your camera at a foreign menu. Palate finds the dishes, translates them, and shows you what is worth ordering.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#download">Join the launch list</a>
+          <a class="button button-secondary" href="#how">See how it works ↓</a>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <span class="sun" aria-hidden="true"></span>
+        <img class="photo" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" width="1200" height="800" alt="Friends sharing a meal around a warmly lit restaurant table" fetchpriority="high">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-screen">
+            <div class="phone-top"><span>9:41</span><span>● ●</span></div>
+            <img class="dish-image" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&amp;fit=crop&amp;w=700&amp;q=85" width="700" height="467" alt="A colorful bowl of vegetables and noodles">
+            <p class="translation-label">Found on your menu</p>
+            <h2>Garden noodle bowl</h2>
+            <p class="original">季節野菜の麺</p>
+            <div class="tags"><span class="tag">Vegetarian</span><span class="tag">Savory</span></div>
+            <div class="price"><span>Confident pick</span><span>¥1,200</span></div>
+          </div>
+        </div>
+        <div class="stamp" aria-hidden="true">SCAN<br>TRANSLATE<br>ORDER</div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Paris</span><span>Phnom Penh</span><span>Tokyo</span><span>Naples</span><span>Seoul</span><span>Mexico City</span>
+        <span>Paris</span><span>Phnom Penh</span><span>Tokyo</span><span>Naples</span><span>Seoul</span><span>Mexico City</span>
+      </div>
+    </div>
+
+    <section class="how shell" id="how">
+      <div class="section-intro" data-reveal>
+        <p class="kicker">Dinner, decoded.</p>
+        <h2>From menu to must-order in seconds.</h2>
+      </div>
+      <div class="steps">
+        <article class="step" data-reveal><span class="step-number">01</span><h3>Point at the menu</h3><p>Photograph the page in front of you. No typing, copying, or awkward hand gestures required.</p></article>
+        <article class="step" data-reveal><span class="step-number">02</span><h3>Meet every dish</h3><p>Palate separates the menu into dishes, translates the names, and adds the context a literal translation misses.</p></article>
+        <article class="step" data-reveal><span class="step-number">03</span><h3>Order without guessing</h3><p>See imagery, ingredients, and useful dietary cues. Save the discoveries you want to remember.</p></article>
+      </div>
+    </section>
+
+    <section class="confidence" id="why">
+      <div class="confidence-inner shell">
+        <div class="confidence-copy" data-reveal>
+          <p class="eyebrow">More than translation</p>
+          <h2>Know what sounds delicious.</h2>
+          <p>A name alone rarely tells the whole story. Palate brings the dish into focus with visual context and concise explanations, so you can choose by appetite, not luck.</p>
+        </div>
+        <img class="confidence-image" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" width="1400" height="933" alt="A carefully plated restaurant dish arriving at the table">
+      </div>
+    </section>
+
+    <section class="features shell" aria-label="Palate benefits">
+      <div class="feature" data-reveal><strong>Fast at the table</strong><p>Built for the moment when the server is waiting and everyone is ready to order.</p></div>
+      <div class="feature" data-reveal><strong>Curious by design</strong><p>Discover unfamiliar dishes without reducing an entire cuisine to a literal translation.</p></div>
+      <div class="feature" data-reveal><strong>Ready offline</strong><p>Premium on-device scanning keeps your dining companion useful when roaming data does not.</p></div>
+    </section>
+
+    <section class="final" id="download">
+      <div class="shell" data-reveal>
+        <p class="eyebrow">Palate is coming soon</p>
+        <h2>Your next favorite dish&nbsp;is untranslated.</h2>
+        <p>Palate is preparing for launch on iPhone and Android. Follow the project and be first at the table.</p>
+        <a class="button" href="mailto:forcefidele@gmail.com?subject=Palate%20launch">Notify me at launch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner shell">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">P</span><span class="brand-name">Palate</span></a>
+      <span>Made for hungry travelers.</span>
+      <div class="footer-links"><a href="mailto:forcefidele@gmail.com?subject=Palate%20support">Support</a><a href="/">Developer</a></div>
+    </div>
+  </footer>
+
+</body>
+</html>

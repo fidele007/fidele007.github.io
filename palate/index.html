@@ -6,9 +6,11 @@
   <meta name="theme-color" content="#e76f24">
   <meta name="description" content="Palate turns foreign restaurant menus into dishes you can understand, recognize, and order with confidence.">
   <title>Palate | Read any menu. Order with confidence.</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bowlby+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Bowlby+One&amp;display=swap" rel="stylesheet">
   <style>
     :root {
       --saffron: oklch(0.69 0.17 49);
@@ -74,15 +76,10 @@
     }
     .brand { display: inline-flex; align-items: center; min-height: 44px; gap: 11px; text-decoration: none; }
     .brand-mark {
-      display: grid;
       width: 42px;
-      aspect-ratio: 1;
-      place-items: center;
-      border-radius: 14px 14px 14px 5px;
-      background: var(--ink);
-      color: var(--cream);
-      font-family: var(--display);
-      font-size: 22px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
       transform: rotate(-3deg);
     }
     .brand-name { font-family: var(--display); font-size: 20px; letter-spacing: -0.03em; }
@@ -294,7 +291,7 @@
   <header class="shell">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Palate home">
-        <span class="brand-mark" aria-hidden="true">P</span>
+        <img class="brand-mark" src="icon.png" width="42" height="42" alt="">
         <span class="brand-name">Palate</span>
       </a>
       <div class="nav-links">
@@ -382,9 +379,9 @@
 
   <footer>
     <div class="footer-inner shell">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">P</span><span class="brand-name">Palate</span></a>
+      <a class="brand" href="#top"><img class="brand-mark" src="icon.png" width="42" height="42" alt=""><span class="brand-name">Palate</span></a>
       <span>Made for hungry travelers.</span>
-      <div class="footer-links"><a href="mailto:forcefidele@gmail.com?subject=Palate%20support">Support</a><a href="/">Developer</a></div>
+      <div class="footer-links"><a href="support.html">Support</a><a href="/">Developer</a></div>
     </div>
   </footer>
 

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e76f24">
+  <meta name="description" content="Get help with Palate menu scanning, translations, purchases, offline mode, and locally saved data.">
+  <title>Palate Support</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Bowlby+One&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --saffron: oklch(0.69 0.17 49);
+      --saffron-deep: oklch(0.54 0.16 43);
+      --cream: oklch(0.965 0.022 77);
+      --paper: oklch(0.925 0.04 76);
+      --ink: oklch(0.205 0.025 53);
+      --ink-soft: oklch(0.39 0.04 55);
+      --lime: oklch(0.8 0.11 116);
+      --line: oklch(0.34 0.035 54 / 0.22);
+      --shadow: 0 22px 55px oklch(0.18 0.03 50 / 0.18);
+      --display: "Bowlby One", sans-serif;
+      --body: "Atkinson Hyperlegible", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { max-width: 100%; overflow-x: clip; }
+    body {
+      margin: 0;
+      max-width: 100%;
+      overflow-x: clip;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      pointer-events: none;
+      content: "";
+      opacity: 0.22;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.10'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; text-underline-offset: 4px; }
+    img { display: block; max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--cream);
+      font-weight: 700;
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell { width: min(760px, calc(100% - 40px)); margin-inline: auto; }
+    .wide-shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 86px;
+    }
+    .brand { display: inline-flex; align-items: center; min-height: 44px; gap: 11px; text-decoration: none; }
+    .brand-mark { width: 42px; height: 42px; border-radius: 12px; object-fit: cover; transform: rotate(-3deg); }
+    .brand-name { font-family: var(--display); font-size: 20px; letter-spacing: -0.03em; }
+    .back-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 700; }
+
+    .hero { padding: clamp(64px, 10vw, 120px) 0 66px; }
+    .eyebrow { margin: 0 0 20px; color: var(--saffron-deep); font-size: 15px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+    h1, h2 { margin: 0; }
+    h1 {
+      max-width: 9ch;
+      font-family: var(--display);
+      font-size: clamp(3.4rem, 10vw, 6.3rem);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      line-height: 0.92;
+    }
+    .lede { max-width: 52ch; margin: 28px 0 0; color: var(--ink-soft); font-size: 21px; }
+
+    section { padding: 48px 0; border-top: 2px solid var(--ink); }
+    h2 { font-family: var(--display); font-size: clamp(1.7rem, 5vw, 2.45rem); font-weight: 400; letter-spacing: -0.035em; line-height: 1.05; }
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 48px);
+      border: 2px solid var(--ink);
+      border-radius: 28px 28px 28px 8px;
+      background: var(--saffron);
+      box-shadow: var(--shadow);
+    }
+    .contact::after {
+      position: absolute;
+      right: -95px;
+      bottom: -125px;
+      width: 240px;
+      aspect-ratio: 1;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      content: "";
+      opacity: 0.65;
+    }
+    .contact > * { position: relative; z-index: 1; }
+    .contact p { max-width: 45ch; margin: 14px 0 0; }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      margin-top: 24px;
+      padding: 12px 22px;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--cream);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-link:hover { background: var(--cream); color: var(--ink); }
+    .contact-details { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; margin: 28px 0 0; }
+    .contact-details dt { font-weight: 700; }
+    .contact-details dd { margin: 0; }
+
+    .checklist { margin: 24px 0 28px; padding-left: 1.25em; }
+    .checklist li { margin-top: 10px; padding-left: 0.25em; }
+    .notice { padding: 20px 22px; border: 2px solid var(--ink); background: var(--lime); }
+    .notice strong { display: block; margin-bottom: 4px; }
+
+    .faq { margin-top: 24px; border-top: 1px solid var(--line); }
+    .faq article { display: grid; grid-template-columns: minmax(190px, 0.72fr) 1fr; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .faq h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+    .faq p { margin: 0; color: var(--ink-soft); }
+
+    .safety { border-top: 0; }
+    .safety-inner { padding: 30px; background: var(--paper); }
+    .safety p { margin: 14px 0 0; }
+
+    footer { margin-top: 48px; background: var(--ink); color: var(--cream); }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; min-height: 120px; }
+    .footer-links { display: flex; gap: 24px; font-size: 15px; }
+    .footer-links a { display: inline-flex; align-items: center; min-height: 44px; color: oklch(0.8 0.02 70); }
+    .copyright { flex-basis: 100%; margin: -28px 0 20px; color: oklch(0.72 0.02 70); font-size: 14px; }
+
+    @media (max-width: 620px) {
+      body { font-size: 17px; }
+      .wide-shell, .shell { width: min(100% - 28px, 760px); }
+      .nav { min-height: 74px; }
+      .back-link { font-size: 15px; }
+      .hero { padding-top: 58px; }
+      .lede { font-size: 19px; }
+      section { padding: 40px 0; }
+      .faq article { grid-template-columns: 1fr; gap: 8px; }
+      .contact-details { grid-template-columns: 1fr; gap: 2px; }
+      .contact-details dd + dt { margin-top: 10px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; padding: 34px 0 20px; }
+      .copyright { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="wide-shell">
+    <nav class="nav" aria-label="Support navigation">
+      <a class="brand" href="index.html" aria-label="Palate home">
+        <img class="brand-mark" src="icon.png" width="42" height="42" alt="">
+        <span class="brand-name">Palate</span>
+      </a>
+      <a class="back-link" href="index.html">Back to Palate</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="hero shell">
+      <p class="eyebrow">Support for hungry travelers</p>
+      <h1>How can we help?</h1>
+      <p class="lede">Get help with menu scans, translations, offline mode, purchases, or your locally saved data.</p>
+    </div>
+
+    <section class="shell" aria-labelledby="contact-heading">
+      <div class="contact">
+        <h2 id="contact-heading">Contact support</h2>
+        <p>Email us with your question. We normally reply within three business days.</p>
+        <a class="contact-link" href="mailto:forcefidele@gmail.com?subject=Palate%20Support%20Request">Email Palate Support</a>
+        <dl class="contact-details">
+          <dt>Publisher</dt>
+          <dd>Force Fidele Kien</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:forcefidele@gmail.com">forcefidele@gmail.com</a></dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="shell" aria-labelledby="include-heading">
+      <h2 id="include-heading">What to include</h2>
+      <ul class="checklist">
+        <li>Your device model and iOS or Android version.</li>
+        <li>Your Palate app version, found in Settings.</li>
+        <li>The steps you took and what happened instead.</li>
+        <li>A screenshot, if it does not contain private information.</li>
+      </ul>
+      <div class="notice">
+        <strong>Keep credentials private</strong>
+        Never email API keys, passwords, full payment details, or unredacted purchase receipts.
+      </div>
+    </section>
+
+    <section class="shell" aria-labelledby="answers-heading">
+      <h2 id="answers-heading">Quick answers</h2>
+      <div class="faq">
+        <article>
+          <h3>A menu scan did not work</h3>
+          <p>Use a clear, well-lit photo with the menu text in focus. For online scans, check your connection and try again. You can also select an existing menu image from your photo library.</p>
+        </article>
+        <article>
+          <h3>I need to restore a purchase</h3>
+          <p>Open Settings, choose Palate Premium, then tap Restore Purchases while signed in to the same App Store or Google Play account used for the purchase.</p>
+        </article>
+        <article>
+          <h3>Offline scanning is unavailable</h3>
+          <p>Offline menu interpretation is a premium feature. Download a supported model over Wi-Fi from Settings, Translation Method before traveling without a connection.</p>
+        </article>
+        <article>
+          <h3>I want to delete my data</h3>
+          <p>Favorites, recent scans, settings, and saved API keys are stored locally. Delete them in the app or uninstall Palate. For a server-side usage-record request, email support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="safety shell" aria-labelledby="safety-heading">
+      <div class="safety-inner">
+        <h2 id="safety-heading">Food safety</h2>
+        <p>Translations and generated dish details can be incomplete or inaccurate. Always confirm allergens, ingredients, dietary suitability, and prices with restaurant staff before ordering.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner wide-shell">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="icon.png" width="42" height="42" alt="">
+        <span class="brand-name">Palate</span>
+      </a>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p class="copyright">© 2026 Force Fidele Kien.</p>
+    </div>
+  </footer>
+</body>
+</html>

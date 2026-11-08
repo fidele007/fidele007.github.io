@@ -8,7 +8,7 @@
   "tintColor": "#1d5fc4",
   "apps": [
     {
-      "name": "Akkhara",
+      "name": "Akkhara Keyboard",
       "bundleIdentifier": "com.forcefidele.akkhara-keyboard",
       "developerName": "Force Fidele KIEN",
       "subtitle": "Type Khmer your way",

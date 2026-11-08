@@ -1,0 +1,42 @@
+{
+  "name": "Force Fidele",
+  "identifier": "com.forcefidele.source",
+  "subtitle": "Apps by Force Fidele KIEN",
+  "description": "Akkhara Keyboard and Palate, ready to install with SideStore.",
+  "iconURL": "https://forcefidele.com/site_logo.png",
+  "website": "https://forcefidele.com",
+  "tintColor": "#1d5fc4",
+  "apps": [
+    {
+      "name": "Akkhara",
+      "bundleIdentifier": "com.forcefidele.akkhara-keyboard",
+      "developerName": "Force Fidele KIEN",
+      "subtitle": "Type Khmer your way",
+      "localizedDescription": "Akkhara Keyboard is a Khmer keyboard for iPhone with smart suggestions, autocorrection, swipe typing and voice dictation, all on your device.",
+      "iconURL": "https://forcefidele.com/akkhara-keyboard/icon.png",
+      "tintColor": "#1d5fc4",
+      "category": "utilities",
+      "screenshots": [
+        "https://forcefidele.com/akkhara/screenshot_1.png",
+        "https://forcefidele.com/akkhara/screenshot_2.png",
+        "https://forcefidele.com/akkhara/screenshot_3.png",
+        "https://forcefidele.com/akkhara/screenshot_4.png",
+        "https://forcefidele.com/akkhara/screenshot_5.png"
+      ],
+      "versions": []
+    },
+    {
+      "name": "Palate",
+      "bundleIdentifier": "com.forcefidele.palate",
+      "developerName": "Force Fidele KIEN",
+      "subtitle": "Read any menu. Order with confidence.",
+      "localizedDescription": "Palate turns foreign restaurant menus into dishes you can understand, recognize, and order with confidence.",
+      "iconURL": "https://forcefidele.com/palate/icon.png",
+      "tintColor": "#e76f24",
+      "category": "food",
+      "screenshots": [],
+      "versions": []
+    }
+  ],
+  "news": []
+}

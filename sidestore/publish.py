@@ -4,8 +4,10 @@
 Usage: sidestore/publish.py path/to/App.ipa ["What's new"]
 Uploads the ipa as a GitHub release asset, adds the version to source.json,
 then commits and pushes. The app must already be listed in source.json.
+If the ipa's build number isn't above the last published one, it is raised to
+the next number (app and extensions) and the ipa is re-signed ad hoc first.
 """
-import datetime, json, os, plistlib, re, subprocess, sys, zipfile
+import datetime, glob, json, os, plistlib, re, subprocess, sys, tempfile, zipfile
 
 REPO = "fidele007/fidele007.github.io"
 SOURCE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "source.json")
@@ -19,8 +21,32 @@ source = json.load(open(SOURCE))
 app = next((a for a in source["apps"] if a["bundleIdentifier"] == bundle), None)
 if app is None:
     sys.exit(f"{bundle} is not listed in source.json; add the app entry first")
-if any(v["version"] == version and v.get("buildVersion") == build for v in app["versions"]):
-    sys.exit(f"{app['name']} {version} ({build}) is already published; bump the build number")
+
+
+def renumber(ipa, build):
+    """Return a copy of ipa with CFBundleVersion set to build, re-signed ad hoc."""
+    work = tempfile.mkdtemp()
+    subprocess.run(["ditto", "-x", "-k", ipa, work], check=True)
+    app_dir = glob.glob(os.path.join(work, "Payload", "*.app"))[0]
+    bundles = glob.glob(os.path.join(app_dir, "PlugIns", "*.appex")) + [app_dir]  # appexes sign first
+    for b in bundles:
+        plist = os.path.join(b, "Info.plist")
+        with open(plist, "rb") as f:
+            data = plistlib.load(f)
+        data["CFBundleVersion"] = build
+        with open(plist, "wb") as f:
+            plistlib.dump(data, f)
+        subprocess.run(["codesign", "-f", "-s", "-", "--preserve-metadata=entitlements", b], check=True)
+    out = os.path.join(tempfile.mkdtemp(), os.path.basename(ipa))
+    subprocess.run(["zip", "-qry", out, "Payload"], cwd=work, check=True)
+    return out
+
+
+published = max((int(v["buildVersion"]) for v in app["versions"] if v.get("buildVersion", "").isdigit()), default=0)
+if not build.isdigit() or int(build) <= published:
+    build = str(published + 1)
+    ipa = renumber(ipa, build)
+    print(f"Build number set to {build}")
 
 slug = bundle.rsplit(".", 1)[-1]
 tag = f"{slug}-{version}-{build}"

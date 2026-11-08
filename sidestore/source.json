@@ -45,7 +45,17 @@
       "tintColor": "#e76f24",
       "category": "food",
       "screenshots": [],
-      "versions": []
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "1",
+          "date": "2026-11-08",
+          "localizedDescription": "First SideStore build.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/palate-1.0.0-1/palate-1.0.0-1.ipa",
+          "size": 41517210,
+          "minOSVersion": "16.4"
+        }
+      ]
     }
   ],
   "news": []

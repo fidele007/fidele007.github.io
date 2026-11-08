@@ -24,7 +24,7 @@ if any(v["version"] == version and v.get("buildVersion") == build for v in app["
 
 slug = bundle.rsplit(".", 1)[-1]
 tag = f"{slug}-{version}-{build}"
-asset = f"{app['name']}-{version}-{build}.ipa"
+asset = f"{slug}-{version}-{build}.ipa"
 subprocess.run(["gh", "release", "create", tag, f"{ipa}#{asset}", "--repo", REPO,
                 "--title", f"{app['name']} {version} ({build})", "--notes", notes or "SideStore build"], check=True)
 

@@ -2,7 +2,7 @@
   "name": "Force Fidele",
   "identifier": "com.forcefidele.source",
   "subtitle": "Apps by Force Fidele KIEN",
-  "description": "Akkhara Keyboard and Palate, ready to install with SideStore.",
+  "description": "Akkhara Keyboard, Akkhara Dictionary and Palate, ready to install with SideStore.",
   "iconURL": "https://forcefidele.com/site_logo.png",
   "website": "https://forcefidele.com",
   "tintColor": "#1d5fc4",
@@ -26,6 +26,34 @@
           "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-65/akkhara-keyboard-1.0-65.ipa",
           "size": 50583889,
           "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Akkhara Dictionary",
+      "bundleIdentifier": "com.fidele007.akara",
+      "developerName": "Force Fidele KIEN",
+      "subtitle": "Khmer dictionaries in one app",
+      "localizedDescription": "Akkhara brings Khmer–English, English–Khmer, Khmer–French and Chuon Nath dictionaries together in one fast, offline app.",
+      "iconURL": "https://forcefidele.com/akkhara/akkhara.png",
+      "tintColor": "#1d5fc4",
+      "category": "reference",
+      "screenshots": [
+        "https://forcefidele.com/akkhara/screenshot_1.png",
+        "https://forcefidele.com/akkhara/screenshot_2.png",
+        "https://forcefidele.com/akkhara/screenshot_3.png",
+        "https://forcefidele.com/akkhara/screenshot_4.png",
+        "https://forcefidele.com/akkhara/screenshot_5.png"
+      ],
+      "versions": [
+        {
+          "version": "1.5.1",
+          "buildVersion": "46",
+          "date": "2026-11-08",
+          "localizedDescription": "First SideStore build. Requires iOS 15.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akara-1.5.1-46/akara-1.5.1-46.ipa",
+          "size": 80940392,
+          "minOSVersion": "15.0"
         }
       ]
     },

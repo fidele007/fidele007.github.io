@@ -5,7 +5,7 @@ Usage: sidestore/publish.py path/to/App.ipa ["What's new"]
 Uploads the ipa as a GitHub release asset, adds the version to source.json,
 then commits and pushes. The app must already be listed in source.json.
 """
-import datetime, json, os, plistlib, re, shutil, subprocess, sys, tempfile, zipfile
+import datetime, json, os, plistlib, re, subprocess, sys, zipfile
 
 REPO = "fidele007/fidele007.github.io"
 SOURCE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "source.json")
@@ -25,10 +25,19 @@ if any(v["version"] == version and v.get("buildVersion") == build for v in app["
 slug = bundle.rsplit(".", 1)[-1]
 tag = f"{slug}-{version}-{build}"
 asset = f"{slug}-{version}-{build}.ipa"
-upload = os.path.join(tempfile.mkdtemp(), asset)  # gh names the asset after the file
-shutil.copy(ipa, upload)
-subprocess.run(["gh", "release", "create", tag, upload, "--repo", REPO,
-                "--title", f"{app['name']} {version} ({build})", "--notes", notes or "SideStore build"], check=True)
+if subprocess.run(["gh", "release", "view", tag, "--repo", REPO], capture_output=True).returncode:
+    subprocess.run(["gh", "release", "create", tag, "--repo", REPO,
+                    "--title", f"{app['name']} {version} ({build})", "--notes", notes or "SideStore build"], check=True)
+# gh's own upload stalls on big files (HTTP 408), so upload with curl.
+release = json.loads(subprocess.run(["gh", "api", f"repos/{REPO}/releases/tags/{tag}"], capture_output=True, check=True).stdout)
+for a in release["assets"]:
+    if a["name"] == asset:
+        subprocess.run(["gh", "api", "-X", "DELETE", f"repos/{REPO}/releases/assets/{a['id']}"], check=True)
+token = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, check=True).stdout.strip()
+subprocess.run(["curl", "-f", "--retry", "3", "-o", "/dev/null", "-X", "POST",
+                "-H", f"Authorization: Bearer {token}", "-H", "Content-Type: application/octet-stream",
+                "--data-binary", f"@{ipa}",
+                f"https://uploads.github.com/repos/{REPO}/releases/{release['id']}/assets?name={asset}"], check=True)
 
 app["versions"].insert(0, {
     "version": version,

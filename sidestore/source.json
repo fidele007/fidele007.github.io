@@ -23,7 +23,17 @@
         "https://forcefidele.com/akkhara/screenshot_4.png",
         "https://forcefidele.com/akkhara/screenshot_5.png"
       ],
-      "versions": []
+      "versions": [
+        {
+          "version": "1.0",
+          "buildVersion": "65",
+          "date": "2026-11-08",
+          "localizedDescription": "Swipe typing closer to Nintype: pause for doubled letters, swipe through the space bar for two words, adaptive merge timing.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-65/akkhara-keyboard-1.0-65.ipa",
+          "size": 50583889,
+          "minOSVersion": "16.0"
+        }
+      ]
     },
     {
       "name": "Palate",

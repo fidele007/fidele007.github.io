@@ -5,7 +5,7 @@ Usage: sidestore/publish.py path/to/App.ipa ["What's new"]
 Uploads the ipa as a GitHub release asset, adds the version to source.json,
 then commits and pushes. The app must already be listed in source.json.
 """
-import datetime, json, os, plistlib, re, subprocess, sys, zipfile
+import datetime, json, os, plistlib, re, shutil, subprocess, sys, tempfile, zipfile
 
 REPO = "fidele007/fidele007.github.io"
 SOURCE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "source.json")
@@ -25,7 +25,9 @@ if any(v["version"] == version and v.get("buildVersion") == build for v in app["
 slug = bundle.rsplit(".", 1)[-1]
 tag = f"{slug}-{version}-{build}"
 asset = f"{slug}-{version}-{build}.ipa"
-subprocess.run(["gh", "release", "create", tag, f"{ipa}#{asset}", "--repo", REPO,
+upload = os.path.join(tempfile.mkdtemp(), asset)  # gh names the asset after the file
+shutil.copy(ipa, upload)
+subprocess.run(["gh", "release", "create", tag, upload, "--repo", REPO,
                 "--title", f"{app['name']} {version} ({build})", "--notes", notes or "SideStore build"], check=True)
 
 app["versions"].insert(0, {

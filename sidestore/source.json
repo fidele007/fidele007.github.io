@@ -16,13 +16,7 @@
       "iconURL": "https://forcefidele.com/akkhara-keyboard/icon.png",
       "tintColor": "#1d5fc4",
       "category": "utilities",
-      "screenshots": [
-        "https://forcefidele.com/akkhara/screenshot_1.png",
-        "https://forcefidele.com/akkhara/screenshot_2.png",
-        "https://forcefidele.com/akkhara/screenshot_3.png",
-        "https://forcefidele.com/akkhara/screenshot_4.png",
-        "https://forcefidele.com/akkhara/screenshot_5.png"
-      ],
+      "screenshots": [],
       "versions": [
         {
           "version": "1.0",

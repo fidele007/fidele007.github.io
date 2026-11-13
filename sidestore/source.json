@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "66",
+          "date": "2026-11-14",
+          "localizedDescription": "iPad keyboard layout: globe and hide keys, split keyboard, digit hints, iPad keycaps; sideload name fixed to Akkhara",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-66/akkhara-keyboard-1.0-66.ipa",
+          "size": 50710259,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "65",
           "date": "2026-11-08",
           "localizedDescription": "Swipe typing closer to Nintype: pause for doubled letters, swipe through the space bar for two words, adaptive merge timing.",

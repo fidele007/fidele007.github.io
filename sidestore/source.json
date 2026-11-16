@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "67",
+          "date": "2026-11-16",
+          "localizedDescription": "Every corrected word in a phrase offers the word as typed again, on any word the cursor returns to; dictation no longer ends with a closing ។.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-67/akkhara-keyboard-1.0-67.ipa",
+          "size": 50730549,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "66",
           "date": "2026-11-14",
           "localizedDescription": "iPad keyboard layout: globe and hide keys, split keyboard, digit hints, iPad keycaps; sideload name fixed to Akkhara",

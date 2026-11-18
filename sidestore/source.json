@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "68",
+          "date": "2026-11-18",
+          "localizedDescription": "Nintype two-finger swipe engine port, with autospace splitting between words. Fast taps that slide on lift-off stay taps.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-68/akkhara-keyboard-1.0-68.ipa",
+          "size": 50927592,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "67",
           "date": "2026-11-16",
           "localizedDescription": "Every corrected word in a phrase offers the word as typed again, on any word the cursor returns to; dictation no longer ends with a closing ។.",

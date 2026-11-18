@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "69",
+          "date": "2026-11-18",
+          "localizedDescription": "Nintype touches option: tap or swipe decided at lift-off like Nintype, decoding in Nintype's units",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-69/akkhara-keyboard-1.0-69.ipa",
+          "size": 50941884,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "68",
           "date": "2026-11-18",
           "localizedDescription": "Nintype two-finger swipe engine port, with autospace splitting between words. Fast taps that slide on lift-off stay taps.",

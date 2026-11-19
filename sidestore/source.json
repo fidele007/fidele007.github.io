@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "71",
+          "date": "2026-11-19",
+          "localizedDescription": "Faster swipe typing: words appear sooner after lifting (decode 2.5x faster, long words 4x)",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-71/akkhara-keyboard-1.0-71.ipa",
+          "size": 50956900,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "70",
           "date": "2026-11-19",
           "localizedDescription": "Nintype engine audited against the original: first keys kept, faithful touch smoothing, slowdown and double-letter rules, search pruning; learned words swipeable at once",

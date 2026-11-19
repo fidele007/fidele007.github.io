@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "70",
+          "date": "2026-11-19",
+          "localizedDescription": "Nintype engine audited against the original: first keys kept, faithful touch smoothing, slowdown and double-letter rules, search pruning; learned words swipeable at once",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-70/akkhara-keyboard-1.0-70.ipa",
+          "size": 50952147,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "69",
           "date": "2026-11-18",
           "localizedDescription": "Nintype touches option: tap or swipe decided at lift-off like Nintype, decoding in Nintype's units",

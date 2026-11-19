@@ -135,7 +135,7 @@
     },
     {
       "name": "Axora",
-      "bundleIdentifier": "dev.axora.viewer",
+      "bundleIdentifier": "com.forcefidele.axora",
       "developerName": "Force Fidele KIEN",
       "subtitle": "DICOM viewer",
       "localizedDescription": "Axora is a DICOM viewer for iPad and iPhone. Not for diagnostic use.",
@@ -143,17 +143,7 @@
       "tintColor": "#1d5fc4",
       "category": "utilities",
       "screenshots": [],
-      "versions": [
-        {
-          "version": "0.1.1",
-          "buildVersion": "1",
-          "date": "2026-11-19",
-          "localizedDescription": "First SideStore build: iPad and iPhone, not for diagnostic use.",
-          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/viewer-0.1.1-1/viewer-0.1.1-1.ipa",
-          "size": 6917211,
-          "minOSVersion": "15.0"
-        }
-      ]
+      "versions": []
     }
   ],
   "news": []

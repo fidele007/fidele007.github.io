@@ -2,7 +2,7 @@
   "name": "Force Fidele",
   "identifier": "com.forcefidele.source",
   "subtitle": "Apps by Force Fidele KIEN",
-  "description": "Akkhara Keyboard, Akkhara Dictionary and Palate, ready to install with SideStore.",
+  "description": "Akkhara Keyboard, Akkhara Dictionary, Palate and Axora, ready to install with SideStore.",
   "iconURL": "https://forcefidele.com/site_logo.png",
   "website": "https://forcefidele.com",
   "tintColor": "#1d5fc4",
@@ -123,6 +123,18 @@
           "minOSVersion": "16.4"
         }
       ]
+    },
+    {
+      "name": "Axora",
+      "bundleIdentifier": "dev.axora.viewer",
+      "developerName": "Force Fidele KIEN",
+      "subtitle": "DICOM viewer",
+      "localizedDescription": "Axora is a DICOM viewer for iPad and iPhone. Not for diagnostic use.",
+      "iconURL": "https://forcefidele.com/axora/icon.png",
+      "tintColor": "#1d5fc4",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": []
     }
   ],
   "news": []

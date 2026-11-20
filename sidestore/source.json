@@ -20,6 +20,15 @@
       "versions": [
         {
           "version": "1.0",
+          "buildVersion": "72",
+          "date": "2026-11-20",
+          "localizedDescription": "Autospace option under swipe typing",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-1.0-72/akkhara-keyboard-1.0-72.ipa",
+          "size": 50958797,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.0",
           "buildVersion": "71",
           "date": "2026-11-19",
           "localizedDescription": "Faster swipe typing: words appear sooner after lifting (decode 2.5x faster, long words 4x)",

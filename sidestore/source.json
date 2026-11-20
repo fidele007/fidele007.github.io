@@ -146,6 +146,15 @@
       "versions": [
         {
           "version": "0.1.1",
+          "buildVersion": "2",
+          "date": "2026-11-20",
+          "localizedDescription": "New app icon (no padding) and launch screen.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.1.1-2/axora-0.1.1-2.ipa",
+          "size": 6950400,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.1.1",
           "buildVersion": "1",
           "date": "2026-11-19",
           "localizedDescription": "First SideStore build: iPad and iPhone, not for diagnostic use.",

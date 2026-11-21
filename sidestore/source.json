@@ -155,6 +155,15 @@
       "versions": [
         {
           "version": "0.1.1",
+          "buildVersion": "3",
+          "date": "2026-11-21",
+          "localizedDescription": "Updated settings and compact PACS layout, refined measurement controls, and improved dose report display.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.1.1-3/axora-0.1.1-3.ipa",
+          "size": 6978331,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.1.1",
           "buildVersion": "2",
           "date": "2026-11-20",
           "localizedDescription": "New app icon (no padding) and launch screen.",

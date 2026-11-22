@@ -155,6 +155,15 @@
       "versions": [
         {
           "version": "0.1.1",
+          "buildVersion": "4",
+          "date": "2026-11-22",
+          "localizedDescription": "Updated the Studies home screen, refined viewer playback and layout controls, and added native Settings tabs on iOS 26 and later.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.1.1-4/axora-0.1.1-4.ipa",
+          "size": 7006154,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.1.1",
           "buildVersion": "3",
           "date": "2026-11-21",
           "localizedDescription": "Updated settings and compact PACS layout, refined measurement controls, and improved dose report display.",

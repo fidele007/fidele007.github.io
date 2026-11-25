@@ -155,6 +155,15 @@
       "versions": [
         {
           "version": "0.1.1",
+          "buildVersion": "6",
+          "date": "2026-11-25",
+          "localizedDescription": "Build script check",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.1.1-6/axora-0.1.1-6.ipa",
+          "size": 7696602,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.1.1",
           "buildVersion": "5",
           "date": "2026-11-23",
           "localizedDescription": "MPR: viewport layouts, 3D rotate, roll, axes, slimmer toolbar; loading spinners",

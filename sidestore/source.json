@@ -155,6 +155,15 @@
       "versions": [
         {
           "version": "0.1.1",
+          "buildVersion": "7",
+          "date": "2026-11-25",
+          "localizedDescription": "MPR toolbar: native menus, tool dock, window presets",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.1.1-7/axora-0.1.1-7.ipa",
+          "size": 7697830,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.1.1",
           "buildVersion": "6",
           "date": "2026-11-25",
           "localizedDescription": "Same app as build 5; rebuilt with the new build script.",

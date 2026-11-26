@@ -155,6 +155,15 @@
       "versions": [
         {
           "version": "0.1.1",
+          "buildVersion": "9",
+          "date": "2026-11-26",
+          "localizedDescription": "Integrate touch MPR controls into the viewer toolbar",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.1.1-9/axora-0.1.1-9.ipa",
+          "size": 7717764,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.1.1",
           "buildVersion": "8",
           "date": "2026-11-25",
           "localizedDescription": "Prioritize reading tools on the touch toolbar",

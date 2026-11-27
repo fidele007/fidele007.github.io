@@ -19,6 +19,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.2.1",
+          "buildVersion": "73",
+          "date": "2026-11-27",
+          "localizedDescription": "Akkhara 0.2.1: single words favored on two-finger swipes, drag-delete works with inline completions, and keyboard crash fixes",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/akkhara-keyboard-0.2.1-73/akkhara-keyboard-0.2.1-73.ipa",
+          "size": 50960972,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.0",
           "buildVersion": "72",
           "date": "2026-11-20",

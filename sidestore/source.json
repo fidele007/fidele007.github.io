@@ -154,6 +154,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.2.0",
+          "buildVersion": "10",
+          "date": "2026-11-27",
+          "localizedDescription": "Axora 0.2.0: arrow annotations with styles and properties, editable annotations in 3D, an MPR hide-axes button, and touch toolbar, sheet and Settings improvements.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.2.0-10/axora-0.2.0-10.ipa",
+          "size": 7768511,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "0.1.1",
           "buildVersion": "9",
           "date": "2026-11-26",

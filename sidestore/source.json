@@ -163,6 +163,15 @@
       "screenshots": [],
       "versions": [
         {
+          "version": "0.3.0",
+          "buildVersion": "12",
+          "date": "2026-11-28",
+          "localizedDescription": "Axora 0.3.0: measurements are kept when a study is closed and reopened, saved key images fly into the series list, a single key image can be shared on iOS, studies open more smoothly, and the 3D tools fit on phones.",
+          "downloadURL": "https://github.com/fidele007/fidele007.github.io/releases/download/axora-0.3.0-12/axora-0.3.0-12.ipa",
+          "size": 7770626,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "0.2.0",
           "buildVersion": "11",
           "date": "2026-11-28",
